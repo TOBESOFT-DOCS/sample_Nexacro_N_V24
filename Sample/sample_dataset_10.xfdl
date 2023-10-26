@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_dataset_10" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Grid id="Grid00" taborder="0" left="174" top="30" width="76" height="275" binddataset="Dataset00" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="1" left="30" top="30" width="136" height="275" binddataset="Dataset01" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="O:Column0[en-US]"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static00" taborder="3" text="locale code" left="263" top="30" width="77" height="35" background="powderblue" border="1px solid darkblue" padding="2px"/>
+        <Combo id="Combo_localeCode" taborder="2" text="none" left="Static00:0" top="30" width="275" height="35" index="0" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" value="none" onitemchanged="Combo_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">en-US</Col>
+                <Col id="datacolumn">English - United States (en-US)</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">de-DE</Col>
+                <Col id="datacolumn">German - Germany (de-DE)</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">sv-FI</Col>
+                <Col id="datacolumn">Swedish - Finland (sv-FI)</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Static id="Static00_00" taborder="4" text="caseFirst" left="263" top="71" width="77" height="35" background="powderblue" border="1px solid darkblue" padding="2px"/>
+        <Combo id="Combo_caseFirst" taborder="5" text="none" left="340" top="71" width="275" height="35" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="0" value="none" onitemchanged="Combo_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">upper</Col>
+                <Col id="datacolumn">upper</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">lower</Col>
+                <Col id="datacolumn">lower</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">false</Col>
+                <Col id="datacolumn">false (default)</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Static id="Static00_00_00" taborder="6" text="numeric" left="263" top="113" width="77" height="35" background="powderblue" border="1px solid darkblue" padding="2px"/>
+        <Combo id="Combo_numeric" taborder="7" text="none" left="340" top="113" width="275" height="35" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="0" value="none" onitemchanged="Combo_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">true</Col>
+                <Col id="datacolumn">true</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn"/>
+                <Col id="datacolumn">false (default)</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Edit id="Edit00" taborder="8" left="263" top="199" width="390" height="43"/>
+        <Static id="Static00_00_00_00" taborder="9" text="keystring" left="263" top="158" width="77" height="35" background="lightgreen" border="1px solid darkblue" padding="2px"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00" keystring="S:Column0,O:Column0[en-US]">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">aaaa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">äaaa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">aabb</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">AaAa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">AABB</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">AAAb</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">bbAA</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">zBAA</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">25</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">120</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01" keystring="S:Column0,O:Column0[en-US]">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">aaaa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">äaaa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">aabb</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">AaAa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">AABB</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">AAAb</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">bbAA</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">zBAA</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">25</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">120</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Combo_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	if(this.Combo_localeCode.value!="none")
+	{
+		//S:Column0,O:Column0[en-US]
+		var localeOption = {};
+		if(this.Combo_caseFirst.value!="none")
+			localeOption["caseFirst"] = this.Combo_caseFirst.value;
+		if(this.Combo_numeric.value!="none")
+			localeOption["numeric"] = Boolean(this.Combo_numeric.value);
+			
+		var strKeyString = "S:Column0,O:Column0["+this.Combo_localeCode.value+"]"+JSON.stringify(localeOption);
+		this.Dataset00.set_keystring(strKeyString);
+		this.Edit00.set_value(strKeyString);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

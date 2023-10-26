@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_calendar_11" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Calendar id="Calendar00" taborder="0" left="25" top="20" width="205" height="210" datepickerchangetype="button" type="monthonly" usetrailingday="false" ondayclick="Calendar00_ondayclick" onlbuttonup="Calendar00_onlbuttonup"/>
+        <Calendar id="Calendar00_00" taborder="1" left="248" top="20" width="205" height="210" type="monthonly"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Calendar00_onlbuttonup = function(obj:nexacro.Calendar,e:nexacro.MouseEventInfo)
+{
+	var yeartext;
+	var monthtext;
+	if(e.fromreferenceobject.id.includes("yearitem")) {
+		yeartext = e.fromreferenceobject.text;
+		this.Calendar00_00.set_value(yeartext);
+	}
+	if(e.fromreferenceobject.id.includes("monthitem")) {
+		yeartext = this.Calendar00.datepicker.head.yearstatic.text;
+		monthtext = e.fromreferenceobject.text;
+		this.Calendar00_00.set_value(yeartext+this.addZero(monthtext));
+	}
+};
+
+this.Calendar00_ondayclick = function(obj:nexacro.Calendar,e:nexacro.CalendarDayClickEventInfo)
+{
+	this.Calendar00_00.set_value(e.date);
+};
+
+this.addZero = function(string) {
+  if (string.length === 1) {
+    return "0" + string;
+  } else {
+    return string;
+  }
+}]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_dataobject_03" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Button id="btn_Apply" taborder="0" text="Apply" left="30" top="263" width="100" height="30" onclick="btn_Apply_onclick"/>
+        <Edit id="edituserId" taborder="1" left="29" top="147" width="77" height="32" displaynulltext="userId" readonly="true"/>
+        <Grid id="Grid00" taborder="2" left="30" top="30" width="440" height="110" autofittype="col" binddataset="Dataset00">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="20"/>
+                <Column size="20"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="userId"/>
+                <Cell col="1" text="id"/>
+                <Cell col="2" text="title"/>
+                <Cell col="3" text="body"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:userId"/>
+                <Cell col="1" text="bind:id"/>
+                <Cell col="2" text="bind:title"/>
+                <Cell col="3" text="bind:body"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Search" taborder="3" text="Search" left="480" top="30" width="100" height="30" onclick="btn_Search_onclick"/>
+        <TextArea id="TextArea00" taborder="4" left="29" top="303" width="440" height="140" wordWrap="english"/>
+        <Edit id="edittitle" taborder="5" left="203" top="147" width="267" height="32" displaynulltext="title"/>
+        <TextArea id="textAreabody" taborder="6" left="29" top="187" width="441" height="66" displaynulltext="body"/>
+        <Edit id="editid" taborder="7" left="116" top="147" width="77" height="32" displaynulltext="id" readonly="true"/>
+        <Button id="btn_Delete" taborder="8" text="Delete" left="480" top="65" width="100" height="30" onclick="btn_Delete_onclick"/>
+        <CheckBox id="CheckBox00" taborder="9" text="updatecontrol" left="480" top="100" width="100" height="20" value="true" onchanged="CheckBox00_onchanged"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <DataObject id="DataObject00" onsuccess="DataObject00_onsuccess" onerror="DataObject00_onerror" url="https://jsonplaceholder.typicode.com/posts" ondatachanged="DataObject00_ondatachanged" onvaluechanged="DataObject00_onvaluechanged"/>
+      <Dataset id="Dataset00" binddataobject="DataObject00" dataobjectpath="$[*]" dataobjectbindmode="twoway">
+        <ColumnInfo>
+          <Column id="userId" datapath="@.userId" type="STRING" size="256"/>
+          <Column id="id" datapath="@.id" type="STRING" size="256"/>
+          <Column id="title" datapath="@.title" type="STRING" size="256"/>
+          <Column id="body" datapath="@.body" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// https://github.com/typicode/jsonplaceholder
+
+// Getting resources
+// https://jsonplaceholder.typicode.com/guide/
+this.btn_Search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.DataObject00.load();
+};
+
+this.btn_Apply_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.TextArea00.deleteText();
+	this.Dataset00.applyChange();
+};
+
+var serviceid;
+this.DataObject00_onsuccess = function(obj:nexacro.DataObject,e:nexacro.DataObjectEventInfo)
+{
+	serviceid = e.serviceid;
+	trace(e.serviceid + ":" + e.statuscode);
+
+    if (e.statuscode == 200 && (e.method == "POST" || e.method == "GET"))
+        trace("getAllResponseHeaders:"+ obj.getAllResponseHeaders());
+	else
+    {
+        e.preventDefault();
+		this.TextArea00.insertText("=================="+"\n");
+		this.TextArea00.insertText(e.serviceid + ":" + e.statuscode+"\n");
+		this.TextArea00.insertText(obj.getResponse()+"\n");		
+    }
+};
+
+this.DataObject00_onerror = function(obj:nexacro.DataObject,e:nexacro.DataObjectErrorEventInfo)
+{
+	trace(e.statuscode +":"+e.errormsg);
+	this.TextArea00.deleteText();
+	this.TextArea00.insertText("=================="+"\n");
+	this.TextArea00.insertText(e.statuscode +":"+e.errormsg+"\n");
+};
+
+// Deleting a resource, Updating a resource
+// https://jsonplaceholder.typicode.com/guide/
+this.DataObject00_ondatachanged = function(obj:nexacro.DataObject,e:nexacro.DataObjectDataChangedEventInfo)
+{
+   var updatelist = e.infoarray;
+   for (var i =0; i<updatelist.length; i++)
+   {
+		var item = updatelist[i];
+		var uid = item.uid;
+		var method = (item.type == "update")?"PUT":"DELETE";
+		var senddata = JSON.stringify(item.data);	
+		var id = item.data.id;
+		var param = {
+			'httpheader' : {'Content-Type': 'application/json; charset=UTF-8'}, 
+			'postdata' : senddata 
+		}
+		if(method == "PUT")
+		{
+			this.DataObject00.request(uid, method, this.DataObject00.url+"/"+id, param);
+		} else {
+			this.DataObject00.request(uid, method, this.DataObject00.url+"/"+id);
+		}
+	}
+};
+
+this.btn_Delete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset00.deleteRow(this.Dataset00.rowposition);
+};
+
+this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	this.Dataset00.set_updatecontrol(e.postvalue);
+};
+
+// Patching a resource
+// https://jsonplaceholder.typicode.com/guide/
+this.DataObject00_onvaluechanged = function(obj:nexacro.DataObject, e:nexacro.DataObjectValueChangedEventInfo)
+{
+	var id = obj.getObjectByPath(e.dataobjectpath)[e.index]["id"];
+	var uid = e.uid;
+	var method = "PATCH";
+	var objddata = {};
+	objddata[e.key] = e.value;
+	var senddata = JSON.stringify(objddata);
+	
+    var param = {
+		'httpheader' : {'Content-Type': 'application/json; charset=UTF-8'}, 
+		'postdata' : senddata 
+	}
+	this.TextArea00.deleteText();
+	this.DataObject00.request(uid, method, this.DataObject00.url+"/"+id, param);
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="edituserId" propid="value" datasetid="Dataset00" columnid="userId"/>
+      <BindItem id="item1" compid="editid" propid="value" datasetid="Dataset00" columnid="id"/>
+      <BindItem id="item2" compid="edittitle" propid="value" datasetid="Dataset00" columnid="title"/>
+      <BindItem id="item3" compid="textAreabody" propid="value" datasetid="Dataset00" columnid="body"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="TEST" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <MultiCombo id="MultiCombo00" taborder="0" text="MultiCombo00" left="25" top="25" width="200" height="50" edittype="count" type="search" innerdataset="Dataset00" codecolumn="Column0" datacolumn="Column1" cssclass="sample_multicombo_04"/>
+        <CheckBox id="CheckBox00" taborder="1" text="dropdown" left="25" top="85" width="150" height="20" onchanged="CheckBox00_onchanged"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[// edittype 속성값이 "count"일 때 스타일 설정하기
+
+this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	if(e.postvalue)
+	{
+		this.MultiCombo00.set_type('dropdown');
+		this.MultiCombo00.set_cssclass("");	
+	}
+	else
+	{
+		this.MultiCombo00.set_type('search')
+		this.MultiCombo00.set_cssclass("test");	
+	}
+};
+
+/**
+.MultiCombo.sample_multicombo_04 .multicombotext
+{
+	-nexa-border : 0px  none, 0px  none, 1px solid #d5d5d5;
+}
+**/]]></Script>
+  </Form>
+</FDL>

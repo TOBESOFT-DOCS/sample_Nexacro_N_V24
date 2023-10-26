@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.0"><![CDATA[.Button.btn_TP_Menu01[status=mouseover],.Button.btn_TP_Menu01[userstatus=selected]
+{
+	background : URL("imagerc::btn_TP_Menu01_O.png") no-repeat center center;
+}
+
+.Button.sample_button_08
+{
+	-nexa-icon : url('theme://images/chk_WF_Box_O.png');
+	-nexa-text-padding : 3px;	
+}
+
+.Button.sample_button_08[userstatus=selected]
+{
+	-nexa-icon : url('theme://images/chk_WF_Box_F.png');	
+}
+
+.Static.Sta_TF_AllMenuTit
+{
+	background : url("imagerc::Sta_TF_AllMenuTit.png") repeat-x;
+	font : bold 10pt "Malgun Gothic";
+	color : #d3d3d3;
+	-nexa-padding : 0px 0px 10px 0px;
+}
+
+.Static.Sta_TF_AllMenuTit_ja
+{
+	background : url("imagerc::Sta_TF_AllMenuTit.png") repeat-x;
+	font : bold 10pt "Meiryo", "Verdana", "Roboto", "Droid Sans", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS Gothic", "sans-serif";
+	color : #d3d3d3;
+	-nexa-padding : 0px 0px 10px 0px;
+}
+
+.Static.Sta_TF_AllMenuTit_zh
+{
+	background : url("imagerc::Sta_TF_AllMenuTit.png") repeat-x;
+	font : bold 10pt "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "SF Pro SC", "SF Pro Text", "Helvetica", "Arial", "sans-serif";
+	color : #d3d3d3;
+	-nexa-padding : 0px 0px 10px 0px;
+}
+
+.Static.Sta_TF_mapTitle
+{
+	background : url("imagerc::Sta_TF_mapTitle.png") no-repeat left center;
+	color : #a9aaaa;
+	-nexa-padding : 0px 0px 0px 10px;
+	font : bold 9pt "Malgun Gothic";
+	cursor : pointer;	
+}
+
+.Static.Sta_TF_mapTitle_ja
+{
+	background : url("imagerc::Sta_TF_mapTitle.png") no-repeat left center;
+	color : #a9aaaa;
+	-nexa-padding : 0px 0px 0px 10px;
+	font : bold 9pt "Meiryo", "Verdana", "Roboto", "Droid Sans", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS Gothic", "sans-serif";
+	cursor : pointer;	
+}
+
+.Static.Sta_TF_mapTitle_zh
+{
+	background : url("imagerc::Sta_TF_mapTitle.png") no-repeat left center;
+	color : #a9aaaa;
+	-nexa-padding : 0px 0px 0px 10px;
+	font : bold 9pt "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "SF Pro SC", "SF Pro Text", "Helvetica", "Arial", "sans-serif";
+	cursor : pointer;	
+}
+
+.Static.Sta_TF_mapTitle[status=mouseover]
+{
+	-nexa-text-decoration : underline;
+}
+
+.Static.Sta_TF_menubar
+{
+	color : white;
+	-nexa-padding : 0px 0px 0px 10px;
+	font : bold 9pt "Malgun Gothic";
+	cursor : pointer;	
+}
+
+.Static.Sta_TF_menubar_ja
+{
+	color : white;
+	-nexa-padding : 0px 0px 0px 10px;
+	font : bold 9pt "Meiryo", "Verdana", "Roboto", "Droid Sans", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS Gothic", "sans-serif";
+	cursor : pointer;	
+}
+
+.Static.Sta_TF_menubar_zh
+{
+	color : white;
+	-nexa-padding : 0px 0px 0px 10px;
+	font : bold 9pt "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "SF Pro SC", "SF Pro Text", "Helvetica", "Arial", "sans-serif";
+	cursor : pointer;	
+}
+
+.Static.Sta_TF_manualTitle
+{
+	font : normal bold 14pt/normal "Malgun Gothic";
+}
+
+.Static.Sta_TF_manualTitle_ja
+{
+	font : normal bold 14pt/normal "Meiryo", "Verdana", "Roboto", "Droid Sans", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS Gothic", "sans-serif";
+}
+
+.Static.Sta_TF_manualTitle_zh
+{
+	font : normal bold 14pt/normal "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "SF Pro SC", "SF Pro Text", "Helvetica", "Arial", "sans-serif";
+}
+
+.Static.Sta_TF_menubar[status=mouseover]
+{
+	-nexa-text-decoration : underline;
+}
+
+.Grid .body .row .cell.sample_grid_61 .celltreeitem .treeitemimage
+{
+	-nexa-icon : URL("theme://images/img_WF_Grdimg.png");
+}
+
+.Grid .body .row .cell.sample_grid_61 .celltreeitem .treeitemimage[userstatus=expand]
+{
+	-nexa-icon : URL("theme://images/btn_WF_Popmenunext_D.png");
+}
+.Grid .body .row .cell.sample_grid_60_font_red .celltreeitem .treeitemtext
+{		
+	color : red;
+}
+
+.Grid .body .row .cell.sample_grid_60_font_blue .celltreeitem .treeitemtext
+{		
+	color : blue;
+}
+	
+.Grid .body .row .cell.sample_grid_71 .cellcombo .combolist .listboxitem[userstatus=selected]
+{		
+	color : red;
+}
+	
+.GroupBox.sample_groupbox_03 .groupboxcontents
+{
+	background : greenyellow;
+	-nexa-border : 3px solid violet;
+}.Grid .body .row .cell.sample_grid_60_font_lightgreen .celltreeitem .treeitemtext
+{		
+	color : lightgreen;
+}/***** sample_grid_62 *****/
+.Grid .body .row .cell.sample_grid_62_blink1
+{		
+	background : gold;
+}
+
+.Grid .body .row .cell.sample_grid_62_blink2
+{		
+	background : white;
+}
+
+.Grid .body .row .cell.sample_grid_62_blinkcell[userstatus=blinked]
+{		
+	background : gold;
+	color : #666666;
+}
+
+.Grid .body .row .cell.sample_grid_84_background
+{
+	-nexa-background-odd : silver;
+	background : silver;	
+	color : white;
+	-nexa-color-odd : white;	
+}
+.Grid .body .row .cell.sample_grid_84_font_a
+{
+	background : blue;	
+	color : red;
+}
+.Grid .body .row .cell.sample_grid_84_font_b
+{
+	background : red;	
+	color : pink;
+}
+.Grid .body .row .cell.sample_grid_64_changevalue
+{
+	color : red;
+}
+
+.Grid .body .row .cell.sample_grid_91_padding1
+{
+	-nexa-padding : 4px 4px 4px 40px;
+}
+
+
+.Grid .body .row .cell.sample_grid_91_padding2
+{
+	-nexa-padding : 4px 4px 4px 80px;
+}
+
+.Grid .body .row .cell.sample_grid_99_cellclick[userstatus=selected]
+{
+	-nexa-background-odd : lawngreen;
+	background : lawngreen; 
+}
+
+.Grid .body .row .cell.sample_grid_31_style_subtotal
+{
+	background : #c3d69b;
+	font : normal bold  8pt "Arial";
+}.GroupBox.sample_groupbox_03 .groupboxtitle
+{
+	background : greenyellow;
+	-nexa-icon : URL("theme://images/rdo_WF_Radio.png");
+}
+.Combo.main_combo
+{
+	-nexa-border : 1px solid #ff8f00;
+	-nexa-padding : 5px 0px;	
+	font : 9pt "Arial";
+}
+.Combo.main_combo .combolist .vscrollbar
+{
+	-nexa-border : 1px none, 1px none, 1px none, 1px solid #b1b1b1;	
+}
+.Combo.main_combo .combolist .vscrollbar .trackbar
+{
+	background : #a1a1a1;
+}
+.Combo.main_combo .combolist .vscrollbar .decbutton
+{
+	-nexa-icon : URL("imagerc::icon_decbtn_N.png");
+}
+.Combo.main_combo .combolist .vscrollbar .decbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("imagerc::icon_decbtn_P.png");
+}
+.Combo.main_combo .combolist .vscrollbar .incbutton
+{
+	-nexa-icon : URL("imagerc::icon_incbtn_N.png");
+}
+.Combo.main_combo .combolist .vscrollbar .incbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("imagerc::icon_incbtn_P.png");
+}
+.Combo.main_combo .combolist .listboxitem
+{
+	-nexa-padding : 5px 0px 5px 2px;
+	font : 9pt "Arial";
+}
+.Combo.main_combo .combolist .listboxitem[userstatus=selected]
+{
+	background : #ff8f00;
+}
+.Combo.main_combo .combolist .listboxitem[status=mouseover]
+{
+	background : #fce5c7;
+}
+.Combo.main_combo .combolist, .Combo.main_combo .combolist[status=mouseover]
+{
+	-nexa-border : 1px solid #ff8f00;
+}
+.Combo.main_combo .dropbutton
+{
+	-nexa-icon : URL("imagerc::cmb_dropbtn_N.png");
+}
+.Combo.main_combo .dropbutton[userstatus=pushed], .Combo.main_combo .dropbutton[status=mouseover]
+{
+	-nexa-icon : URL("imagerc::cmb_dropbtn_P.png");
+}
+.Combo.main_combo[status=mouseover], .Combo.main_combo[status=focused]
+{
+	-nexa-border : 1px solid #ff8f00;
+}
+.Button.btn_TP_Menu01,.Button.btn_TP_Menu01[status=focused]
+{
+	background : URL("imagerc::btn_TP_Menu01_N.png") no-repeat center center;
+}
+
+.Grid.sample_grid_83 .body .selection
+{
+	-nexa-border : 2px dotted hotpink;
+}
+
+.Calendar.sample_calendar_09 .datepicker .body .dayitem[userstatus=saturday]
+{
+	color : #333333;
+}
+
+.Calendar.sample_calendar_09 .datepicker .body .dayitem[userstatus=sunday]
+{
+	color : #333333;
+}
+.Calendar.sample_calendar_09 .datepicker .body .weekitem[userstatus=sunday]
+{
+	color : #ffffff;
+}
+
+.Calendar.sample_calendar_09 .datepicker .head
+{
+	background : orangered;
+}
+
+.Calendar.sample_calendar_09 .datepicker  .body .weekband
+{
+	background : orangered;
+}
+
+.Calendar.sample_calendar_09 .datepicker  .body
+{
+	-nexa-border : 1px none transparent;
+
+}.Calendar.sample_calendar_09 .datepicker .body .weekitem[userstatus=saturday]
+{
+	color : #ffffff;
+}
+.Grid .body .row .cell.sample_grid_94_level_0 .celltreeitem .treeitemtext
+{
+	font : normal bold 20pt/normal "Arial";
+	color : blue;
+}
+
+.Grid .body .row .cell.sample_grid_94_level_1 .celltreeitem .treeitemtext
+{		
+	font : normal bold 15pt/normal "Arial";
+}
+
+.Grid .body .row .cell.sample_grid_94_level_2  .celltreeitem .treeitemtext
+{
+	color : firebrick;		
+}.Grid.test
+{
+	font : 20pt/normal "Arial";
+	
+}
+.Grid .body .row .cell.sample_grid_53_cursor[status=mouseover]
+{
+    cursor : pointer;
+}
+
+.Grid .body .row .cell.sample_grid_107_cellclick .cellselection
+{
+    -nexa-border : 3px solid lawngreen;
+}
+
+.MultiCombo.sample_multicombo_04 .multicombotext
+{
+	-nexa-border : 0px  none, 0px  none, 1px solid #d5d5d5;
+}]]></XCSS>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_menu_02" width="670" height="200" titletext="New Form">
+    <Layouts>
+      <Layout height="200" width="670">
+        <Menu id="Menu00" taborder="1" left="20" top="32" width="193" height="50" innerdataset="innerdataset" captioncolumn="captioncolumn" hotkeycolumn="hotkeycolumn" idcolumn="idcolumn" levelcolumn="levelcolumn" autohotkey="true" onmenuclick="Menu00_onmenuclick">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="captioncolumn" size="256"/>
+              <Column id="checkboxcolumn" size="256"/>
+              <Column id="enablecolumn" size="256"/>
+              <Column id="hotkeycolumn" size="256"/>
+              <Column id="iconcolumn" size="256"/>
+              <Column id="idcolumn" size="256"/>
+              <Column id="levelcolumn" size="256"/>
+              <Column id="userdatacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="captioncolumn">BUTTON CONTROL</Col>
+                <Col id="levelcolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">SHOW BUTTON</Col>
+                <Col id="idcolumn">1</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="hotkeycolumn">ALT+1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">HIDE BUTTON</Col>
+                <Col id="hotkeycolumn">ALT+2</Col>
+                <Col id="idcolumn">2</Col>
+                <Col id="levelcolumn">1</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Menu>
+        <Button id="Button00" taborder="0" text="Button00" left="223" top="32" width="120" height="50"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Menu00_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+	if(e.id == "1")
+		this.Button00.set_visible(true);
+	else if(e.id == "2")
+		this.Button00.set_visible(false);
+};]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_multicombo_02" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <MultiCombo id="MultiCombo00" taborder="0" text="MultiCombo00" left="180" top="25" width="365" height="270" edittype="multitag" innerdataset="dsMultiCombo" codecolumn="code" datacolumn="code" showselectallcheckbox="true" readonly="false" enable="true"/>
+        <Grid id="Grid00" taborder="1" left="25" top="25" width="147" height="270" binddataset="dsMultiCombo" autofittype="col" selecttype="multirow" onselectchanged="Grid00_onselectchanged">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:code"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsMultiCombo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">Basil Rivera</Col>
+          </Row>
+          <Row>
+            <Col id="code">Clayton Chandler</Col>
+          </Row>
+          <Row>
+            <Col id="code">Constance Trevino</Col>
+          </Row>
+          <Row>
+            <Col id="code">Raymond Lara</Col>
+          </Row>
+          <Row>
+            <Col id="code">Hayfa Rodgers</Col>
+          </Row>
+          <Row>
+            <Col id="code">Vance Love</Col>
+          </Row>
+          <Row>
+            <Col id="code">Adena Pruitt</Col>
+          </Row>
+          <Row>
+            <Col id="code">Colleen Solis</Col>
+          </Row>
+          <Row>
+            <Col id="code">Benedict O'connor</Col>
+          </Row>
+          <Row>
+            <Col id="code">Hayes Melendez</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Grid00_onselectchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEventInfo)
+{
+	var arrayStatrRow = e.selectstartrow;
+	var arrayEndRow = e.selectendrow;
+	var selectedIndexes = [];
+
+	for (var i = 0; i < arrayStatrRow.length; i++) {
+		for (var j = arrayStatrRow[i]; j <= arrayEndRow[i]; j++) {
+			selectedIndexes.push(j);
+		}
+	}
+
+	var result = selectedIndexes.join(",");
+	this.MultiCombo00.set_index(result);
+};
+]]></Script>
+  </Form>
+</FDL>

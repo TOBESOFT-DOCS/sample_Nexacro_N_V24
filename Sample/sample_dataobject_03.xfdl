@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_dataobject_03" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Button id="btn_Create" taborder="0" text="Create" left="409" top="204" width="100" height="30" onclick="btn_Create_onclick"/>
+        <Edit id="edituserId" taborder="1" left="29" top="204" width="77" height="32" displaynulltext="userId"/>
+        <Edit id="editid" taborder="2" left="30" top="30" width="77" height="32" displaynulltext="id"/>
+        <Grid id="Grid00" taborder="3" left="30" top="69" width="570" height="125" autofittype="col"/>
+        <Button id="btn_Search" taborder="4" text="Search" left="117" top="30" width="100" height="30" onclick="btn_Search_onclick"/>
+        <TextArea id="TextArea00" taborder="5" left="30" top="320" width="570" height="110" wordWrap="english"/>
+        <Edit id="edittitle" taborder="6" left="112" top="204" width="287" height="32" displaynulltext="title"/>
+        <TextArea id="textAreabody" taborder="7" left="30" top="244" width="369" height="63" displaynulltext="body"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <DataObject id="DataObject00" onsuccess="DataObject00_onsuccess" onload="DataObject00_onload" onerror="DataObject00_onerror"/>
+      <Dataset id="Dataset00"/>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// Getting resources
+// https://jsonplaceholder.typicode.com/guide/
+this.btn_Search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strId = this.editid.value;
+	this.DataObject00.request("SEARCH", "GET", "https://jsonplaceholder.typicode.com/posts"+(strId?"/"+strId:""));
+};
+
+// Creating a resource
+// https://jsonplaceholder.typicode.com/guide/
+this.btn_Create_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var header = {"Content-Type" : "application/json; charset=UTF-8"};
+	var strPostdata = JSON.stringify(
+		{
+			"userId":this.edituserId.value,
+			"title":this.edittitle.value,
+			"body":this.textAreabody.value
+		}
+	);
+	this.DataObject00.request("CREATE", "POST", "https://jsonplaceholder.typicode.com/posts", 
+		{
+			"httpheader":header, 
+			"postdata":strPostdata
+		}
+	);
+};
+
+var serviceid;
+this.DataObject00_onsuccess = function(obj:nexacro.DataObject,e:nexacro.DataObjectEventInfo)
+{
+	serviceid = e.serviceid;
+	trace(e.serviceid + ":" + e.statuscode);
+
+    if (e.statuscode == 200)
+        trace("getAllResponseHeaders:"+ obj.getAllResponseHeaders())
+    else if(e.statuscode > 200)
+    {
+        e.preventDefault();
+		this.TextArea00.set_value(obj.getResponse());
+    }
+};
+
+this.DataObject00_onload = function(obj:nexacro.DataObject,e:nexacro.DataObjectLoadEventInfo)
+{
+	if(e.reason == 2)
+	{
+		this.Dataset00.clear();
+		var objData;
+		var strDataobjectpath;
+		if(serviceid == "SEARCH")
+		{
+			if(obj.data.length > 1)
+			{
+				objData = obj.data[0];
+				strDataobjectpath = "$[*]";
+			} else {
+				objData = obj.data;
+				strDataobjectpath = "$";			
+			}
+		}
+		for(var key in objData)
+		{
+			var objColinfo = new ColumnInfo();
+			objColinfo.set_type("String");
+			objColinfo.set_datapath("@."+key);
+			this.Dataset00.addColumnInfo(key, objColinfo);
+		}
+		this.Dataset00.set_binddataobject(obj.id);
+		this.Dataset00.set_dataobjectpath(strDataobjectpath);
+		this.Grid00.set_binddataset(this.Dataset00.name);
+		this.Grid00.createFormat();
+		this.TextArea00.set_value("");
+	}
+};
+
+this.DataObject00_onerror = function(obj:nexacro.DataObject,e:nexacro.DataObjectErrorEventInfo)
+{
+	trace(e.statuscode +":"+e.errormsg);
+	this.TextArea00.set_value(e.statuscode +":"+e.errormsg);
+};
+]]></Script>
+  </Form>
+</FDL>

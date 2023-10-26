@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_checkboxset_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <CheckBoxSet id="CheckBoxSet00" taborder="0" left="25" top="25" width="170" height="100" innerdataset="dsCheckBoxSet" codecolumn="code" datacolumn="data" readonlycolumn="readonly" columncount="2"/>
+        <Grid id="Grid00" taborder="1" left="235" top="25" width="245" height="195" binddataset="dsGrid" autofittype="col" autosizingtype="row" autoenter="select">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="code"/>
+                <Cell col="1" text="data"/>
+                <Cell col="2" text="stock"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:code"/>
+                <Cell col="1" text="bind:data"/>
+                <Cell col="2" text="bind:stock" edittype="text" displaytype="editcontrol" editinputtype="digit" editautoselect="true"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsCheckBoxSet">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">apple</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">banana</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">orange</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">kiwi</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">peach</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">strawberry</Col>
+            <Col id="code">6</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsGrid" oncolumnchanged="dsGrid_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="stock" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">apple</Col>
+            <Col id="stock">10</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">banana</Col>
+            <Col id="stock">10</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">orange</Col>
+            <Col id="stock">10</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">kiwi</Col>
+            <Col id="stock">10</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">peach</Col>
+            <Col id="stock">10</Col>
+          </Row>
+          <Row>
+            <Col id="data">strawberry</Col>
+            <Col id="code">6</Col>
+            <Col id="stock">10</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.dsGrid_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo) {
+  if (e.columnid === 'stock') {
+    var targetRow = this.dsCheckBoxSet.findRow("code", obj.getColumn(e.row, 0));
+    var newValue = e.newvalue;
+    var readonlyValue = (newValue === 0) ? 1 : 0;
+    this.dsCheckBoxSet.setColumn(targetRow, "readonly", readonlyValue);
+  }
+};]]></Script>
+  </Form>
+</FDL>

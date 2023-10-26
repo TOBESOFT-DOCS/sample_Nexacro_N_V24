@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_multicombo_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Grid id="Grid00" taborder="0" left="25" top="25" width="170" height="245" binddataset="dsGrid" autofittype="col" onheadvaluechanged="Grid00_onheadvaluechanged" autosizingtype="row">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+              </Band>
+            </Format>
+            <Format id="multicombo_filter">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="30" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell row="1" displaytype="multicombocontrol" edittype="multicombo" multicombodataset="dsCombo" multicombocodecol="code" multicombodatacol="data"/>
+                <Cell row="1" col="1"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <CheckBox id="CheckBox00" taborder="1" text="showFilter" left="215" top="25" width="150" height="20" onchanged="CheckBox00_onchanged"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsGrid">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">A</Col>
+            <Col id="Column1">A-0</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">B</Col>
+            <Col id="Column1">B-0</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">A</Col>
+            <Col id="Column1">A-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">B</Col>
+            <Col id="Column1">B-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">A</Col>
+            <Col id="Column1">A-2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">B</Col>
+            <Col id="Column1">B-2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">B</Col>
+            <Col id="Column1">B-3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsCombo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	if(e.postvalue)
+	{
+		this.Grid00.set_formatid("multicombo_filter");
+		this.setMultiComboFilter();	
+	}
+	else
+	{
+		this.Grid00.set_formatid("default");
+		this.dsGrid.filter("");
+	}
+};
+
+this.setMultiComboFilter = function()
+{
+	this.dsCombo.set_enableevent(false);
+	this.dsCombo.deleteAll();
+	for(var i=0, len=this.dsGrid.rowcount; i<len; i++)
+	{
+		tempvalue = this.dsGrid.getColumn(i, "Column0")
+		if(!this.dsCombo.lookup("code", tempvalue, "code"))
+		{
+			this.dsCombo.addRow();
+			this.dsCombo.setColumn(i, "code", tempvalue);
+			this.dsCombo.setColumn(i, "data", tempvalue);
+		}
+	}
+	//this.dsCombo.set_keystring("S:code");
+
+	this.dsCombo.set_enableevent(true);
+}
+
+this.Grid00_onheadvaluechanged = function(obj:nexacro.Grid,e:nexacro.GridHeadValueChangedEventInfo)
+{
+	var array = (e.newvalue).split(",");
+	var filterString = "";
+	if(array) {
+		filterString = array.map(function(item) {
+			return "'" + item + "' == Column0";
+		}).join("||");
+		this.dsGrid.filter(filterString);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>
