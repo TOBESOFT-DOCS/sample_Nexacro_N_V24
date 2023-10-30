@@ -1,5 +1,6 @@
-<!--[if gt IE 8]><!DOCTYPE html><!--<![endif]-->
-<html xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'>
+<!-- DOCTYPE : DOCTYPE declaration -->
+<!DOCTYPE html>
+<html > <!-- LANGUAGE : locale setting (value of location property in Environment) -->
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126808471-1"></script>
@@ -10,31 +11,44 @@
 
   gtag('config', 'UA-126808471-1', {
   'page_title' : '메인페이지',
-  'page_path': '/developer_guide/17/guide.html'
+  'page_path': '/developer_guide/N_V24/guide.html'
 });
 </script>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-	<meta name="viewport" content="user-scalable=1, initial-scale=0.1, width=device-width, target-densitydpi=device-dpi" />
-	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=1, initial-scale=0.1, width=device-width, target-densitydpi=device-dpi">
+	<!-- META_CHECKVERSION : Add if value of checkversion property in Envrionment is true -->
 
 	
-    <script type="text/javascript" src="./nexacro17lib/framework/Framework.js"></script>
+	<!-- FAVICON : favion setting (value of icon property in Environment. add to value of icon property in Environment) -->
+    <link rel="shortcut icon" href="./_resource_/_images_/56e72089fac4e4e9.ico">
 	
-    <script type="text/javascript" src="./nexacro17lib/component/CompBase.js"></script>
-    <script type="text/javascript" src="./nexacro17lib/component/ComComp.js"></script>
-    <script type="text/javascript" src="./nexacro17lib/component/Grid.js"></script>
-    <script type="text/javascript" src="./nexacro17lib/component/DeviceAPI.js"></script>
-	<script type="text/javascript" src="./nexacro17lib/component/Chart.js"></script>
-	<script type="text/javascript" src="./nexacro17lib/component/ListView.js"></script>
+	<!-- USERFONT_STYLE : userfont style setting (value of userfontid property in Environment. crate contents contained in xfont file specified userfontid property in Environment) -->
+    <style id="userfont">
+        @import url('https://fonts.googleapis.com/css?family=Chilanka|Lobster&display=swap');
+        </style>
+																				 
+																					
 	
-    <script type="text/javascript" src="./environment.xml.js"></script>
-
+	<!-- FRAMEWORK_LIBRARY : framework lodaing path (list of scripts files in the Framework.json file) -->
+    <script src="./nexacrolib/framework/Framework.js"></script>
+	
+	<!-- COMPONENTS_LIBRARY : commonent lodaing path (list of script file in json file specified in the TypeDefinition module) -->
+    <script src="./nexacrolib/component/CompBase.js"></script>
+    <script src="./nexacrolib/component/ComComp.js"></script>
+    <script src="./nexacrolib/component/Grid.js"></script>
+    <script src="./nexacrolib/component/DeviceAPI.js"></script>
+    <script src="./nexacrolib/component/ListView.js"></script>
+    <script src="./nexacrolib/component/Graphics.js"></script>
+    <script src="./nexacrolib/component/MobileComp.js"></script>
+	<!-- ENVIRONMENT_LIBRARY : application environment path (path of Environment.xml.js) -->
+    <script src="./environment.xml.js"></script>
+	
 	<title></title>
 </head>
 
 <body style="margin:0;border:none;-ms-touch-action:none;" onload="oninitframework()">
-	<script type="text/javascript">
+	<script>
 		function oninitframework()
 		{
 
@@ -54,24 +68,33 @@
 
 			nexacro._manual = urlParams.ma;
 			nexacro._sample = urlParams.sa;
+			nexacro._lang = urlParams.lang;
 			nexacro._hostname = window.location.hostname;
 			
+			<!-- SCREEN_INFORMATION : create screen information defined in Environment > ScreenDefinition -->
 			var screeninfo = [
-            {"id":"Screen_D","type":"desktop","userzoom":"true","themeid":"default.xtheme","xadl":"sample_nexacroplatform_17.xadl.js"}
+            {"id":"Screen_D","type":"desktop","userzoom":"true","themeid":"theme::blue","xadl":"sample_Nexacro_N_V24.xadl.js"},
+            {"id":"Screen_ja","type":"desktop","locale":"ja_JP","specifiedlocale":"ja_JP","themeid":"theme::blue_ja","xadl":"sample_Nexacro_N_V24.xadl.js"},
+            {"id":"Screen_zh","type":"desktop","specifiedlocale":"zh_CN","themeid":"theme::blue_zh","xadl":"sample_Nexacro_N_V24.xadl.js"}
 			];
 
 			nexacro._initHTMLSysEvent(window, document);
 			nexacro._initEnvironment(screeninfo);
-            nexacro._prepareManagerFrame(onloadframework);
+			<!-- create internal iframe -->
+			<!-- USERFONT_INFORMATION : userfontid property is specified in the Environment -->
+			nexacro._prepareManagerFrame(onloadframework);
 		}
 		function onloadframework()
 		{
+			<!-- application loading -->
 			nexacro._loadADL();
 		}
 		function onfinalframework()
 		{
-
+			<!-- application exit -->
 		}
 	</script>
 </body>
 </html>
+  
+  

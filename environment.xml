@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ENV version="2.1">
-  <Environment themeid="theme::blue" filesecurelevel="all" userfontid="font::sample_common_font.xfont" datatyperule="2.0" icon="url('imagerc::56e72089fac4e4e9.ico')">
+  <Environment themeid="theme::blue" filesecurelevel="all" userfontid="font::sample_common_font.xfont" datatyperule="2.0" icon="url('imagerc::56e72089fac4e4e9.ico')" usestringresource="true">
     <ScreenDefinition>
       <Screen id="Screen_D" type="desktop" userzoom="true" themeid="theme::blue"/>
       <Screen id="Screen_ja" type="desktop" locale="ja_JP" themeid="theme::blue_ja" specifiedlocale="ja_JP"/>
