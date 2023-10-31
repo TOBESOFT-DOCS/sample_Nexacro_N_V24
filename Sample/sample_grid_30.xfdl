@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_30" width="1024" height="768" titletext="New Form" onload="Form_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -135,7 +135,7 @@ this.copyPaste = {
 	
 	addGrid: function(grid)
 	{
-		if (system.navigatorname == "nexacro" || system.navigatorname == "IE" ) 
+		if (system.navigatorname == "nexacro") 
 		{
 			grid.setEventHandler("onkeydown", this.copyGridCellData1(this), this);
 		}		

@@ -19,10 +19,10 @@ this.Button00_onclick = function(obj:Button,e:ClickEventInfo)
     
 	if(sRtn ==='Y')
 		// alert("Password correct");	
-		this.Static01.set_text("Password correct");
+		this.Static01.text = "Password correct";
 	else
 		// alert("Password incorrect");		
-		this.Static01.set_text("Password incorrect");
+		this.Static01.text = "Password incorrect";
 
 };
 
@@ -30,11 +30,11 @@ this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChan
 {
 	if(e.postvalue == 1) 
 	{
-		this.edit_password.set_password("false");
+		this.edit_password.password = false;
 	}
 	else
 	{
-		this.edit_password.set_password("true");
+		this.edit_password.password = true;
 	}
 	
 };

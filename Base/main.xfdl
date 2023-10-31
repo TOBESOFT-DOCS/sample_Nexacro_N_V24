@@ -1629,17 +1629,6 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
           <Row>
             <Col id="category">Edit</Col>
             <Col id="tree_level">1</Col>
-            <Col id="subject">입력 언어 변경하기</Col>
-            <Col id="id_sample">sample_edit_04</Col>
-            <Col id="id_doc">3117ccab554de9d6</Col>
-            <Col id="search_subject">1</Col>
-            <Col id="keyword">imemode</Col>
-            <Col id="subject_zh">更改输入语言</Col>
-            <Col id="subject_en">Changing Input Language</Col>
-          </Row>
-          <Row>
-            <Col id="category">Edit</Col>
-            <Col id="tree_level">1</Col>
             <Col id="subject">정규표현식(Regular Expression)을 사용한 비밀번호 형식 체크하기</Col>
             <Col id="id_sample">sample_edit_05</Col>
             <Col id="id_doc">9a691487e9b769f5</Col>
@@ -4256,17 +4245,6 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
             <Col id="keyword">indexOf</Col>
             <Col id="subject_zh">验证电子邮件地址值</Col>
             <Col id="subject_en">Verifying Email Address Value</Col>
-          </Row>
-          <Row>
-            <Col id="category">String</Col>
-            <Col id="subject">전각문자와 반각문자 변환하기</Col>
-            <Col id="id_sample">sample_string_03</Col>
-            <Col id="id_doc">bb2f7406d8522ea9</Col>
-            <Col id="tree_level">1</Col>
-            <Col id="search_subject">6</Col>
-            <Col id="keyword">charCodeAt, imemode</Col>
-            <Col id="subject_zh">切换全角字符和半角字符</Col>
-            <Col id="subject_en">Converting Full-width &amp; Half-width Characters</Col>
           </Row>
           <Row>
             <Col id="category">String</Col>
