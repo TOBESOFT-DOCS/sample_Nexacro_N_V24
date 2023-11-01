@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_edit_08" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -75,8 +75,8 @@
 this.popupdivList_gridList_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
 	this.popupdivList.closePopup();
-	this.editCode.set_value(this.dsList.getColumn(e.row, "CODE"));
-	this.editData.set_value(this.dsList.getColumn(e.row, "DATA"));
+	this.editCode.value = this.dsList.getColumn(e.row, "CODE");
+	this.editData.value = this.dsList.getColumn(e.row, "DATA");
 };
 ]]></Script>
   </Form>

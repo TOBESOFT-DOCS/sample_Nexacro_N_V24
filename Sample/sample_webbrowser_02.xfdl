@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_webbrowser_02" width="1280" height="720" titletext="New Form" onload="sample_webbrowser_02_onload">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -19,7 +19,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 	var str = dom.getProperty("value");
 	
-	this.Static00.set_text(str);
+	this.Static00.text = str;
 
 	if(_doc && dom)
 	{
@@ -37,7 +37,7 @@ this.sample_webbrowser_02_onload = function(obj:nexacro.Form,e:nexacro.LoadEvent
 	var arrdomain = domain.split('/');
 	var currentfile = arrdomain.pop();
 	domain = domain.replace(currentfile, "Service/webbrowser.html")
-	this.WebBrowser00.set_url(domain);
+	this.WebBrowser00.url = domain;
 };
 ]]></Script>
   </Form>

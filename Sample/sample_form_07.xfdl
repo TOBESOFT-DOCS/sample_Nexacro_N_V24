@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_07" left="0" top="0" width="600" height="600" titletext="New Form" border="" background="" onsize="Form_onsize" onlayoutchanged="Form_onlayoutchanged" onload="sample_form_07_onload">
     <Layouts>
       <Layout height="600" width="600">
@@ -97,9 +97,9 @@ this.Form_onlayoutchanged = function(obj:nexacro.Form,e:nexacro.LayoutChangeEven
 {
 	trace(this.parent.name);
 	if(e.newlayout == 'default') {
-		this.Grid00.set_formatid("default");
+		this.Grid00.formatid = "default";
 	} else if(e.newlayout == 'Layout0') {
-		this.Grid00.set_formatid("default_00");
+		this.Grid00.formatid = "default_00";
 	}	
 };
 
@@ -107,11 +107,11 @@ this.Form_onlayoutchanged = function(obj:nexacro.Form,e:nexacro.LayoutChangeEven
 this.sample_form_07_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
 	if(this.parent.name == "TEST") {
-		this.Grid00.set_visible(true);
-		this.btnOpen.set_visible(false);
+		this.Grid00.visible = true;
+		this.btnOpen.visible = false;
 	} else {
-		this.Grid00.set_visible(false);
-		this.btnOpen.set_visible(true);
+		this.Grid00.visible = false;
+		this.btnOpen.visible = true;
 	}
 };
 ]]></Script>

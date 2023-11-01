@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_38" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -4581,8 +4581,8 @@ list inquire
 */
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro .ClickEventInfo)
 {
-	obj.set_visible(false);
-	this.div_page.set_visible(true);
+	obj.visible = false;
+	this.div_page.visible = true;
 	
 	/* transaction call */
 	
@@ -4622,7 +4622,7 @@ this.fn_callback = function(sTrId, ErrorCode, ErrorMsg)
 				this.fn_SetStyle();
 				this.fn_SetPageNo();
 				
-				this.div_page.form.stt_0.set_color("red");
+				this.div_page.form.stt_0.color = "red";
 			}
 		}
 	}
@@ -4638,7 +4638,7 @@ this.div_page_stt_onclick = function(obj:Static,  e:nexacro.ClickEventInfo)
 	var iLastNum = iFirstNum + this.gv_iMaxPageNum;
 
 	this.fn_SetStyle();
-	obj.set_color("red");
+	obj.color = "red";
 	
 	this.ds_client.filter("");
 	this.ds_client.filter("ROWNO >= " + iFirstNum+" && ROWNO < " + iLastNum);
@@ -4680,37 +4680,37 @@ this.fn_SetPageNo = function()
 	/* prev button setting */
 	if (this.gv_iStartPageNo < 1)
 	{
-		this.div_page.form.stt_prev.set_visible(false);
+		this.div_page.form.stt_prev.visible = false;
 	} 
 	else 
 	{
-		this.div_page.form.stt_prev.set_visible(true);
+		this.div_page.form.stt_prev.visible = true;
 	}
 
 	/* next button setting */
 	if (this.gv_iServerRowCount < this.gv_iUnitSelRowNo)
 	{
-		this.div_page.form.stt_next.set_visible(false);
+		this.div_page.form.stt_next.visible = false;
 	}
 	else
 	{
-		this.div_page.form.stt_next.set_visible(true);
+		this.div_page.form.stt_next.visible = true;
 	}
 
 	/* page button setting */
 	for (var i = 0; i < this.gv_iMaxPageNum; i++)
 	{
-		this.div_page.form.components["stt_"+i].set_visible(true);
+		this.div_page.form.components["stt_"+i].visible = true;
 		
-		this.div_page.form.components["stt_"+i].set_text(sPage+i+1);
+		this.div_page.form.components["stt_"+i].text = sPage+i+1;
 		
 		if (this.gv_iServerRowCount < (i * this.gv_iMaxPageNum))
 		{
-			this.div_page.form.components["stt_"+i].set_visible(false);
+			this.div_page.form.components["stt_"+i].visible = false;
 		} 
 		else 
 		{
-			this.div_page.form.components["stt_"+i].set_visible(true);
+			this.div_page.form.components["stt_"+i].visible = true;
 		}
 	}	
 }
@@ -4722,7 +4722,7 @@ this.fn_SetStyle = function()
 {
 	for (var i = 0; i < this.gv_iMaxPageNum; i++)
 	{
-		this.div_page.form.components["stt_"+i].set_color("blue");			
+		this.div_page.form.components["stt_"+i].color = "blue";			
 	}	
 }]]></Script>
   </Form>

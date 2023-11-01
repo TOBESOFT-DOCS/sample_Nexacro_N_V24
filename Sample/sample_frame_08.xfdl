@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_frame_08" left="0" top="0" width="1024" height="768" titletext="New Form" onload="sample_frame_08_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -11,25 +11,25 @@
 {
 	if(this.parent.id=="TEST")
 	{
-		this.parent.titlebar.titleicon.set_font("20pt 'Arial'");
-		this.parent.titlebar.titleicon.set_color("pink");
-		this.parent.titlebar.minbutton.set_visible(false);
-		this.parent.titlebar.maxbutton.set_visible(false);
-		this.parent.set_titlebarheight(40);	
+		this.parent.titlebar.titleicon.font = "20pt 'Arial'";
+		this.parent.titlebar.titleicon.color = "pink";
+		this.parent.titlebar.minbutton.visible = false;
+		this.parent.titlebar.maxbutton.visible = false;
+		this.parent.titlebarheight = 40;	
 	}
 	else
 	{
 		var objHFrameset = new HFrameSet();  
 		objHFrameset.init("hframesetNew", 30, 90, 400, 200);
 		this.addChild("hframesetNew", objHFrameset);
-		objHFrameset.set_border("1px solid #999999");
+		objHFrameset.border = "1px solid #999999";
 		objHFrameset.show();
 		
 		var objChildFrame = new ChildFrame();  
 		objChildFrame.init("TEST", 0, 0, 0, 0);
 		objHFrameset.addChild("TEST", objChildFrame);
-		objChildFrame.set_border("1px solid #999999");
-		objChildFrame.set_formurl("Sample::sample_frame_08.xfdl");
+		objChildFrame.border = "1px solid #999999";
+		objChildFrame.formurl = "Sample::sample_frame_08.xfdl";
 		objChildFrame.show();
 	}
 };
@@ -38,7 +38,7 @@ this.sample_frame_08_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
 	if(this.parent.id=="TEST")
 	{
-		this.btnCreate.set_text('Set TitleBar');
+		this.btnCreate.text = 'Set TitleBar';
 	}
 };
 ]]></Script>

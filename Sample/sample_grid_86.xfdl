@@ -33,11 +33,11 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.Grid00_oninput = function(obj:nexacro.Grid,e:nexacro.InputEventInfo)
 {
-	this.TextArea00.set_value("getCurEditType: "+obj.getCurEditType()+"\n"
+	this.TextArea00.value = "getCurEditType: "+obj.getCurEditType()+"\n"
 		+"getEditValue: "+obj.getEditValue()+"\n"
 		+"getEditText: "+obj.getEditText()+"\n"
 		+"getEditingValue: "+obj.getEditingValue()+"\n"
-		+"getEditingText: "+obj.getEditingText());
+		+"getEditingText: "+obj.getEditingText();
 };]]></Script>
     <Objects>
       <Dataset id="Dataset00">

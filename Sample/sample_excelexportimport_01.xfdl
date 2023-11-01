@@ -62,8 +62,8 @@
 {
 	this.exportObj = new ExcelExportObject("Export00", this);
 	
-	this.exportObj.set_exportfilename("ExcelExportFile");
-	this.exportObj.set_exporturl("http://demo.nexacro.com/developer_guide/XExportImport");
+	this.exportObj.exportfilename = "ExcelExportFile";
+	this.exportObj.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
 	
 	this.exportObj.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, "Sheet1!A1");
 	

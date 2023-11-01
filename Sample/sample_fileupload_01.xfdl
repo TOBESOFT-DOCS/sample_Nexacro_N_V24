@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_fileupload_01" left="0" top="0" width="1024" height="768" titletext="New Form" border="" background="">
     <Layouts>
       <Layout height="768" width="1024" stepcount="0">
@@ -38,9 +38,9 @@ this.fn_checklist = function()
 		{
 			filelist += this.fileupload.filelist[i].filename+"\n";
 		}
-		this.TextArea00.set_value(filelist);
+		this.TextArea00.value = filelist;
 	} else {
-		this.TextArea00.set_value("NO SELECTED FILES");
+		this.TextArea00.value = "NO SELECTED FILES";
 	}
 }
 

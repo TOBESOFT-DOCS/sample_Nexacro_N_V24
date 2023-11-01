@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_excelexportimport_02" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -39,8 +39,8 @@
 {
 	this.importObj = new ExcelImportObject("Import00", this);
 	
-	this.importObj.set_importtype(nexacro.ImportTypes.EXCEL);
-	this.importObj.set_importurl("http://demo.nexacro.com/developer_guide/XImport");
+	this.importObj.importtype = nexacro.ImportTypes.EXCEL;
+	this.importObj.importurl = "http://demo.nexacro.com/developer_guide/XImport";
 	
 	this.importObj.addEventHandler("onsuccess", this.Import00_onsuccess, this);
 	this.importObj.addEventHandler("onerror", this.Import00_onerror, this);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_excelexportimport_04" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -184,9 +184,9 @@
 {
 	this.exportObj = new ExcelExportObject("Export00", this);
 
-	this.exportObj.set_exporturl("http://demo.nexacro.com/developer_guide/XExportImport");
-	this.exportObj.set_exportfilename("ExcelExportFile00");
-	this.exportObj.set_exporttype(nexacro.ExportTypes.EXCEL2007);
+	this.exportObj.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
+	this.exportObj.exportfilename = "ExcelExportFile00";
+	this.exportObj.exporttype = nexacro.ExportTypes.EXCEL2007;
 	this.exportObj.clearExportItems(nexacro.ExportItemTypes.GRID);
 
 	this.exportObj.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, "Sheet1!A1" );
@@ -200,9 +200,9 @@ this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	this.exportObj1 = new ExcelExportObject("Export01", this);
 
-	this.exportObj1.set_exporturl("http://demo.nexacro.com/developer_guide/XExportImport");
-	this.exportObj1.set_exportfilename("ExcelExportFile01");
-	this.exportObj1.set_exporttype(nexacro.ExportTypes.EXCEL2007);
+	this.exportObj1.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
+	this.exportObj1.exportfilename = "ExcelExportFile01";
+	this.exportObj1.exporttype = nexacro.ExportTypes.EXCEL2007;
 	this.exportObj1.clearExportItems(nexacro.ExportItemTypes.GRID);
 
 	this.exportObj1.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, "Sheet1!A1" );

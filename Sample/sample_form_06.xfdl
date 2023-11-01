@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_06" left="0" top="0" width="1024" height="768" titletext="New Form" border="" background="" ontimer="Form_ontimer">
     <Layouts>
       <Layout height="768" width="1024" stepcount="0">
@@ -22,9 +22,9 @@ this.Form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
 {
 	if(e.timerid == 1)
 	{
-		this.staticTime.set_text(this.Clock());
+		this.staticTime.text = this.Clock();
 	} else if(e.timerid == 2) {
-		this.staticTime01.set_text(this.Clock());
+		this.staticTime01.text = this.Clock();
 	}
 };
 

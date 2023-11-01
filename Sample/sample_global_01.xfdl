@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_global_01" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -28,11 +28,11 @@ this.fn_hexToDec = function(sHex)
 	var nGreen = parseInt(sHex.substring(2,4),16);
 	var nBlue  = parseInt(sHex.substring(4),16);
 
-	this.Edit01.set_value(nRed);
-	this.Edit02.set_value(nGreen);
-	this.Edit03.set_value(nBlue);
+	this.Edit01.value = nRed;
+	this.Edit02.value = nGreen;
+	this.Edit03.value = nBlue;
 
-	this.set_background("#" + sHex);
+	this.background = "#" + sHex;
 }
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -51,8 +51,8 @@ this.fn_decToHex = function(nRed, nGreen, nBlue)
 	sHexBlue = sHexBlue.length<2?"0"+sHexBlue:sHexBlue;
 	
 	var sHex = sHexRed.toUpperCase() + sHexGreen.toUpperCase() + sHexBlue.toUpperCase();
-    this.Edit07.set_value(sHex);
-	this.set_background("#" + sHex);
+    this.Edit07.value = sHex;
+	this.background = "#" + sHex;
 }]]></Script>
   </Form>
 </FDL>

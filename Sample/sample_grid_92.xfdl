@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_92" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -79,13 +79,13 @@
     <Script type="xscript5.1"><![CDATA[this.Dataset00_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
 {
 	if( e.columnid == "Column0" ){
-		obj.set_enableevent(false);
+		obj.enableevent = false;
 		for(var i=0; i<obj.rowcount; i++)
 		{
 			if( obj.getColumn(e.row,"Column1") == obj.getColumn(i,"Column1"))
 				obj.setColumn(i,e.columnid, e.newvalue);
 		}	
-		obj.set_enableevent(true);
+		obj.enableevent = true;
 	}
 };
 ]]></Script>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_imageviewer_04" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -11,8 +11,8 @@
     <Script type="xscript5.1"><![CDATA[
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.ImageViewer00.set_image("https://dummy/Jack_Black_2007.jpg");
-	this.ImageViewer01.set_image("https://dummy/Jack_Black_2007.jpg");
+	this.ImageViewer00.image = "https://dummy/Jack_Black_2007.jpg";
+	this.ImageViewer01.image = "https://dummy/Jack_Black_2007.jpg";
 };
 
 // https://commons.wikimedia.org/wiki/File:2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg
@@ -20,7 +20,7 @@ this.ImageViewer00_onload = function(obj:nexacro.ImageViewer,e:nexacro.LoadEvent
 {
 	if(obj.imageheight == 0 && obj.imagewidth == 0)
 	{
-		this.ImageViewer00.set_image("https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg/160px-2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg");
+		this.ImageViewer00.image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg/160px-2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg";
 	}
 };
 

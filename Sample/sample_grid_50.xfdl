@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_50" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -53,7 +53,7 @@ this.Dataset00_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DS
 {
 	if(e.columnid == "Column0")
 	{
-		obj.set_enableevent(false);
+		obj.enableevent = false;
 		if(e.newvalue == '1')
 		{
 			obj.setColumn(e.row,"Column0",'Y');
@@ -62,7 +62,7 @@ this.Dataset00_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DS
 			
 			obj.setColumn(e.row,"Column0",'N');  
 		}
-		obj.set_enableevent(true);
+		obj.enableevent = true;
 	}
 };
 ]]></Script>

@@ -101,18 +101,18 @@ this.Grid00_ondragenter = function(obj:nexacro.Grid,e:nexacro.DragEventInfo)
 {
 	if(e.datatype == "file")
 	{
-		this.Grid00.set_opacity(0.5);
+		this.Grid00.opacity = 0.5;
 	}
 };
 
 this.Grid00_ondragleave = function(obj:nexacro.Grid,e:nexacro.DragEventInfo)
 {
-	this.Grid00.set_opacity(1);
+	this.Grid00.opacity = 1;
 };
 
 this.Grid00_ondrop = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
 {
-	this.Grid00.set_opacity(1);
+	this.Grid00.opacity = 1;
 	if(e.datatype == "file")
 	{
 		this.addFileList(e.filelist);
@@ -121,7 +121,7 @@ this.Grid00_ondrop = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.TextArea00.set_value("");
+	this.TextArea00.value = "";
 	this.FileUpTransfer00.upload('http://demo.nexacro.com/developer_guide/17/Service/fileupload.jsp');
 };
 

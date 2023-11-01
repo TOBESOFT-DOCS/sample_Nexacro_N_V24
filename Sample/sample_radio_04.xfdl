@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_radio_04" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -100,15 +100,15 @@
 
 this.setProp = function(strFittocontents, strDirection, nColumncount, nRowcount)
 {
-	this.Radio00.set_fittocontents(strFittocontents);
-	this.Radio00.set_direction(strDirection);
-	this.Radio00.set_columncount(nColumncount);
-	this.Radio00.set_rowcount(nRowcount);
-	this.TextArea00.set_value("fittocontents: "+strFittocontents+"\n"
+	this.Radio00.fittocontents = strFittocontents;
+	this.Radio00.direction = strDirection;
+	this.Radio00.columncount = nColumncount;
+	this.Radio00.rowcount = nRowcount;
+	this.TextArea00.value = "fittocontents: "+strFittocontents+"\n"
 		+"direction: "+strDirection+"\n"
 		+"columncount: "+nColumncount+"\n"
-		+"rowcount: "+nRowcount
-	);
+		+"rowcount: "+nRowcount;
+
 	this.resetScroll();
 }
 ]]></Script>

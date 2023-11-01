@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_20" left="0" top="0" width="1024" height="768" titletext="New Form" border="" lineHeight="">
     <Layouts>
       <Layout height="768" width="1024">
@@ -150,7 +150,7 @@ this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEven
 {
 	var strFormat = e.posttext;
 	
-	this.Grid00.set_formatid(strFormat);
+	this.Grid00.formatid = strFormat;
 };
 ]]></Script>
   </Form>

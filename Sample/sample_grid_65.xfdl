@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_65" width="1280" height="720" titletext="New Form" onload="sample_grid_65_onload" ondragmove="sample_grid_65_ondragmove" ondrop="sample_grid_65_ondrop">
     <Layouts>
       <Layout height="720" width="1280">
@@ -86,12 +86,12 @@ this.Grid00_ondrag = function(obj:nexacro.Grid, e:nexacro.GridDragEventInfo)
 	sTextDragData = obj.getCellValue(e.row, e.cell);
 
 	var cell_rect = obj.getCellRect(e.row, e.cell);
-	this.Static00.set_left(cell_rect.left);
-	this.Static00.set_top(cell_rect.top);
-	this.Static00.set_width(cell_rect.width);
-	this.Static00.set_height(cell_rect.height);
-	this.Static00.set_text(sTextDragData);
-	this.Static00.set_visible(true);
+	this.Static00.left = cell_rect.left;
+	this.Static00.top = cell_rect.top;
+	this.Static00.width = cell_rect.width;
+	this.Static00.height = cell_rect.height;
+	this.Static00.text = sTextDragData;
+	this.Static00.visible = true;
 	return true;
 };
 
@@ -120,13 +120,13 @@ this.DragTextMove = function(obj, e)
 
 this.equal_Obj = function(obj, e)
 {
-	this.Static01.set_visible(true);
+	this.Static01.visible = true;
 	this.Static01.move(e.clientx-10, e.clienty+5);
 };
 
 this.different_Obj = function(obj, e)
 {
-	this.Static01.set_visible(false);
+	this.Static01.visible = false;
 };
 
 
@@ -136,8 +136,8 @@ this.sample_grid_65_ondrop = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
 	{
 		if(e.fromobject != undefined && e.fromobject.name == arr1[i].name)
 		{
-			this.Static00.set_visible(false);
-			this.Static01.set_visible(false);
+			this.Static00.visible = false;
+			this.Static01.visible = false;
 			return false;
 		}
 	}
@@ -146,11 +146,11 @@ this.sample_grid_65_ondrop = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
 	{
 		if(e.fromobject != undefined && e.fromobject.name == arr2[i].name)
 		{
-			e.fromobject.set_value(sTextDragData);
-			this.Static00.set_visible(false);
+			e.fromobject.value = sTextDragData;
+			this.Static00.visible = false;
 		}
 	}
-	this.Static00.set_visible(false);
+	this.Static00.visible = false;
 };
 ]]></Script>
   </Form>

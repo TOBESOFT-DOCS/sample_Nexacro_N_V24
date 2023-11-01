@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_49" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -62,7 +62,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		+"format length: "+formatList.length+"\n"
 		+"format id:"+this.getFormatid(formatList, formatList.length)+"\n"
 		+"current format:"+this.Grid00.formatid;
-	this.TextArea00.set_value(formatStr);
+	this.TextArea00.value = formatStr;
 };
 
 this.getFormatid = function(arr, length)

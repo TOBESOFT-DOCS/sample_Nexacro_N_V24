@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="test3" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -87,7 +87,7 @@ this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo
 {
 	if(e.fromreferenceobject == "[object TreeItemIconControl]" && e.fromreferenceobject.id == "treeitembutton")
 	{
-		this.Dataset00.set_enableevent(false);
+		this.Dataset00.enableevent = false;
 		if(this.Dataset00.getColumn(e.row,"Status") == null)
 		{
 			this.Dataset00.setColumn(e.row,"Status",1);
@@ -112,7 +112,7 @@ this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo
 				}
 			}
 		}
-		this.Dataset00.set_enableevent(true);
+		this.Dataset00.enableevent = true;
 	}
 };]]></Script>
   </Form>

@@ -48,7 +48,7 @@
     </Objects>
     <Script type="xscript5.1"><![CDATA[this.Grid00_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
-	this.WebBrowser00.set_url("https://view.officeapps.live.com/op/embed.aspx?src="+encodeURI(this.Dataset00.getColumn(e.row,0)));
+	this.WebBrowser00.url = "https://view.officeapps.live.com/op/embed.aspx?src="+encodeURI(this.Dataset00.getColumn(e.row,0));
 };
 ]]></Script>
   </Form>

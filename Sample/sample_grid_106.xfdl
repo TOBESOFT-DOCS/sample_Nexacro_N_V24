@@ -57,11 +57,11 @@
     <Script type="xscript5.1"><![CDATA[
 this.Grid00_ondrag = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
 {
-	e.set_userdata(e.row);
+	e.userdata = e.row;
 	var strVal = this.Dataset00.getColumn(e.row, "Column0");
 		strVal += " : " + this.Dataset00.getColumn(e.row, "Column1");
-	this.Static00.set_text(strVal);
-	this.Static00.set_visible(true);
+	this.Static00.text = strVal;
+	this.Static00.visible = true;
 	var nL = obj.getOffsetLeft() + e.clientx;
 	var nT = obj.getOffsetTop() + e.clienty;
 	this.Static00.move(nL, nT);
@@ -76,7 +76,7 @@ this.sample_grid_106_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventI
 
 this.Grid00_ondrop = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
 {
-	this.Static00.set_visible(false);
+	this.Static00.visible = false;
 	var nRow = e.userdata;
 	this.Dataset00.moveRow(nRow, e.row);	
 };

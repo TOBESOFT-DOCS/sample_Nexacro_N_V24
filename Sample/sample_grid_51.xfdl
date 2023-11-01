@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_51" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -115,14 +115,14 @@
     <Script type="xscript5.1"><![CDATA[
 this.Grid01_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
-	this.Grid00.set_treeinitstatus("collapse,all");
+	this.Grid00.treeinitstatus = "collapse,all";
 	
 	var path_Arr = this.findParentArr(this.Grid00, e.row);
 	for(var i =  path_Arr.length -1  ; i > 0 ; i--) // Should be expanded in reverse.
 	{
 		path_Arr[i], this.Grid00.setTreeStatus(this.Grid00.getTreeRow(path_Arr[i]), true);
 	}
-	this.Dataset00.set_rowposition(path_Arr[0]);
+	this.Dataset00.rowposition = path_Arr[0];
 };
 
 this.findParentArr = function (obj, idx)

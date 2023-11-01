@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_47" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -1318,7 +1318,7 @@ this.fn_retrieve = function(bNext)
     var nEnd   = this.fv_nNowPage * this.fv_nPageSize + this.fv_nPageSize;
     this.Dataset00.filter("COL0 >= " + nStrat + " && COL0 <= " + nEnd);		
     this.Dataset01.appendData(this.Dataset00);	
-    this.Dataset01.set_rowposition(this.Dataset01.rowcount - 1);
+    this.Dataset01.rowposition = this.Dataset01.rowcount - 1;
     this.fv_nNowPage++;   	
 }
 

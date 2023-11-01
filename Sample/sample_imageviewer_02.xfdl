@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_imageviewer_02" left="0" top="0" width="1024" height="768" titletext="New Form" onrbuttondown="Form_onrbuttondown">
     <Layouts>
       <Layout height="768" width="1024">
@@ -12,17 +12,17 @@
     <Objects/>
     <Script type="xscript5.1"><![CDATA[this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.imageviewerMain.set_stretch('fixaspectratio');
+	this.imageviewerMain.stretch = 'fixaspectratio';
 };
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.imageviewerMain.set_stretch('fit');
+	this.imageviewerMain.stretch = 'fit';
 };
 
 this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.imageviewerMain.set_stretch('none');
+	this.imageviewerMain.stretch = 'none';
 };
 ]]></Script>
   </Form>

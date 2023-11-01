@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sampla_grid_71" left="0" top="0" width="1024" height="768">
     <Layouts>
       <Layout height="768" width="1024">
@@ -76,10 +76,10 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		}	
 	}
 	
-	this.TextArea00.set_value("No. of selected rows : " + cnt);
+	this.TextArea00.value = "No. of selected rows : " + cnt;
 	
 	if(cnt == 0){
-		this.TextArea00.set_value("There is no selected row " );
+		this.TextArea00.value = "There is no selected row ";
 	}
 	
 };

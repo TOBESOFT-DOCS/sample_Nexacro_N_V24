@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sampla_grid_66" left="0" top="0" width="1024" height="768">
     <Layouts>
       <Layout height="768" width="1024">
@@ -107,9 +107,9 @@ this.getRowType = function(currow)
 this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	trace(this.Dataset00.saveXML("Dataset00", "All"));
-	this.Dataset00.set_updatecontrol(false);
+	this.Dataset00.updatecontrol = false;
 	trace(this.Dataset00.setRowTypeNF(0, 4));
-	this.Dataset00.set_updatecontrol(true);
+	this.Dataset00.updatecontrol = true;
 	trace(this.Dataset00.saveXML("Dataset00", "All"));	
 };
 ]]></Script>

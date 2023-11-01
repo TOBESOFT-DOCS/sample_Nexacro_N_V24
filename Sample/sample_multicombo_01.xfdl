@@ -97,19 +97,19 @@
 {
 	if(e.postvalue)
 	{
-		this.Grid00.set_formatid("multicombo_filter");
+		this.Grid00.formatid = "multicombo_filter";
 		this.setMultiComboFilter();	
 	}
 	else
 	{
-		this.Grid00.set_formatid("default");
+		this.Grid00.formatid = "default";
 		this.dsGrid.filter("");
 	}
 };
 
 this.setMultiComboFilter = function()
 {
-	this.dsCombo.set_enableevent(false);
+	this.dsCombo.enableevent = false;
 	this.dsCombo.deleteAll();
 	for(var i=0, len=this.dsGrid.rowcount; i<len; i++)
 	{
@@ -121,9 +121,9 @@ this.setMultiComboFilter = function()
 			this.dsCombo.setColumn(i, "data", tempvalue);
 		}
 	}
-	//this.dsCombo.set_keystring("S:code");
+	//this.dsCombo.keystring = "S:code";
 
-	this.dsCombo.set_enableevent(true);
+	this.dsCombo.enableevent = true;
 }
 
 this.Grid00_onheadvaluechanged = function(obj:nexacro.Grid,e:nexacro.GridHeadValueChangedEventInfo)

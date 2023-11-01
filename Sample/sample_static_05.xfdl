@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_static_05" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -34,11 +34,11 @@ this.radioLang_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEv
 {
 	trace(e.postindex, e.posttext, e.postvalue);
 	if(e.postvalue == "KOR")	{
-		this.staticName.set_text("1. 이름");
-		this.staticWorkplace.set_text("2. 직장");
+		this.staticName.text = "1. 이름";
+		this.staticWorkplace.text = "2. 직장";
 	} else if(e.postvalue == "ENG")	{
-		this.staticName.set_text("1. First name");
-		this.staticWorkplace.set_text("2. place of work");
+		this.staticName.text = "1. First name";
+		this.staticWorkplace.text = "2. place of work";
 	}
 	this.resetScroll();
 };
@@ -46,11 +46,11 @@ this.radioLang_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEv
 this.checkboxFit_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
 {
 	if(e.postvalue == true)	{
-		this.staticName.set_fittocontents('width');
-		this.staticWorkplace.set_fittocontents('width');
+		this.staticName.fittocontents = 'width';
+		this.staticWorkplace.fittocontents = 'width';
 	} else if(e.postvalue == false)	{
-		this.staticName.set_fittocontents('none');
-		this.staticWorkplace.set_fittocontents('none');
+		this.staticName.fittocontents = 'none';
+		this.staticWorkplace.fittocontents = 'none';
 	}
 	this.resetScroll();
 };

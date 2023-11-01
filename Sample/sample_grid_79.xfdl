@@ -88,7 +88,7 @@
 		var numChildRow = this.Grid00.getTreeChildRow(this.Dataset00.rowposition, i, false);
 		strChildInfo += "Row = "+numChildRow+", RowText = "+this.Grid00.getCellText(numChildRow, 0)+"\n";
 	}
-	this.TextArea00.set_value(strChildInfo);
+	this.TextArea00.value = strChildInfo;
 };
 ]]></Script>
   </Form>

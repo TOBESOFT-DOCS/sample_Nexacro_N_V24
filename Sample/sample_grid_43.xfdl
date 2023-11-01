@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_43" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -90,7 +90,7 @@
     <Script type="xscript5.1"><![CDATA[this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	var sFormatContents = this.Grid00.getCurFormatString();
-	this.Grid01.set_formats("<Formats> "+sFormatContents+" </Formats>");
+	this.Grid01.formats = "<Formats> "+sFormatContents+" </Formats>";
 	
 };
 ]]></Script>

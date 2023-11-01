@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_string_06" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -77,7 +77,7 @@
 		sRtn = "X";	
 	}
 
-    this.Edit01.set_value(sRtn);
+    this.Edit01.value = sRtn;
 };
 
 this.fn_isYYYYMMDD = function(nYY, nMM, nDD) 

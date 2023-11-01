@@ -59,7 +59,7 @@ this.fn_checklength = function(row, cell)
 		length = this.Grid00.getEditingText().length;
 	else if(this.Grid00.getCellText(row, cell))
 		length = this.Grid00.getCellText(row, cell).length;
-	this.Static00.set_text(length + " / "+maxlength);
+	this.Static00.text = length + " / "+maxlength;
 }
 
 this.Grid00_oncellposchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEventInfo)
@@ -69,7 +69,7 @@ this.Grid00_oncellposchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEve
 		maxlength = this.Grid00.getCellProperty("body", e.cell, "textareamaxlength");
 		if(maxlength == -1)
 		{
-			this.Static00.set_visible(false);
+			this.Static00.visible = false;
 		}
 		else
 		{
@@ -79,11 +79,11 @@ this.Grid00_oncellposchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEve
 			
 			this.Static00.move(vL, vT + 1);
 			this.fn_checklength(e.row, e.cell);
-			this.Static00.set_visible(true);		
+			this.Static00.visible = true;		
 		}
 	}
 	else 
-		this.Static00.set_visible(false);
+		this.Static00.visible = false;
 };]]></Script>
   </Form>
 </FDL>

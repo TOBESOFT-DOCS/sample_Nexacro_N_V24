@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_static_08" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -17,29 +17,29 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		var objStatic = new Static();  
 		objStatic.init("Static"+i, 30, 70, 300, 30);				
 		this.addChild("Static"+i, objStatic); 	
-		objStatic.set_border("1px solid darkgray");
-		objStatic.set_padding("0px 0px 0px 5px");
+		objStatic.border = "1px solid darkgray";
+		objStatic.padding = "0px 0px 0px 5px";
 		objStatic.show(); 
 		
 		objStatic.addEventHandler("onclick", this.StaticAll_onclick, this);
-		objStatic.set_text(this.Dataset00.getColumn(i, "Column0"));
+		objStatic.text = this.Dataset00.getColumn(i, "Column0");
 		
 		if(i != 0)
 		{
 			var imgID = "Static"+(i-1)+"_1";
-			objStatic.set_top(imgID+":-1");
+			objStatic.top = imgID+":-1";
 		}
 		
 		var objStatic1 = new Static();  
 		objStatic1.init("Static"+i + "_1", 30, nTop+60, 300, 0, null, null);				
 		this.addChild("Static"+i + "_1", objStatic1); 	
-		objStatic1.set_border("1px solid darkred, 1px solid darkgray, 1px solid darkgray");
-		objStatic1.set_background("yellow");
-		objStatic1.set_wordWrap("char");
+		objStatic1.border = "1px solid darkred, 1px solid darkgray, 1px solid darkgray";
+		objStatic1.background = "yellow";
+		objStatic1.wordWrap = "char";
 		objStatic1.show(); 		
 		
-		objStatic1.set_text(this.Dataset00.getColumn(i, "Column1"));
-		objStatic1.set_top(objStatic.id+":0px");	
+		objStatic1.text = this.Dataset00.getColumn(i, "Column1");
+		objStatic1.top = objStatic.id+":0px";	
 		nTop += 40;
 
 	}
@@ -51,8 +51,8 @@ this.StaticAll_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
 	if(this.preObj != "")
 	{
 		var objID = this.preObj + "_1";
-		this.components[objID].set_fittocontents("none");		
-		this.components[objID].set_height(0);	
+		this.components[objID].fittocontents = "none";		
+		this.components[objID].height = 0;	
 	}
 		
 	if(obj.id == this.preObj)
@@ -64,8 +64,8 @@ this.StaticAll_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
 	else 
 	{
 		var objID1 = obj.id + "_1";
-		this.components[objID1].set_fittocontents("height");
-		this.components[objID1].set_padding("10px 5px");	
+		this.components[objID1].fittocontents = "height";
+		this.components[objID1].padding = "10px 5px";	
 		this.resetScroll();
 	}
 	this.preObj = obj.id;

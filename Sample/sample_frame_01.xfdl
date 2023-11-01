@@ -20,7 +20,7 @@
 this.btnBorder_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	if(this.childframeNew) {
-		this.childframeNew.set_border("1px solid blue");
+		this.childframeNew.border = "1px solid blue";
 	} else {
 		trace("childframeNew undefined");
 	}
@@ -29,11 +29,11 @@ this.btnBorder_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 this.btnDrag_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	if(this.childframeNew.dragmovetype == "normal") {
-		this.childframeNew.set_dragmovetype("none");
-		obj.set_text(obj.text.replace("normal","none"));
+		this.childframeNew.dragmovetype = "none";
+		obj.text = obj.text.replace("normal","none");
 	} else {
-		this.childframeNew.set_dragmovetype("normal");
-		obj.set_text(obj.text.replace("none","normal"));
+		this.childframeNew.dragmovetype = "normal";
+		obj.text = obj.text.replace("none","normal");
 	}
 };
 ]]></Script>

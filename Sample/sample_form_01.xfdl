@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_01" left="0" top="0" width="600" height="600" titletext="New Form" border="" background="" onsize="Form_onsize" onlayoutchanged="Form_onlayoutchanged">
     <Layouts>
       <Layout height="600" width="600">
@@ -21,7 +21,7 @@
 
 this.Form_onlayoutchanged = function(obj:nexacro.Form,e:nexacro.LayoutChangeEventInfo)
 {
-	this.staticLayoutInfo.set_text(e.oldlayout + "->" + e.newlayout + " (" + this.width + "x" + this.height + ")");
+	this.staticLayoutInfo.text = e.oldlayout + "->" + e.newlayout + " (" + this.width + "x" + this.height + ")";
 };
 
 ]]></Script>

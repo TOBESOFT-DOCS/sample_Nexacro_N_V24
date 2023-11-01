@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_frame_02" left="0" top="0" width="1024" height="768" titletext="New Form" onrbuttondown="Form_onrbuttondown" onload="sample_frame_02_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -38,7 +38,7 @@
 	var objHFrameset = new HFrameSet();  
 	objHFrameset.init("hframesetNew", 30, 90, 400, 200);
 	this.addChild("hframesetNew", objHFrameset);
-	objHFrameset.set_border("1px solid #999999");
+	objHFrameset.border = "1px solid #999999";
 	objHFrameset.show();
 };
 
@@ -54,13 +54,13 @@ this.addChildFrame = function(obj, strId:String)
 	var objChildFrame = new ChildFrame();  
 	objChildFrame.init(strId, 0, 0, 0, 0);
 	obj.addChild(strId, objChildFrame);
-	objChildFrame.set_border("1px solid #999999");
+	objChildFrame.border = "1px solid #999999";
 	objChildFrame.show();
 }
 
 this.radioSeparate_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
 {
-	this.hframesetNew.set_separatesize(obj.value);
+	this.hframesetNew.separatesize = obj.value;
 };
 
 

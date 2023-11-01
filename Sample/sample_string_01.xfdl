@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_string_01" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -12,15 +12,15 @@
     <Script type="xscript5.1"><![CDATA[this.TextArea00_oninput = function(obj:nexacro.TextArea,e:nexacro.InputEventInfo)
 {
 	if(obj.value == null || obj.value== '') {
-		this.TextArea01.set_value('');
+		this.TextArea01.value = '';
 	} else {
-		this.TextArea01.set_value(this.engTypeToKor(obj.value));
+		this.TextArea01.value = this.engTypeToKor(obj.value);
 	}
 };
 
 this.TextArea01_oninput = function(obj:nexacro.TextArea,e:nexacro.InputEventInfo)
 {
-	this.TextArea00.set_value(this.korTypeToEng(obj.value));
+	this.TextArea00.value = this.korTypeToEng(obj.value);
 };
 
 // source: http://www.theyt.net/wiki/%ED%95%9C%EC%98%81%ED%83%80%EB%B3%80%ED%99%98%EA%B8%B0

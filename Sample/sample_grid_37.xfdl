@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_37" width="1024" height="768" titletext="New Form" onload="Form_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -276,7 +276,7 @@ this.Grid_onkeydown = function(obj:nexacro.Grid,e:nexacro.KeyEventInfo)
 				}	
 	
 				nRowPos++;
-				objDs.set_rowposition(nRowPos);
+				objDs.rowposition = nRowPos;
 				nIndex = 0;
 			}			
 		}

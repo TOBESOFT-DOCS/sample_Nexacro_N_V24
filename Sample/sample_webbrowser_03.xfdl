@@ -35,7 +35,7 @@ this.sample_webbrowser_03_onload = function(obj:nexacro.Form,e:nexacro.LoadEvent
 	var arrdomain = domain.split('/');
 	var currentfile = arrdomain.pop();
 	domain = domain.replace(currentfile, "Service/webbrowser.html")
-	this.WebBrowser00.set_url(domain);
+	this.WebBrowser00.url = domain;
 };
 ]]></Script>
   </Form>

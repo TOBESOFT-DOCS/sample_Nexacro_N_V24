@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="test" width="1280" height="720" titletext="New Form" scrollbartype="auto fixed" scrolltype="vertical">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -17,7 +17,7 @@
     <Objects/>
     <Script type="xscript5.1"><![CDATA[this.Div00_ondragmove = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
 {
-	this.Div00.form.Div01.set_left(e.clientx);
+	this.Div00.form.Div01.left = e.clientx;
 	this.Div00.form.resetScroll();
 };
 

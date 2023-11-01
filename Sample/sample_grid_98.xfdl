@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_98" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -94,8 +94,8 @@ this.Grid00_onlbuttonup = function(obj:nexacro.Grid,e:nexacro.GridMouseEventInfo
 		
 		var nTot = this.Dataset00.getSum(strColExpr, obj.selectstartrow, Number(obj.selectendrow)+1);
 		
-		this.PopupDiv00.form.Static00.set_text("SUM : "+nTot);
-		this.PopupDiv00.form.Static00.set_fittocontents('width');
+		this.PopupDiv00.form.Static00.text = "SUM : "+nTot;
+		this.PopupDiv00.form.Static00.fittocontents = 'width';
 		this.PopupDiv00.form.resetScroll();
 		this.PopupDiv00.trackPopupByComponent(obj,e.canvasx,e.canvasy);
 		this.nShift = 0;
@@ -104,7 +104,7 @@ this.Grid00_onlbuttonup = function(obj:nexacro.Grid,e:nexacro.GridMouseEventInfo
 
 this.PopupDiv00_oncloseup = function(obj:nexacro.PopupDiv,e:nexacro.EventInfo)
 {
-	obj.form.Static00.set_text("");
+	obj.form.Static00.text = "";
 };
 
 this.PopupDiv00_Static00_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)

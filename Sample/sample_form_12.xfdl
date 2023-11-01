@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_12" width="770" height="540" titletext="New Form">
     <Layouts>
       <Layout height="540" mobileorientation="landscape" width="770">
@@ -28,16 +28,16 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	{
 		if(this.components[i] instanceof nexacro.Edit)
 		{
-			this.components[i].set_background("lavenderblush");
+			this.components[i].background = "lavenderblush";
 		}
 		else if(this.components[i] instanceof nexacro.Combo)
 		{
-			this.components[i].set_background("beige");
+			this.components[i].background = "beige";
 		}
 		else if(this.components[i] instanceof nexacro.Button)
 		{
 			if(this.components[i].id != obj.id)
-				this.components[i].set_background("lightgreen");
+				this.components[i].background = "lightgreen";
 		}
 	}
 };

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_string_10" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -13,7 +13,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	var strchecknumber = this.fn_checkNumber(this.Edit00.value);
 	var strisNumeric = nexacro.isNumeric(this.Edit00.value);
-	this.Edit01.set_value(strchecknumber+', '+strisNumeric);
+	this.Edit01.value = strchecknumber+', '+strisNumeric;
 };
 
 this.fn_checkNumber = function(sNum)

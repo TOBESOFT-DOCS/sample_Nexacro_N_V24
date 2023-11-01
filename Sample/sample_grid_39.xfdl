@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_38" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -89,7 +89,7 @@
     <Script type="xscript5.1"><![CDATA[this.btnData_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	var rIdx;
-	this.dsTest.set_enableevent(false);
+	this.dsTest.enableevent = false;
 	for(var i=0;i<1000000;i++)	{
 		rIdx = this.dsTest.addRow();
 		this.dsTest.setColumn(rIdx, "Column0", i);
@@ -99,12 +99,12 @@
 		this.dsTest.setColumn(rIdx, "Column4", i);
 		this.dsTest.setColumn(rIdx, "Column5", i);
 	}
-	this.dsTest.set_enableevent(true);
+	this.dsTest.enableevent = true;
 };
 
 this.cbType_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
 {
-	this.gridData.set_fastvscrolltype(e.postvalue);
+	this.gridData.fastvscrolltype = e.postvalue;
 };
 ]]></Script>
   </Form>

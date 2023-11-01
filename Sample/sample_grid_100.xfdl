@@ -310,7 +310,7 @@ this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo
 		var nPos = obj.getTreeRow(e.row) * nRowSize;
 		trace(e.row);
 		trace(obj.getTreeRow(e.row));
-		obj.vscrollbar.set_pos(nPos);
+		obj.vscrollbar.pos = nPos;
 	}	
 };
 ]]></Script>

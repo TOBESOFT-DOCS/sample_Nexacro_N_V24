@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_static_07" left="0" top="0" width="760" height="430" ontimer="BarChart_ontimer">
     <Layouts>
-      <Layout>
+      <Layout width="760" height="430">
         <Div id="divChart1" taborder="1" left="18" top="23" height="117" width="422" border="1px solid black">
           <Layouts>
             <Layout>
@@ -80,7 +80,7 @@ this.fn_Chart01 = function ()
 		objValue = this.divChart1.form.components["stValue0"+(i+1)];
 
 		nValue = Math.round(this.ds_Chart01.getColumn(i, "Value")*5.4);
-		objValue.set_text(this.ds_Chart01.getColumn(i, "Value"));
+		objValue.text = this.ds_Chart01.getColumn(i, "Value");
 
 		nLeft = objBar.left;
 		nTop = objBar.top;

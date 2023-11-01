@@ -75,12 +75,12 @@ this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEven
 
 this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
 {
-	this.FileDialog00.set_accept(e.postvalue);
+	this.FileDialog00.accept = e.postvalue;
 };
 
 this.FileDialog00_onclose = function(obj:nexacro.FileDialog,e:nexacro.FileDialogEventInfo)
 {
-	this.TextArea00.set_value("selectfiles: "+e.virtualfiles.length+"\n");
+	this.TextArea00.value = "selectfiles: "+e.virtualfiles.length+"\n";
 	for (var i = 0, len = e.virtualfiles.length, vFile; i < len; i++)
 	{
 		vFile = e.virtualfiles[i];
@@ -100,7 +100,7 @@ this.FileDialog_VirtualFile_onsuccess = function(obj:nexacro.VirtualFile, e:nexa
 			obj.getFileSize();
 			break;
 		case 9:
-			this.TextArea00.set_value(this.TextArea00.value+obj.filename+"("+e.filesize+")\n");
+			this.TextArea00.value = this.TextArea00.value+obj.filename+"("+e.filesize+")\n";
 			obj.close();
 			break;
 	}

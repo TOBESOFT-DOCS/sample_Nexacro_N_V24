@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_59" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -106,7 +106,7 @@
     </Objects>
     <Script type="xscript5.1"><![CDATA[this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
 {
-	this.Grid00.set_fillareatype(e.posttext);
+	this.Grid00.fillareatype = e.posttext;
 };
 
 ]]></Script>

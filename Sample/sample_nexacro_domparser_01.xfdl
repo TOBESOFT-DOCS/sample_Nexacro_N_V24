@@ -93,7 +93,7 @@ this.XHR_onload = function()
 		var objSerializer = new nexacro.XmlSerializer();
 		var strXML = objSerializer.serializeToString(this.responseXML);
 		that.strXML = strXML;
-		that.TextArea00.set_value(strXML);
+		that.TextArea00.value = strXML;
 
 	}
 }
@@ -112,7 +112,7 @@ this.fn_setData = function(strXML)
 	var domCnt = domElement.length;
 	var msg="";
 	
-	this.Dataset00.set_enableevent(false);
+	this.Dataset00.enableevent = false;
 	this.Dataset00.clearData();
 	for(var i=0;i<domCnt;i++)
 	{
@@ -126,7 +126,7 @@ this.fn_setData = function(strXML)
 		this.Dataset00.setColumn(rIdx, 4, domElement.getElementsByTagName("humidity")[0].getAttribute("value")); // humidity  
 		this.Dataset00.setColumn(rIdx, 5, "http://openweathermap.org/img/wn/"+domElement.getElementsByTagName("symbol")[0].getAttribute("var")+".png");
 	}
-	this.Dataset00.set_enableevent(true);
+	this.Dataset00.enableevent = true;
 	this.Grid00.scrollTo(0,0);
 	
 };

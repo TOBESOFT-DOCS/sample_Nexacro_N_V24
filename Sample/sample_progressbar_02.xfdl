@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_progressbar_02_nexacro16" width="1024" height="768" titletext="New Form" ontimer="Form_ontimer">
     <Layouts>
       <Layout height="768" width="1024">
@@ -29,21 +29,21 @@ this.Form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
 		}
 		
 		this.ProgressBar00.stepIt();
-		this.ProgressBar00.set_text(parseInt(varProgressValue00) + " %");
+		this.ProgressBar00.text = parseInt(varProgressValue00) + " %";
 		
 		this.ProgressBar01.stepIt();
-		this.ProgressBar01.set_text(parseInt(varProgressValue01) + " %");
+		this.ProgressBar01.text = parseInt(varProgressValue01) + " %";
 	}
 	
 };
 
 this.btn_reset_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.ProgressBar00.set_pos(0);
-	this.ProgressBar00.set_text("ProgressBar00");
+	this.ProgressBar00.pos = 0;
+	this.ProgressBar00.text = "ProgressBar00";
 	
-	this.ProgressBar01.set_pos(0);
-	this.ProgressBar01.set_text("ProgressBar01");
+	this.ProgressBar01.pos = 0;
+	this.ProgressBar01.text = "ProgressBar01";
 	
 	this.killTimer(0);
 	

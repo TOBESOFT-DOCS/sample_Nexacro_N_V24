@@ -77,15 +77,15 @@ this.fn_drawLine = function(e:nexacro.MouseEventInfo)
 	if(bMouseButtonPressed)
 	{
 		var objGLine = new nexacro.GraphicsLine();
-		objGLine.set_x1(preClientX);
-		objGLine.set_x2(nowClientX);
-		objGLine.set_y1(preClientY);
-		objGLine.set_y2(nowCLientY);
+		objGLine.x1 = preClientX;
+		objGLine.x2 = nowClientX;
+		objGLine.y1 = preClientY;
+		objGLine.y2 = nowCLientY;
 		/*
 		var colorCode = "#"+Math.round(Math.random()*0xffffff).toString(16);
-		objGLine.set_strokepen('1px solid '+colorCode);
+		objGLine.strokepen = '1px solid '+colorCode;
 		*/
-		objGLine.set_strokepen('1px solid red');
+		objGLine.strokepen = '1px solid red';
 		this.Graphics00.addChild( "GraphicsControl_"+nNUm, objGLine );
 		this.Graphics00.redraw();
 		
@@ -118,11 +118,11 @@ this.fn_drawRect = function(e:nexacro.MouseEventInfo)
 			height *= -1;
 		}
  
-		objGRect.set_x(left);
-		objGRect.set_y(top);
-		objGRect.set_width(width);
-		objGRect.set_height(height);
-		objGRect.set_strokepen('1px solid red'); 
+		objGRect.x = left;
+		objGRect.y = top;
+		objGRect.width = width;
+		objGRect.height = height;
+		objGRect.strokepen = '1px solid red'; 
 		if(temprectangle)
 		{
 			this.Graphics00.removeChild(temprectangle);
@@ -158,11 +158,11 @@ this.fn_drawEllipse = function(e:nexacro.MouseEventInfo)
 			height *= -1;
 		}
  
-		objGEllipse.set_x(left+(width/2));
-		objGEllipse.set_y(top+(height/2));
-		objGEllipse.set_width(width);
-		objGEllipse.set_height(height);
-		objGEllipse.set_strokepen('1px solid red'); 
+		objGEllipse.x = left+(width/2);
+		objGEllipse.y = top+(height/2);
+		objGEllipse.width = width;
+		objGEllipse.height = height;
+		objGEllipse.strokepen = '1px solid red'; 
 		if(tempellipse)
 		{
 			this.Graphics00.removeChild(tempellipse);

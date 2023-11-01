@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_static_01" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -55,11 +55,11 @@ this.radioExpr_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEv
 	var browserExpr = "comp.parent.fn_checkBrowser()";
 	var osExpr = "comp.parent.fn_checkOS()";
 	if(obj.value == "Today")
-		this.staticExpr.set_expr(todayExpr);		
+		this.staticExpr.expr = todayExpr;		
 	else if(obj.value == "Browser")
-		this.staticExpr.set_expr(browserExpr);
+		this.staticExpr.expr = browserExpr;
 	else if(obj.value == "OS")
-		this.staticExpr.set_expr(osExpr);	
+		this.staticExpr.expr = osExpr;	
 };
 
 ]]></Script>

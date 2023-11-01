@@ -34,11 +34,11 @@ this.radioLang_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEv
 {
 	trace(e.postindex, e.posttext, e.postvalue);
 	if(e.postvalue == "JAP")	{
-		this.staticName.set_text("1.氏名");
-		this.staticWorkplace.set_text("2.しょくば");
+		this.staticName.text = "1.氏名";
+		this.staticWorkplace.text = "2.しょくば";
 	} else if(e.postvalue == "ENG")	{
-		this.staticName.set_text("1. First name");
-		this.staticWorkplace.set_text("2. place of work");
+		this.staticName.text = "1. First name";
+		this.staticWorkplace.text = "2. place of work";
 	}
 	this.resetScroll();
 };
@@ -46,11 +46,11 @@ this.radioLang_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEv
 this.checkboxFit_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
 {
 	if(e.postvalue == true)	{
-		this.staticName.set_fittocontents('width');
-		this.staticWorkplace.set_fittocontents('width');
+		this.staticName.fittocontents = 'width';
+		this.staticWorkplace.fittocontents = 'width';
 	} else if(e.postvalue == false)	{
-		this.staticName.set_fittocontents('none');
-		this.staticWorkplace.set_fittocontents('none');
+		this.staticName.fittocontents = 'none';
+		this.staticWorkplace.fittocontents = 'none';
 	}
 	this.resetScroll();
 };

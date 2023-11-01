@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_videoplayer_02" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -17,7 +17,7 @@
     <Script type="xscript5.1"><![CDATA[
 this.btn_play_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.VideoPlayer00.set_url("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"); //http://www.mediaelementjs.com/
+	this.VideoPlayer00.url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"; //http://www.mediaelementjs.com/
 	this.VideoPlayer00.play();
 };
 
@@ -33,23 +33,23 @@ this.btn_stop_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.btn_forward_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.VideoPlayer00.set_currenttime(this.VideoPlayer00.currenttime + 2000);
+	this.VideoPlayer00.currenttime = this.VideoPlayer00.currenttime + 2000;
 };
 
 this.btn_rewind_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.VideoPlayer00.set_currenttime(this.VideoPlayer00.currenttime - 2000);
+	this.VideoPlayer00.currenttime = this.VideoPlayer00.currenttime - 2000;
 };
 
 this.chk_mute_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
 {
 	if(e.postvalue)
 	{	
-		this.VideoPlayer00.set_mute(true);
+		this.VideoPlayer00.mute = true;
 	}
 	else
 	{
-		this.VideoPlayer00.set_mute(false);
+		this.VideoPlayer00.mute = false;
 	}	
 };
 
@@ -57,7 +57,7 @@ this.VideoPlayer00_oncurrenttimechanged = function(obj:nexacro.VideoPlayer,e:nex
 {
 	var strPlayTime = nexacro.round(this.VideoPlayer00.currenttime / 1000) + " / " + nexacro.round(this.VideoPlayer00.duration / 1000);
 		
-	this.stt_playtime.set_text(strPlayTime);
+	this.stt_playtime.text = strPlayTime;
 };
 
 this.VideoPlayer00_onplaystatuschanged = function(obj:nexacro.VideoPlayer,e:nexacro.VideoPlayStateChangedEventInfo)
@@ -65,7 +65,7 @@ this.VideoPlayer00_onplaystatuschanged = function(obj:nexacro.VideoPlayer,e:nexa
 	switch(e.newstate)
 	{	
 		case "stop":
-				this.stt_playtime.set_text(" ");
+				this.stt_playtime.text = " ";
 		case "pause":
 		case "play":
 		case "buffer":

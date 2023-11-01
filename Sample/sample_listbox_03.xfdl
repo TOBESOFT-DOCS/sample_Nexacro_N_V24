@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_listbox_01_nexacro16" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -85,7 +85,7 @@ this.btn_selected_record_onclick = function(obj:nexacro.Button,e:nexacro.ClickEv
 	sMsg += "\nNumber of selected record: " + this.ListBox00.getSelectedCount();	
 	
 	// this.alert(sMsg);
-	this.TextArea00.set_value(sMsg);
+	this.TextArea00.value = sMsg;
 	
 };
 

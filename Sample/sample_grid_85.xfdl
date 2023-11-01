@@ -37,7 +37,7 @@
 {
 	var nH = this.Grid00.getRealRowFullSize();
 	//computed style (border-top + border-bottom = 3)
-	this.Grid00.set_height(nH + 3);
+	this.Grid00.height = nH + 3;
 };
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)

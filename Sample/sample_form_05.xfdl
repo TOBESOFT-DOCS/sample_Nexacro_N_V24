@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_05" left="0" top="0" width="1024" height="768" titletext="New Form" border="" background="" onkeydown="Form_onkeydown">
     <Layouts>
       <Layout height="768" width="1024" stepcount="0">
@@ -22,8 +22,8 @@ this.Form_onkeydown = function(obj:nexacro.Form,e:nexacro.KeyEventInfo)
 
 this.btnSubmit_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.edit01.set_value('');
-	this.edit02.set_value('');
+	this.edit01.value = '';
+	this.edit02.value = '';
 };
 
 this.btnSubmit_onkeydown = function(obj:nexacro.Button,e:nexacro.KeyEventInfo)

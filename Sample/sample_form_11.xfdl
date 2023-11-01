@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_11" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -78,7 +78,7 @@
 {
 	for(var i = 0; i < this.binds.length; i++)
 	{
-		this.TextArea00.set_value(this.TextArea00.value+this.binds[i].compid+", "+ this.binds[i].propid+", "+ this.binds[i].datasetid + ", " + this.binds[i].columnid+"\n");
+		this.TextArea00.value = this.TextArea00.value+this.binds[i].compid+", "+ this.binds[i].propid+", "+ this.binds[i].datasetid + ", " + this.binds[i].columnid+"\n";
 	}
 };
 ]]></Script>

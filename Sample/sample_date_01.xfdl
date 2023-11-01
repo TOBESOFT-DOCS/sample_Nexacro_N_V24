@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_date_01" width="1280" height="720" titletext="New Form" locale="en_US" ontimer="sample_date_01_ontimer">
     <Layouts>
       <Layout height="720" width="1280">
@@ -48,7 +48,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	this.session_Endtime = new Date(this.session_time + holding_time);  
 	var millis = this.session_Endtime- this.session_time;
 	var t = this.millisToTime(millis);
-	this.Static00.set_text("It will be logout after " + t[1]+"Minute and "+t[2]+ " Seconds automatically.");     
+	this.Static00.text = "It will be logout after " + t[1]+"Minute and "+t[2]+ " Seconds automatically.";     
 	this.setTimer(100,1000);
 	
 };
@@ -62,10 +62,10 @@ this.sample_date_01_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo
 		var t = this.millisToTime(millis);
 		if(t[2] <= 0 )
 		{
-			this.Static00.set_text("Session is terminated, it is logout automatically. ");
+			this.Static00.text = "Session is terminated, it is logout automatically. ";
 			return;
 		}
-		this.Static00.set_text("It will be logout after " + t[1]+" Minute and "+t[2]+ " Seconds automatically.");
+		this.Static00.text = "It will be logout after " + t[1]+" Minute and "+t[2]+ " Seconds automatically.";
 	}
 };
 

@@ -24,7 +24,7 @@
 
 this.Calendar00_ondayclick = function(obj:nexacro.Calendar,e:nexacro.CalendarDayClickEventInfo)
 {
-	this.Calendar00_00.set_value(e.date);
+	this.Calendar00_00.value = e.date;
 };
 
 this.addZero = function(string) {

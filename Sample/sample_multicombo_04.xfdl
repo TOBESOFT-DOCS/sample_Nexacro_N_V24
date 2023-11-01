@@ -8,19 +8,19 @@
       </Layout>
     </Layouts>
     <Objects/>
-    <Script type="xscript5.1"><![CDATA[// edittype 속성값이 "count"일 때 스타일 설정하기
+    <Script type="xscript5.1"><![CDATA[// Setting styles when the edittype property value is "count"
 
 this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
 {
 	if(e.postvalue)
 	{
-		this.MultiCombo00.set_type('dropdown');
-		this.MultiCombo00.set_cssclass("");	
+		this.MultiCombo00.type = 'dropdown';
+		this.MultiCombo00.cssclass = "";	
 	}
 	else
 	{
-		this.MultiCombo00.set_type('search')
-		this.MultiCombo00.set_cssclass("test");	
+		this.MultiCombo00.type = 'search'
+		this.MultiCombo00.cssclass = "test";	
 	}
 };
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_string_02" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -13,7 +13,7 @@
     <Script type="xscript5.1"><![CDATA[this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	var sRtn = this.fn_checkEmail(this.Edit00.value);
-	this.Edit01.set_value(sRtn);
+	this.Edit01.value = sRtn;
 };
 
 this.fn_checkEmail = function(sValue)

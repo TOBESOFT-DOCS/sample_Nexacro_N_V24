@@ -20,49 +20,49 @@ this.addGraphicsControl = function()
 	//GraphicsRect
 	var objGRect = new nexacro.GraphicsRect();
 	this.Graphics00.addChild( "GraphicsRect00", objGRect );
-	objGRect.set_x(50);
-	objGRect.set_y(50);
-	objGRect.set_width(50);
-	objGRect.set_height(50);
-	objGRect.set_strokepen("1px solid red");
+	objGRect.x = 50;
+	objGRect.y = 50;
+	objGRect.width = 50;
+	objGRect.height = 50;
+	objGRect.strokepen = "1px solid red";
 	
 	// GraphicsEllipse
 	var objGEllipse = new nexacro.GraphicsEllipse();
-	objGEllipse.set_x(150);
-	objGEllipse.set_y(75);
- 	objGEllipse.set_width(50);
- 	objGEllipse.set_height(50);
-	objGEllipse.set_strokepen("1px solid red");	
+	objGEllipse.x = 150;
+	objGEllipse.y = 75;
+ 	objGEllipse.width = 50;
+ 	objGEllipse.height = 50;
+	objGEllipse.strokepen = "1px solid red";	
 	
 	// GraphicsText
 	var objGText = new nexacro.GraphicsText();
-	objGText.set_x(300);
-	objGText.set_y(50);
-	objGText.set_color('red');
-	objGText.set_font('12pt/normal Verdana'); 
- 	objGText.set_text('Ryan');
+	objGText.x = 300;
+	objGText.y = 50;
+	objGText.color = 'red';
+	objGText.font = '12pt/normal Verdana'; 
+ 	objGText.text = 'Ryan';
 	
 	// GraphicsImage
 	var objGImage = new nexacro.GraphicsImage();
-	objGImage.set_x(200);
-	objGImage.set_y(50);	
+	objGImage.x = 200;
+	objGImage.y = 50;	
 	objGImage.setImageLoadEventHandler(this.fn_checkGImage, this);
-	objGImage.set_image("url('imagerc::img_50.png')");		
+	objGImage.image = "url('imagerc::img_50.png')";		
 	
 	// GraphicsLine
 	var objGLine = new nexacro.GraphicsLine();
 
-	objGLine.set_x(50);
-	objGLine.set_y(120);
-	objGLine.set_x2(250);
-	objGLine.set_y2(0);
-	objGLine.set_strokepen('1px solid red');  
+	objGLine.x = 50;
+	objGLine.y = 120;
+	objGLine.x2 = 250;
+	objGLine.y2 = 0;
+	objGLine.strokepen = '1px solid red';  
 	
 	// GraphicsPaths
 	var objGPaths = new nexacro.GraphicsPaths();
-	objGPaths.set_x(50);
-	objGPaths.set_y(120);
-	objGPaths.set_strokepen('1px solid blue');  
+	objGPaths.x = 50;
+	objGPaths.y = 120;
+	objGPaths.strokepen = '1px solid blue';  
 
 	
 	var objGPath = new nexacro.GraphicsPath();	
@@ -85,8 +85,8 @@ this.addGraphicsControl = function()
 this.fn_checkGImage = function()
 {
 	var objGImage = this.Graphics00.getObjectByID("GraphicsImage00");
-	objGImage.set_width(objGImage.imagewidth);
-	objGImage.set_height(objGImage.imageheight);
+	objGImage.width = objGImage.imagewidth;
+	objGImage.height = objGImage.imageheight;
 	// Images are loaded asynchronously and can only be processed by setImageLoadEventHandler.
 	// If you do not know the size seems to have to be processed in this way to handle the actual size.
 	this.Graphics00.redraw();
@@ -95,7 +95,7 @@ this.fn_checkGImage = function()
 this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	var objGRect = this.Graphics00.getObjectByID("GraphicsRect00");
-	objGRect.set_fillstyle("yellow");
+	objGRect.fillstyle = "yellow";
 	objGRect.rotate(10);
 	this.Graphics00.redraw();
 };

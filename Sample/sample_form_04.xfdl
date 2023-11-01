@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_03" left="0" top="0" width="1024" height="768" titletext="New Form" border="" background="">
     <Layouts>
       <Layout height="768" width="1024" stepcount="0">
@@ -16,9 +16,9 @@
     <Script type="xscript5.1"><![CDATA[
 this.btnCount_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.TextArea00.set_value("components.length: "+this.components.length+"\n"
+	this.TextArea00.value = "components.length: "+this.components.length+"\n"
 		+"objects.length: "+this.objects.length+"\n"
-		+"all.length: "+this.all.length);
+		+"all.length: "+this.all.length;
 };
 
 var i=0;
@@ -36,17 +36,17 @@ this.btnHide_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	{
 		tempobj = this.components[j];
 		if(tempobj.visible == true && tempobj != obj)	{
-			tempobj.set_visible(false);
+			tempobj.visible = false;
 		} else {
-			tempobj.set_visible(true);
+			tempobj.visible = true;
 		}
 	}
 	
 	if(obj.text == "Hide Button")
 	{
-		obj.set_text("Show Button");
+		obj.text = "Show Button";
 	} else {
-		obj.set_text("Hide Button");
+		obj.text = "Hide Button";
 	}
 };
 ]]></Script>

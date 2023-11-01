@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_string_08" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -14,7 +14,7 @@
     <Script type="xscript5.1"><![CDATA[
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit01.set_value(this.fn_checkNull(this.Edit00.value));
+	this.Edit01.value = this.fn_checkNull(this.Edit00.value);
 };
 
 this.fn_checkNull = function(sValue)
@@ -46,17 +46,17 @@ this.fn_checkNull = function(sValue)
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit00.set_value(null);
+	this.Edit00.value = null;
 };
 
 this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit00.set_value("");
+	this.Edit00.value = "";
 };
 
 this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit00.set_value(undefined);
+	this.Edit00.value = undefined;
 	trace(this.Edit00.hasOwnProperty('value'));	
 };
 ]]></Script>

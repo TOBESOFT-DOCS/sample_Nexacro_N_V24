@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_application_02" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -36,7 +36,7 @@
     <Script type="xscript5.1"><![CDATA[var bAsync = true;
 this.btnTransaction_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.TextArea00.set_value("");
+	this.TextArea00.value = "";
 	this.fn_addlog("Before Transaction");
 	this.transaction("TEST","FileSample::sample_form_10_file.xml", null, "Dataset00=TEST", null, "fn_test", bAsync);
 	this.fn_addlog("After Transaction");
@@ -54,7 +54,7 @@ this.radioTransaction_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemC
 
 this.fn_addlog = function(strMessage)
 {
-	this.TextArea00.set_value(this.TextArea00.text + strMessage + '\n');
+	this.TextArea00.value = this.TextArea00.text + strMessage + '\n';
 }]]></Script>
   </Form>
 </FDL>

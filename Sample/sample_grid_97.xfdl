@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_97" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -68,7 +68,7 @@
     <Script type="xscript5.1"><![CDATA[
 this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
-	this.Edit00.set_value(obj.getSubCellProperty("body", e.cell, 1, "color"))
+	this.Edit00.value = obj.getSubCellProperty("body", e.cell, 1, "color");
 };
 ]]></Script>
   </Form>

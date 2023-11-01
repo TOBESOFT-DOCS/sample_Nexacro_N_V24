@@ -9,10 +9,10 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.GoogleMap00.set_showzoom(true);
-	this.GoogleMap00.set_apikey(nexacro.getApplication().googleMapAPIKey);	
-	this.GoogleMap00.set_language('ko');
-	this.GoogleMap00.set_region('KR');
+	this.GoogleMap00.showzoom = true;
+	this.GoogleMap00.apikey = nexacro.getApplication().googleMapAPIKey;	
+	this.GoogleMap00.language = 'ko';
+	this.GoogleMap00.region = 'KR';
 	this.GoogleMap00.load(false, 37.243158, 131.869202, 3, 15);
 };
 ]]></Script>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_form_09" left="0" top="0" width="1024" height="768" titletext="New Form" border="" background="" ontimer="Form_ontimer">
     <Layouts>
-      <Layout>
+      <Layout width="1024" height="768">
         <Button id="Button00" taborder="0" text="check list" left="16" top="17" width="104" height="33" onclick="Button00_onclick"/>
         <Button id="Button01" taborder="1" text="check all list" onclick="Button01_onclick" left="130" top="17" width="92" height="33"/>
         <Grid id="Grid00" taborder="2" left="16" top="200" width="544" height="400" binddataset="Dataset00" autosizingtype="col" autofittype="col" cellmovingtype="col" cellsizingtype="col" scrollbartype="" scrolltype="both">
@@ -93,7 +93,7 @@ this.get_com_info = function(obj, bAll, bRecursive)
 {
 	var i;
 	var components = bAll?obj.all:obj.components;
-	this.Dataset00.set_enableevent(false);
+	this.Dataset00.enableevent = false;
 	
 	for( i = 0 ; i < components.length ; i++ )
 	{
@@ -119,7 +119,7 @@ this.get_com_info = function(obj, bAll, bRecursive)
 			}
 		}		 
 	}
-	this.Dataset00.set_enableevent(true);
+	this.Dataset00.enableevent = true;
 };
 
 this.get_url = function(obj, str)

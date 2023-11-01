@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_82" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -52,8 +52,8 @@
     </Objects>
     <Script type="xscript5.1"><![CDATA[this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {	
-	this.TextArea00.set_value(obj.getCellPropertyValue(e.row, e.cell, "displaytype")+"\n"
-		+obj.getCellProperty("body", e.cell, "displaytype"));
+	this.TextArea00.value = obj.getCellPropertyValue(e.row, e.cell, "displaytype")+"\n"
+		+obj.getCellProperty("body", e.cell, "displaytype");
 };]]></Script>
   </Form>
 </FDL>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_global_02" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -14,11 +14,11 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit02.set_value(encodeURI(this.Edit00.value));
+	this.Edit02.value = encodeURI(this.Edit00.value);
 	try	{
-		this.Edit03.set_value(decodeURI(this.Edit01.value));
+		this.Edit03.value = decodeURI(this.Edit01.value);
 	}	catch (e)	{
-		this.Edit03.set_value(e.name+": "+e.message);
+		this.Edit03.value = e.name+": "+e.message;
 	}
 };]]></Script>
   </Form>

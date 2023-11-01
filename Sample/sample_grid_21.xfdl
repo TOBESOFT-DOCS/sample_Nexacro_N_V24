@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_21" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -159,7 +159,7 @@
     <Script type="xscript5.1"><![CDATA[this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
 {
 	//Binding selected dataset
-	this.Grid00.set_binddataset(e.posttext);
+	this.Grid00.binddataset = e.posttext;
 
 	//Creating new format for bound dataset
 	this.Grid00.createFormat();	

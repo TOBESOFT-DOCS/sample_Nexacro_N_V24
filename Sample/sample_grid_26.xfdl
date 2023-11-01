@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_26" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -109,7 +109,7 @@
     <Script type="xscript5.1"><![CDATA[this.btn_suppress_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	//Sorting records
-	this.Dataset00.set_keystring("S:Company+Department");
+	this.Dataset00.keystring = "S:Company+Department";
 
 	//Suppressing cells
 	var retVal = this.Grid00.setCellProperty("body", 2, "suppress", "1");

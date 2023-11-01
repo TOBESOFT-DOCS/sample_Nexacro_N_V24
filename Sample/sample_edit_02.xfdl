@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_edit_02" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -12,7 +12,7 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.edit_input_onkeyup = function(obj:nexacro.Edit,e:nexacro.KeyEventInfo)
 {
-	this.edit_length.set_value(this.edit_input.value.length);
+	this.edit_length.value = this.edit_input.value.length;
 	
 };
 ]]></Script>

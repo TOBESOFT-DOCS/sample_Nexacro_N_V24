@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_string_07" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -30,9 +30,9 @@
     }
 	if (Sum == sComp.substring(12, 13)) 
 	{
-		this.Edit01.set_value(true);
+		this.Edit01.value = true;
 	}	else	{
-		this.Edit01.set_value(false);
+		this.Edit01.value = false;
 	}
 };]]></Script>
   </Form>

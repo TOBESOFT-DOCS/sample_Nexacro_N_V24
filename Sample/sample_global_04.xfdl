@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_global_04" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -16,17 +16,17 @@
 	}
 	else
 	{
-		this.Edit00.set_value(strfn+' is not Function. is '+typeof(this[strfn]));
+		this.Edit00.value = strfn+' is not Function. is '+typeof(this[strfn]);
 	}
 };
 
 this.fn_test = function()
 {
-	this.Edit00.set_value(this.Edit00.value.toString()+' is Function');
+	this.Edit00.value = this.Edit00.value.toString()+' is Function';
 }
 this.Edit00_oneditclick = function(obj:nexacro.Edit,e:nexacro.EditClickEventInfo)
 {
-	this.Edit00.set_value();
+	this.Edit00.value = "";
 };
 ]]></Script>
   </Form>

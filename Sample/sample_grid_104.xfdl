@@ -67,7 +67,7 @@
 this.fn_getMaskString = function(nRow)
 {
 	var nStr = this.Dataset00.getColumn(nRow,"code");
-	this.MaskEdit00.set_value(nStr);
+	this.MaskEdit00.value = nStr;
 	var rtn = this.MaskEdit00.getDisplayText();
 	return rtn;
 };]]></Script>

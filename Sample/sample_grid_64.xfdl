@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_64" width="1280" height="720" titletext="New Form" onload="sample_grid_62_onload" ontimer="sample_grid_62_ontimer">
     <Layouts>
       <Layout height="720" width="1280">
@@ -65,7 +65,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	objGrid.show();
 	
 	var objDs = new Dataset();
-	objDs.set_name("ds_test");
+	objDs.name = "ds_test";
 	objDs.addColumn("no", "string");
 	objDs.addColumn("name", "string");
 	objDs.addColumn("age", "int");
@@ -79,7 +79,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		objDs.setColumn(nRow, "age", (10 + i));
 	}
 
-	objGrid.set_binddataset(objDs);
+	objGrid.binddataset = objDs;
 
 	objGrid.appendContentsRow("head");
 	objGrid.appendContentsRow("body");

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_radio_02" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -65,15 +65,15 @@ this.btnChange_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	if(this.radioDirection.value != null)
 	{
-		this.radioValue.set_direction(this.radioDirection.value);
+		this.radioValue.direction = this.radioDirection.value;
 	}
 	if(this.editRowCount.value != null)
 	{
-		this.radioValue.set_rowcount(this.editRowCount.value);
+		this.radioValue.rowcount = this.editRowCount.value;
 	}
 	if(this.editColumnCount.value != null)
 	{
-		this.radioValue.set_columncount(this.editColumnCount.value);
+		this.radioValue.columncount = this.editColumnCount.value;
 	}
 };
 ]]></Script>

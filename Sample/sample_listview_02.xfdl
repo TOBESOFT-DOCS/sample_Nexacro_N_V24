@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_listview_01" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -88,18 +88,18 @@
     <Script type="xscript5.1"><![CDATA[
 this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
 {
-	this.Div00.set_width(e.postvalue);
+	this.Div00.width = e.postvalue;
 	if(e.postvalue == 640)
 	{
-		this.Div00.form.ListView00.set_formatid("format00");
+		this.Div00.form.ListView00.formatid = "format00";
 	}
 	else if(e.postvalue == 180)
 	{
-		this.Div00.form.ListView00.set_formatid("format01");
+		this.Div00.form.ListView00.formatid = "format01";
 	}
 	else
 	{
-		this.Div00.form.ListView00.set_formatid("default");
+		this.Div00.form.ListView00.formatid = "default";
 	}
 };
 ]]></Script>

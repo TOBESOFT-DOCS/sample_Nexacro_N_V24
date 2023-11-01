@@ -18,12 +18,12 @@
     <Script type="xscript5.1"><![CDATA[
 this.btn320_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Div00.form.imageviewerMain.set_image("imagerc::320px-Bob_Dylan_1978.jpg");
+	this.Div00.form.imageviewerMain.image = "imagerc::320px-Bob_Dylan_1978.jpg";
 };
 
 this.btn160_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Div00.form.imageviewerMain.set_image("imagerc::160px-Bob_Dylan_1978.jpg");
+	this.Div00.form.imageviewerMain.image = "imagerc::160px-Bob_Dylan_1978.jpg";
 };
 
 this.Div00_imageviewerMain_onload = function(obj:nexacro.ImageViewer,e:nexacro.LoadEventInfo)
@@ -31,8 +31,8 @@ this.Div00_imageviewerMain_onload = function(obj:nexacro.ImageViewer,e:nexacro.L
 	var nHeight = obj.imageheight;
 	var nWidth = obj.imagewidth;
 	
-	obj.set_height(nHeight);
-	obj.set_width(nWidth);
+	obj.height = nHeight;
+	obj.width = nWidth;
 	
 	this.Div00.form.resetScroll();
 };

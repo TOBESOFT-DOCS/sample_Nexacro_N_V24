@@ -117,42 +117,42 @@ var firstmenuList = new Object;
 		titleComment = "예제 애플리케이션은 넥사크로 N " + g_strAppInfo.appVersion + " 버전에서 테스트했습니다." 
 			+ "\n" 
 			+ "웹브라우저에 따라 가이드 문서에 표시된 이미지와 실행된 예제가 다르게 보일 수 있습니다.";
-		//this.Div00.form.Static00.set_cssclass("Sta_TF_AllMenuTit");
-		this.Div00.form.Static01.set_cssclass("Sta_TF_menubar");
-		this.Div00.form.Static02.set_cssclass("Sta_TF_menubar");
-		this.Div03.form.Static02.set_cssclass("Sta_TF_menubar");			
+		//this.Div00.form.Static00.cssclass = "Sta_TF_AllMenuTit";
+		this.Div00.form.Static01.cssclass = "Sta_TF_menubar";
+		this.Div00.form.Static02.cssclass = "Sta_TF_menubar";
+		this.Div03.form.Static02.cssclass = "Sta_TF_menubar";			
 	} else if(strLang == "ja") {
 		titleComment = "サンプル・アプリケーションは、Nexacro Nの" + g_strAppInfo.appVersion + "バージョンで動作確認しました。" 
 			+ "\n" 
 			+ "Webブラウザに応じてガイド文書に表示された画像と実行されたサンプルが異なって表示される場合があります。";
 			
-		//this.Div00.form.Static00.set_cssclass("Sta_TF_AllMenuTit_ja");
-		this.Div00.form.Static01.set_cssclass("Sta_TF_menubar_ja");
-		this.Div00.form.Static02.set_cssclass("Sta_TF_menubar_ja");
-		this.Div03.form.Static02.set_cssclass("Sta_TF_menubar_ja");
-		this.Div00.form.btn_Menu.set_tooltiptext("メニュー");
+		//this.Div00.form.Static00.cssclass = "Sta_TF_AllMenuTit_ja";
+		this.Div00.form.Static01.cssclass = "Sta_TF_menubar_ja";
+		this.Div00.form.Static02.cssclass = "Sta_TF_menubar_ja";
+		this.Div03.form.Static02.cssclass = "Sta_TF_menubar_ja";
+		this.Div00.form.btn_Menu.tooltiptext = "メニュー";
 	} else if(strLang == "zh") {
 		titleComment = "示例应用程序已在"+ g_strAppInfo.appVersion +"Nxacro N版本中进行过测试。"
 			+ "\n" 
 			+ "根据Web浏览器的不同，指南文档中显示的图像与执行的示例可能看起来有所不同。";
 			
-		//this.Div00.form.Static00.set_cssclass("Sta_TF_AllMenuTit_zh");
-		this.Div00.form.Static01.set_cssclass("Sta_TF_menubar_zh");
-		this.Div00.form.Static02.set_cssclass("Sta_TF_menubar_zh");
-		this.Div03.form.Static02.set_cssclass("Sta_TF_menubar_zh");
-		this.Div00.form.btn_Menu.set_tooltiptext("菜单");
+		//this.Div00.form.Static00.cssclass = "Sta_TF_AllMenuTit_zh";
+		this.Div00.form.Static01.cssclass = "Sta_TF_menubar_zh";
+		this.Div00.form.Static02.cssclass = "Sta_TF_menubar_zh";
+		this.Div03.form.Static02.cssclass = "Sta_TF_menubar_zh";
+		this.Div00.form.btn_Menu.tooltiptext = "菜单";
 	} else if(strLang == "en") {
 		titleComment = "The example application was tested on the Nexaro N " + g_strAppInfo.appVersion + " version."
 			+ "\n" 
 			+ "Depending on your web browser, the images shown in the guide documentation and the executed examples may look different.";
 			
-		//this.Div00.form.Static00.set_cssclass("Sta_TF_AllMenuTit_zh");
-		this.Div00.form.Static01.set_cssclass("Sta_TF_menubar");
-		this.Div00.form.Static02.set_cssclass("Sta_TF_menubar");
-		this.Div03.form.Static02.set_cssclass("Sta_TF_menubar");
-		this.Div00.form.btn_Menu.set_tooltiptext("Full menu");
+		//this.Div00.form.Static00.cssclass = "Sta_TF_AllMenuTit_zh";
+		this.Div00.form.Static01.cssclass = "Sta_TF_menubar";
+		this.Div00.form.Static02.cssclass = "Sta_TF_menubar";
+		this.Div03.form.Static02.cssclass = "Sta_TF_menubar";
+		this.Div00.form.btn_Menu.tooltiptext = "Full menu";
 	}
-	this.Div00.form.Static00.set_text(titleComment);
+	this.Div00.form.Static00.text = titleComment;
 }
 
 /*
@@ -167,15 +167,15 @@ this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubj
 	strSampleFile = strargSampleFile;
 	var strServiceURL = g_strAppInfo.serverURL + "/N/Service/viewsource.jsp?fileName=";
 	if(strLang == "ko" || strLang == "en") {
-		this.Div04.form.Static01.set_cssclass("Sta_TF_manualTitle");
+		this.Div04.form.Static01.cssclass = "Sta_TF_manualTitle";
 	} else if(strLang == "ja") {
-		this.Div04.form.Static01.set_cssclass("Sta_TF_manualTitle_ja");
+		this.Div04.form.Static01.cssclass = "Sta_TF_manualTitle_ja";
 	} else if(strLang == "zh") {
-		this.Div04.form.Static01.set_cssclass("Sta_TF_manualTitle_zh");
+		this.Div04.form.Static01.cssclass = "Sta_TF_manualTitle_zh";
 	}
-	this.Div04.form.Static01.set_text(strCategory + " > " + strSubject);
+	this.Div04.form.Static01.text = strCategory + " > " + strSubject;
 	
-	this.Div01.form.WebBrowser00.set_url(g_strAppInfo.docsURL + strDocID);
+	this.Div01.form.WebBrowser00.url = g_strAppInfo.docsURL + strDocID;
 	//일본어 분기되는 소스 처리
 	if(strLang == "ja") {
 		switch(strSampleFile) {
@@ -187,7 +187,7 @@ this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubj
 			break;			
 		}
 	}
-	this.Div03.form.Tab00.tp_description.set_url("Sample::" + strSampleFile + ".xfdl");
+	this.Div03.form.Tab00.tp_description.url = "Sample::" + strSampleFile + ".xfdl";
 
 	//this.ds_source.clear();
 	/*this.transaction( "tr"
@@ -345,121 +345,121 @@ this.setCompLabel = function()
 {
 	if(strLang == "ja") {
 		//menu
-		this.pdiv_Menu.form.Static00.set_text("テーマ別サンプル一覧"); // 주제별 예제 보기
-		this.pdiv_Menu.form.Static01.set_text("基本コンポーネント"); // 기본 컴포넌트
-		this.pdiv_Menu.form.Static02.set_text("Gridコンポーネント"); // Grid 컴포넌트
-		this.pdiv_Menu.form.Static03.set_text("コンテナオブジェクト"); // 컨테이너  오브젝트
-		this.pdiv_Menu.form.Static04.set_text("App、Form、Frame"); // App, Form, Frame
-		this.pdiv_Menu.form.Static99.set_text("全コンポーネント"); // 전체 컴포넌트
-		this.pdiv_Menu.form.Static06.set_text("Dataset、Excel"); // Dataset, Excel
-		this.pdiv_Menu.form.Static07.set_text("スクリプト"); // 스크립트
-		this.pdiv_Menu.form.Static05.set_text("nexacroオブジェクト"); // nexacro objects
-		this.pdiv_Menu.form.Static08.set_text("Animationコンポーネント"); // Animation 컴포넌트
-		this.pdiv_Menu.form.Static09.set_text("キーワード別サンプル一覧"); // 키워드별 예제 보기
+		this.pdiv_Menu.form.Static00.text = "テーマ別サンプル一覧"; // 주제별 예제 보기
+		this.pdiv_Menu.form.Static01.text = "基本コンポーネント"; // 기본 컴포넌트
+		this.pdiv_Menu.form.Static02.text = "Gridコンポーネント"; // Grid 컴포넌트
+		this.pdiv_Menu.form.Static03.text = "コンテナオブジェクト"; // 컨테이너  오브젝트
+		this.pdiv_Menu.form.Static04.text = "App、Form、Frame"; // App, Form, Frame
+		this.pdiv_Menu.form.Static99.text = "全コンポーネント"; // 전체 컴포넌트
+		this.pdiv_Menu.form.Static06.text = "Dataset、Excel"; // Dataset, Excel
+		this.pdiv_Menu.form.Static07.text = "スクリプト"; // 스크립트
+		this.pdiv_Menu.form.Static05.text = "nexacroオブジェクト"; // nexacro objects
+		this.pdiv_Menu.form.Static08.text = "Animationコンポーネント"; // Animation 컴포넌트
+		this.pdiv_Menu.form.Static09.text = "キーワード別サンプル一覧"; // 키워드별 예제 보기
 
-		this.pdiv_Menu.form.Static00.set_cssclass("Sta_TF_AllMenuTit_ja");
-		this.pdiv_Menu.form.Static01.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static02.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static03.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static04.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static99.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static06.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static07.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static05.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static08.set_cssclass("Sta_TF_mapTitle_ja");
-		this.pdiv_Menu.form.Static09.set_cssclass("Sta_TF_AllMenuTit_ja");
+		this.pdiv_Menu.form.Static00.cssclass = "Sta_TF_AllMenuTit_ja";
+		this.pdiv_Menu.form.Static01.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static02.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static03.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static04.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static99.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static06.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static07.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static05.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static08.cssclass = "Sta_TF_mapTitle_ja";
+		this.pdiv_Menu.form.Static09.cssclass = "Sta_TF_AllMenuTit_ja";
 
 		//tab
-		this.Div03.form.Tab00.tp_description.set_text("サンプル"); // 예제
-		this.Div03.form.Tab00.tp_source.set_text("ソース"); // 소스
-		this.Div03.form.Tab00.tp_script.set_text("スクリプト"); // 스크립트
+		this.Div03.form.Tab00.tp_description.text = "サンプル"; // 예제
+		this.Div03.form.Tab00.tp_source.text = "ソース"; // 소스
+		this.Div03.form.Tab00.tp_script.text = "スクリプト"; // 스크립트
 		// &gt; 실행중인 예제 새로고침 (클릭하면 예제 화면에 입력한 값을 초기화합니다)
-		this.Div03.form.Static02.set_text("実行中のサンプルを更新（クリックするとサンプル画面で入力した値を初期化します。）"); 
-		this.Div03.form.Static02.set_width("600px");
+		this.Div03.form.Static02.text = "実行中のサンプルを更新（クリックするとサンプル画面で入力した値を初期化します。）"; 
+		this.Div03.form.Static02.width = "600px";
 		
 		//top menu
-		//this.Div00.form.Static01.set_text("サンプルプロジェクトのソースコードをダウンロード"); // &gt; 예제 프로젝트 소스코드 내려받기
-		//this.Div00.form.Static02.set_text("開発ガイド全文書一覧"); // &gt; 개발 가이드 전체 문서 보기
-		this.Div00.form.Static01.set_visible(false);
-		this.Div00.form.Static02.set_visible(false);
+		//this.Div00.form.Static01.text = "サンプルプロジェクトのソースコードをダウンロード"; // &gt; 예제 프로젝트 소스코드 내려받기
+		//this.Div00.form.Static02.text = "開発ガイド全文書一覧"; // &gt; 개발 가이드 전체 문서 보기
+		this.Div00.form.Static01.visible = false;
+		this.Div00.form.Static02.visible = false;
 	} else if(strLang == "zh") {
 		//menu
-		this.pdiv_Menu.form.Static00.set_text("按主题查看示例"); // 주제별 예제 보기
-		this.pdiv_Menu.form.Static01.set_text("基本组件"); // 기본 컴포넌트
-		this.pdiv_Menu.form.Static02.set_text("Grid 组件"); // Grid 컴포넌트
-		this.pdiv_Menu.form.Static03.set_text("容器对象"); // 컨테이너  오브젝트
-		this.pdiv_Menu.form.Static04.set_text("App、Form、Frame"); // App, Form, Frame
-		this.pdiv_Menu.form.Static99.set_text("所有组件"); // 전체 컴포넌트
-		this.pdiv_Menu.form.Static06.set_text("Dataset、Excel"); // Dataset, Excel
-		this.pdiv_Menu.form.Static07.set_text("脚本"); // 스크립트
-		this.pdiv_Menu.form.Static05.set_text("nexacro对象"); // nexacro objects
-		this.pdiv_Menu.form.Static08.set_text("Animation组件"); // Animation 컴포넌트
-		this.pdiv_Menu.form.Static09.set_text("按关键字查看示例"); // 키워드별 예제 보기
+		this.pdiv_Menu.form.Static00.text = "按主题查看示例"; // 주제별 예제 보기
+		this.pdiv_Menu.form.Static01.text = "基本组件"; // 기본 컴포넌트
+		this.pdiv_Menu.form.Static02.text = "Grid 组件"; // Grid 컴포넌트
+		this.pdiv_Menu.form.Static03.text = "容器对象"; // 컨테이너  오브젝트
+		this.pdiv_Menu.form.Static04.text = "App、Form、Frame"; // App, Form, Frame
+		this.pdiv_Menu.form.Static99.text = "所有组件"; // 전체 컴포넌트
+		this.pdiv_Menu.form.Static06.text = "Dataset、Excel"; // Dataset, Excel
+		this.pdiv_Menu.form.Static07.text = "脚本"; // 스크립트
+		this.pdiv_Menu.form.Static05.text = "nexacro对象"; // nexacro objects
+		this.pdiv_Menu.form.Static08.text = "Animation组件"; // Animation 컴포넌트
+		this.pdiv_Menu.form.Static09.text = "按关键字查看示例"; // 키워드별 예제 보기
 
-		this.pdiv_Menu.form.Static00.set_cssclass("Sta_TF_AllMenuTit_zh");
-		this.pdiv_Menu.form.Static01.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static02.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static03.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static04.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static99.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static06.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static07.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static05.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static08.set_cssclass("Sta_TF_mapTitle_zh");
-		this.pdiv_Menu.form.Static09.set_cssclass("Sta_TF_AllMenuTit_zh");
+		this.pdiv_Menu.form.Static00.cssclass = "Sta_TF_AllMenuTit_zh";
+		this.pdiv_Menu.form.Static01.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static02.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static03.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static04.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static99.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static06.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static07.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static05.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static08.cssclass = "Sta_TF_mapTitle_zh";
+		this.pdiv_Menu.form.Static09.cssclass = "Sta_TF_AllMenuTit_zh";
 
 		//tab
-		this.Div03.form.Tab00.tp_description.set_text("示例"); // 예제
-		this.Div03.form.Tab00.tp_source.set_text("源代码"); // 소스
-		this.Div03.form.Tab00.tp_script.set_text("脚本"); // 스크립트
+		this.Div03.form.Tab00.tp_description.text = "示例"; // 예제
+		this.Div03.form.Tab00.tp_source.text = "源代码"; // 소스
+		this.Div03.form.Tab00.tp_script.text = "脚本"; // 스크립트
 		// &gt; 실행중인 예제 새로고침 (클릭하면 예제 화면에 입력한 값을 초기화합니다)
-		this.Div03.form.Static02.set_text("更新正在运行的样本（点击后，将样本画面手动输入的值初始化。）");
-		this.Div03.form.Static02.set_width("600px");
+		this.Div03.form.Static02.text = "更新正在运行的样本（点击后，将样本画面手动输入的值初始化。）";
+		this.Div03.form.Static02.width = "600px";
 		
 		//top menu
-		this.Div00.form.Static01.set_text("下载示例项目源代码"); // &gt; 예제 프로젝트 소스코드 내려받기
-		this.Div00.form.Static02.set_text("查看开发指南全部文档"); // &gt; 개발 가이드 전체 문서 보기
-		//this.Div00.form.Static01.set_visible(false);
-		//this.Div00.form.Static02.set_visible(false);
+		this.Div00.form.Static01.text = "下载示例项目源代码"; // &gt; 예제 프로젝트 소스코드 내려받기
+		this.Div00.form.Static02.text = "查看开发指南全部文档"; // &gt; 개발 가이드 전체 문서 보기
+		//this.Div00.form.Static01.visible = false;
+		//this.Div00.form.Static02.visible = false;
 	} else if(strLang == "en") {
 		//menu
-		this.pdiv_Menu.form.Static00.set_text("View examples by topic"); // 주제별 예제 보기
-		this.pdiv_Menu.form.Static01.set_text("Basic Components"); // 기본 컴포넌트
-		this.pdiv_Menu.form.Static02.set_text("Grid Components"); // Grid 컴포넌트
-		this.pdiv_Menu.form.Static03.set_text("Container Components"); // 컨테이너  오브젝트
-		this.pdiv_Menu.form.Static04.set_text("App、Form、Frame"); // App, Form, Frame
-		this.pdiv_Menu.form.Static99.set_text("All Components"); // 전체 컴포넌트
-		this.pdiv_Menu.form.Static06.set_text("Dataset、Excel"); // Dataset, Excel
-		this.pdiv_Menu.form.Static07.set_text("Scripts"); // 스크립트
-		this.pdiv_Menu.form.Static05.set_text("nexacro Objects"); // nexacro objects
-		this.pdiv_Menu.form.Static08.set_text("Animation Components"); // Animation 컴포넌트
-		this.pdiv_Menu.form.Static09.set_text("View examples by keyword"); // 키워드별 예제 보기
+		this.pdiv_Menu.form.Static00.text = "View examples by topic"; // 주제별 예제 보기
+		this.pdiv_Menu.form.Static01.text = "Basic Components"; // 기본 컴포넌트
+		this.pdiv_Menu.form.Static02.text = "Grid Components"; // Grid 컴포넌트
+		this.pdiv_Menu.form.Static03.text = "Container Components"; // 컨테이너  오브젝트
+		this.pdiv_Menu.form.Static04.text = "App、Form、Frame"; // App, Form, Frame
+		this.pdiv_Menu.form.Static99.text = "All Components"; // 전체 컴포넌트
+		this.pdiv_Menu.form.Static06.text = "Dataset、Excel"; // Dataset, Excel
+		this.pdiv_Menu.form.Static07.text = "Scripts"; // 스크립트
+		this.pdiv_Menu.form.Static05.text = "nexacro Objects"; // nexacro objects
+		this.pdiv_Menu.form.Static08.text = "Animation Components"; // Animation 컴포넌트
+		this.pdiv_Menu.form.Static09.text = "View examples by keyword"; // 키워드별 예제 보기
 
-		this.pdiv_Menu.form.Static00.set_cssclass("Sta_TF_AllMenuTit");
-		this.pdiv_Menu.form.Static01.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static02.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static03.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static04.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static99.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static06.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static07.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static05.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static08.set_cssclass("Sta_TF_mapTitle");
-		this.pdiv_Menu.form.Static09.set_cssclass("Sta_TF_AllMenuTit");
+		this.pdiv_Menu.form.Static00.cssclass = "Sta_TF_AllMenuTit";
+		this.pdiv_Menu.form.Static01.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static02.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static03.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static04.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static99.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static06.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static07.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static05.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static08.cssclass = "Sta_TF_mapTitle";
+		this.pdiv_Menu.form.Static09.cssclass = "Sta_TF_AllMenuTit";
 
 		//tab
-		this.Div03.form.Tab00.tp_description.set_text("Example"); // 예제
-		this.Div03.form.Tab00.tp_source.set_text("Source"); // 소스
-		this.Div03.form.Tab00.tp_script.set_text("Script"); // 스크립트
+		this.Div03.form.Tab00.tp_description.text = "Example"; // 예제
+		this.Div03.form.Tab00.tp_source.text = "Source"; // 소스
+		this.Div03.form.Tab00.tp_script.text = "Script"; // 스크립트
 		// &gt; 실행중인 예제 새로고침 (클릭하면 예제 화면에 입력한 값을 초기화합니다)
-		this.Div03.form.Static02.set_text("Refresh running example (click to reset values entered in the example screen)");
-		this.Div03.form.Static02.set_width("600px");
+		this.Div03.form.Static02.text = "Refresh running example (click to reset values entered in the example screen)";
+		this.Div03.form.Static02.width = "600px";
 		
 		//top menu
-		this.Div00.form.Static01.set_text("Get the example project source code"); // &gt; 예제 프로젝트 소스코드 내려받기
-		this.Div00.form.Static02.set_text("View the full development guide documentation"); // &gt; 개발 가이드 전체 문서 보기
-		//this.Div00.form.Static01.set_visible(false);
-		//this.Div00.form.Static02.set_visible(false);
+		this.Div00.form.Static01.text = "Get the example project source code"; // &gt; 예제 프로젝트 소스코드 내려받기
+		this.Div00.form.Static02.text = "View the full development guide documentation"; // &gt; 개발 가이드 전체 문서 보기
+		//this.Div00.form.Static01.visible = false;
+		//this.Div00.form.Static02.visible = false;
 	}	
 }
 
@@ -518,7 +518,7 @@ this.stc_FirstMenu_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInf
 this.btn_Menu_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
 {
 	this.pdiv_Menu.trackPopupByComponent(obj, 0, obj.getOffsetHeight()+1);
-	this.pdiv_Menu.form.Div00.set_width(this.pdiv_Menu.getOffsetWidth()-this.pdiv_Menu.form.Div00.left);
+	this.pdiv_Menu.form.Div00.width = this.pdiv_Menu.getOffsetWidth()-this.pdiv_Menu.form.Div00.left;
 	this.pdiv_Menu.form.Div00.form.resetScroll();
 	obj.toggleSelectStatus();
 }
@@ -565,13 +565,13 @@ this.fnMakeMenu = function(search_subject, bKeyword)
 		objFirstMenu.init("stc_" + search_subject, nLeft, nTop, nWidth, nTHeight, null, null);
 		this.pdiv_Menu.form.Div00.addChild("stc_" + search_subject, objFirstMenu);
 		if(strLang == "ko") {
-			objFirstMenu.set_cssclass("Sta_TF_AllMenuTit");
+			objFirstMenu.cssclass = "Sta_TF_AllMenuTit";
 		} else if(strLang == "ja") {
-			objFirstMenu.set_cssclass("Sta_TF_AllMenuTit_ja");
+			objFirstMenu.cssclass = "Sta_TF_AllMenuTit_ja";
 		} else if(strLang == "zh") {
-			objFirstMenu.set_cssclass("Sta_TF_AllMenuTit_zh");
+			objFirstMenu.cssclass = "Sta_TF_AllMenuTit_zh";
 		}
-		objFirstMenu.set_text("Keyword: "+search_subject);
+		objFirstMenu.text = "Keyword: "+search_subject;
 		objFirstMenu.show();
 		nTop += nTHeight + 3;
 		menuList.push("stc_" + search_subject);		
@@ -598,24 +598,24 @@ this.fnMakeMenu = function(search_subject, bKeyword)
 			}
 			if(objFirstMenu && search_subject==0)
 			{
-				objFirstMenu.set_text((firstmenuList[objFirstMenu.text]?"> ":"+ ")+objFirstMenu.text+" ("+nFirstCount+")");
+				objFirstMenu.text = (firstmenuList[objFirstMenu.text]?"> ":"+ ")+objFirstMenu.text+" ("+nFirstCount+")";
 				nFirstCount = 0;
 			}
 			objFirstMenu = new Static();
 			objFirstMenu.init("stc_" + objmenuList.getColumn(i, strSubjectCol), nLeft, nTop, nWidth, nTHeight, null, null);
 			this.pdiv_Menu.form.Div00.addChild("stc_" + objmenuList.getColumn(i, strSubjectCol), objFirstMenu);
 			if(strLang == "ko" || strLang == "en") {
-				objFirstMenu.set_cssclass("Sta_TF_AllMenuTit");
+				objFirstMenu.cssclass = "Sta_TF_AllMenuTit";
 			} else if(strLang == "ja") {
-				objFirstMenu.set_cssclass("Sta_TF_AllMenuTit_ja");
+				objFirstMenu.cssclass = "Sta_TF_AllMenuTit_ja";
 			} else if(strLang == "zh") {
-				objFirstMenu.set_cssclass("Sta_TF_AllMenuTit_zh");
+				objFirstMenu.cssclass = "Sta_TF_AllMenuTit_zh";
 			}
-			objFirstMenu.set_text(objmenuList.getColumn(i, strSubjectCol));
+			objFirstMenu.text = objmenuList.getColumn(i, strSubjectCol);
 			
 			if(search_subject==0)
 			{
-				objFirstMenu.set_cursor("hand");
+				objFirstMenu.cursor = "hand";
 				objFirstMenu.category = objmenuList.getColumn(i, "category");
 				objFirstMenu.addEventHandler("onclick", this.stc_FirstMenu_onclick, this);			
 			}
@@ -635,13 +635,13 @@ this.fnMakeMenu = function(search_subject, bKeyword)
 				objMenu.init("stc_" + objmenuList.getColumn(i, "id_sample"), nLeft+19, nTop, nWidth-19, nHeight, null, null);
 				this.pdiv_Menu.form.Div00.addChild("stc_" + objmenuList.getColumn(i, "id_sample"), objMenu);
 				if(strLang == "ko" || strLang == "en") {
-					objMenu.set_cssclass("Sta_TF_mapTitle");
+					objMenu.cssclass = "Sta_TF_mapTitle";
 				} else if(strLang == "ja") {
-					objMenu.set_cssclass("Sta_TF_mapTitle_ja");
+					objMenu.cssclass = "Sta_TF_mapTitle_ja";
 				}
-				objMenu.set_text(objmenuList.getColumn(i, strSubjectCol));
-				objMenu.set_tooltiptext(objmenuList.getColumn(i, strSubjectCol));
-				objMenu.set_cursor("hand");
+				objMenu.text = objmenuList.getColumn(i, strSubjectCol);
+				objMenu.tooltiptext = objmenuList.getColumn(i, strSubjectCol);
+				objMenu.cursor = "hand";
 				objMenu.menu_id = objmenuList.getColumn(i, "id_sample");
 				objMenu.addEventHandler("onclick", this.stc_Menu_onclick, this);
 				objMenu.show();
@@ -651,7 +651,7 @@ this.fnMakeMenu = function(search_subject, bKeyword)
 			nFirstCount++;
 			if(search_subject==0 && objmenuList.getRowCount()==i+1)
 			{
-				objFirstMenu.set_text((firstmenuList[objFirstMenu.text]?"> ":"+ ")+objFirstMenu.text+" ("+nFirstCount+")");
+				objFirstMenu.text = (firstmenuList[objFirstMenu.text]?"> ":"+ ")+objFirstMenu.text+" ("+nFirstCount+")";
 			}
 		}
 	}
@@ -715,13 +715,13 @@ this.fnMakeKeywordList = function()
             aRtn[aRtn.length] = vDist;            
         }
     }
-	this.ds_keyword.set_enableevent(false);
+	this.ds_keyword.enableevent = false;
 	for(var i=0;i<aRtn.length;i++)
 	{
 		var nRow = this.ds_keyword.addRow();
 		this.ds_keyword.setColumn(nRow,"keyword", aRtn[i]);
 	}
-	this.ds_keyword.set_enableevent(true);
+	this.ds_keyword.enableevent = true;
 };
 
 /*
@@ -765,8 +765,8 @@ this.pdiv_Menu_Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.Item
  */
 this.Div03_Static02_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
 {
-	this.Div03.form.Tab00.tp_description.set_url("");
-	this.Div03.form.Tab00.tp_description.set_url("Sample::" + strSampleFile + ".xfdl");	
+	this.Div03.form.Tab00.tp_description.url = "";
+	this.Div03.form.Tab00.tp_description.url = "Sample::" + strSampleFile + ".xfdl";	
 };
 
 this.Div00_Static02_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_div_05" width="1280" height="720" titletext="New Form" onvscroll="N403418_onvscroll">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -21,16 +21,16 @@
 this.Div00_onvscroll = function(obj:nexacro.Div,e:nexacro.ScrollEventInfo)
 {
 	if( e.pos > 0 ) {
-		this.Div00.form.Button00.set_visible(true);
-		this.Div00.form.Button00.set_top(nexacro.toNumber(nTop)+ nexacro.toNumber(e.pos));
+		this.Div00.form.Button00.visible = true;
+		this.Div00.form.Button00.top = nexacro.toNumber(nTop)+ nexacro.toNumber(e.pos);
 	} else {
-		this.Div00.form.Button00.set_visible(false);
+		this.Div00.form.Button00.visible = false;
 	}
 };
 
 this.Div00_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Div00.form.vscrollbar.set_pos(0);
+	this.Div00.form.vscrollbar.pos = 0;
 };
 ]]></Script>
     <Objects/>

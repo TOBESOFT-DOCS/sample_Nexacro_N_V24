@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_excelexportimport_03" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -143,14 +143,14 @@
 {
 	this.exportObj = new ExcelExportObject("Export00", this);
 	
-	this.exportObj.set_exportfilename("ExcelExportFile");
-	this.exportObj.set_exporttype(nexacro.ExportTypes.EXCEL2007);
-	this.exportObj.set_exporturl("http://demo.nexacro.com/developer_guide/XExportImport");
+	this.exportObj.exportfilename = "ExcelExportFile";
+	this.exportObj.exporttype = nexacro.ExportTypes.EXCEL2007;
+	this.exportObj.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
 	
 	this.exportObj.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, "Sheet1!A1");
 	
 	var objExportItem = this.exportObj.getExportItem(nexacro.ExportItemTypes.GRID, 0);
-	objExportItem.set_exportimage("image");	
+	objExportItem.exportimage = "image";	
 	
 	this.exportObj.setExportItem(nexacro.ExportItemTypes.GRID, 0, objExportItem);
 

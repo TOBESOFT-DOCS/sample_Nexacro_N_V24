@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_90" width="1280" height="720" titletext="New Form" onload="ColumnResize_onload">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -71,7 +71,7 @@
             <Col id="Column0">ABCDEFGHIJK</Col>
             <Col id="Column1">AB</Col>
             <Col id="Column2">ABC</Col>
-            <Col id="Column3"></Col>
+            <Col id="Column3"/>
           </Row>
         </Rows>
       </Dataset>
@@ -88,7 +88,7 @@
 			sMaxText = this.Dataset00.getColumn(i, e.col);
 		}
 	}
-	this.staTemp.set_text(sMaxText);
+	this.staTemp.text = sMaxText;
 	this.resetScroll();
 	this.Grid00.setFormatColProperty(e.col, "size", this.staTemp.getOffsetWidth()+10);
 };

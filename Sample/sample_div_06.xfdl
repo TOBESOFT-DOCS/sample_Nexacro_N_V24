@@ -41,8 +41,8 @@ this.Div_ondrag = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
 
 this.fn_makeDragObj = function (obj)
 {	
-	this.divMove.set_background(obj.background);
-	this.divMove.set_visible(true);
+	this.divMove.background = obj.background;
+	this.divMove.visible = true;
 };
 
 this.form_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
@@ -52,7 +52,7 @@ this.form_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
 		
 this.form_ondrop = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
 {
-	this.divMove.set_visible(false);
+	this.divMove.visible = false;
 	this.fv_objFrom = e.userdata;
 	this.fv_objTo = e.fromobject.parent;							
 	if (this.fv_objTo != "[object Div]") 

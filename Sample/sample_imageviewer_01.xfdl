@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_imageviewer_01" left="0" top="0" width="1024" height="768" titletext="New Form" onrbuttondown="Form_onrbuttondown">
     <Layouts>
       <Layout height="768" width="1024">
@@ -12,14 +12,14 @@
     <Script type="xscript5.1"><![CDATA[
 this.btn320_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.imageviewerMain.set_image("imagerc::320px-Bob_Dylan_1978.jpg");
+	this.imageviewerMain.image = "imagerc::320px-Bob_Dylan_1978.jpg";
 };
 
 
 
 this.btn160_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.imageviewerMain.set_image("imagerc::160px-Bob_Dylan_1978.jpg");
+	this.imageviewerMain.image = "imagerc::160px-Bob_Dylan_1978.jpg";
 };
 ]]></Script>
   </Form>
