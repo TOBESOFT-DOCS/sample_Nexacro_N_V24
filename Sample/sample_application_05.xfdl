@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_application_05" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -13,12 +13,12 @@
 	var arrCookie = window.document.cookie;
 	arrCookie = arrCookie.split(";");
 	var arrTempCookie;
-	this.TextArea00.set_value("");
+	this.TextArea00.value = "";
 	for(var i=0; i<arrCookie.length; i++)
 	{
 		arrTempCookie = arrCookie[i].split("=");
-		this.TextArea00.set_value(this.TextArea00.value 
-			+ ( arrTempCookie[0].trim() + " : " + arrTempCookie[1] ) + "\n");
+		this.TextArea00.value = this.TextArea00.value 
+			+ ( arrTempCookie[0].trim() + " : " + arrTempCookie[1] ) + "\n";
 	}  
 };
 ]]></Script>

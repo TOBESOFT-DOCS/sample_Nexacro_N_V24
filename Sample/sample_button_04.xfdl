@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_button_03_nexacro16" width="1024" height="768" titletext="New Form" background="">
     <Layouts>
       <Layout height="768" width="1024">
@@ -18,19 +18,19 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.btnIcon_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	obj.set_iconPosition(this.editIconPosition.value);
-	//obj.set_textPadding("20px");
-	obj.set_textPadding(this.editTextPaddingTop.value+"px " 
+	obj.iconPosition = this.editIconPosition.value;
+	//obj.textPadding = "20px";
+	obj.textPadding = this.editTextPaddingTop.value+"px " 
 		+this.editTextPaddingRight.value+"px "
 		+this.editTextPaddingBottom.value+"px " 
-		+this.editTextPaddingLeft.value+"px");
+		+this.editTextPaddingLeft.value+"px";
 };
 
 this.editTextPadding_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
 {
 	if(!nexacro.isNumeric(obj.value))
 	{
-		obj.set_value(0);
+		obj.value = 0;
 	}
 };
 ]]></Script>

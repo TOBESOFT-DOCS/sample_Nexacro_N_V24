@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_animation_02" left="0" top="0" width="1024" height="768" titletext="New Form" onload="sample_animation_02_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -15,8 +15,8 @@
     var aniObj = new nexacro.Animation("Ani00", this);
     this.addChild("Ani00", aniObj);
     
-    this.Ani00.set_easing("linear");
-	this.Ani00.set_duration("5000");
+    this.Ani00.easing = "linear";
+	this.Ani00.duration = "5000";
 	
     this.Ani00.addTarget("AniItem00", this.Static00, "text:100");
 	this.Ani00.setEventHandler("onrun", this.Ani00_onrun, this);
@@ -33,12 +33,12 @@ this.btnPlay_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.btnInit_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Static00.set_text(0);
+	this.Static00.text = 0;
 };
 
 this.Ani00_onrun = function(obj:nexacro.Animation,e:nexacro.AnimationEventInfo)
 {
-	this.Static00.set_text(nexacro.round(this.Static00.text));
+	this.Static00.text = nexacro.round(this.Static00.text);
 };]]></Script>
   </Form>
 </FDL>

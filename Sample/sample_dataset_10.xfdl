@@ -210,8 +210,8 @@
 			localeOption["numeric"] = Boolean(this.Combo_numeric.value);
 			
 		var strKeyString = "S:Column0,O:Column0["+this.Combo_localeCode.value+"]"+JSON.stringify(localeOption);
-		this.Dataset00.set_keystring(strKeyString);
-		this.Edit00.set_value(strKeyString);
+		this.Dataset00.keystring = strKeyString;
+		this.Edit00.value = strKeyString;
 	}
 };
 ]]></Script>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_dataset_07" width="1280" height="720" titletext="New Form" locale="en_US" onload="sample_dataset_03_onload">
     <Layouts>
       <Layout height="720" width="1280">
@@ -56,9 +56,9 @@
 		{
 			this.fn_addvalue("index:"+i+" getOrgColumn: "+this.Dataset00.getOrgColumn(i,0));
 			this.fn_addvalue("index:"+i+" getColumn: "+this.Dataset00.getColumn(i,0));
-			this.Dataset00.set_updatecontrol(false);
+			this.Dataset00.updatecontrol = false;
 			this.Dataset00.setRowType(i,Dataset.ROWTYPE_NORMAL);
-			this.Dataset00.set_updatecontrol(true);
+			this.Dataset00.updatecontrol = true;
 			this.fn_addvalue("index:"+i+" ROWTYPE_NORMAL_getOrgColumn: "+this.Dataset00.getOrgColumn(i,0));	
 		}
 	}
@@ -68,9 +68,9 @@ this.fn_addvalue = function(str:String)
 {
 	if(this.TextArea00.value)
 	{
-		this.TextArea00.set_value(this.TextArea00.value+"\n"+str);
+		this.TextArea00.value = this.TextArea00.value+"\n"+str;
 	} else {
-		this.TextArea00.set_value(str);
+		this.TextArea00.value = str;
 	}
 }
 

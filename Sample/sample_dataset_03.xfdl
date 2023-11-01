@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_dataset_03" width="1280" height="720" titletext="New Form" locale="en_US" onload="sample_dataset_03_onload">
     <Layouts>
       <Layout height="720" width="1280">
@@ -75,18 +75,18 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		strText += " type = " + objColInfo.type;
 		strText += "\n";
 	}
-	this.TextArea00.set_value(strText);
+	this.TextArea00.value = strText;
 };
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	var objColInfo = this.Dataset00.getColumnInfo(this.Spin00.value);
-	objColInfo.set_type(this.Combo00.value);
+	objColInfo.type = this.Combo00.value;
 };
 
 this.sample_dataset_03_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
-	this.Spin00.set_max(this.Dataset00.getColCount()-1);
+	this.Spin00.max = this.Dataset00.getColCount()-1;
 };
 ]]></Script>
   </Form>

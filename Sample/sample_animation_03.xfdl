@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_animation_03" left="0" top="0" width="1024" height="768" titletext="New Form" onload="sample_animation_03_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -56,13 +56,13 @@ this.initAnimation = function(sId, sEasing, objButton)
 		var aniObj = new nexacro.Animation(sId, this);
 		this.addChild(sId, aniObj);
 		this.all[sId].addTarget("AniItem00", objButton, "left:300");		
-		this.all[sId].set_direction("alternate");		
-		this.all[sId].set_duration(3000);
-		this.all[sId].set_direction("alternate");
-		this.all[sId].set_loop(true);	
+		this.all[sId].direction = "alternate";		
+		this.all[sId].duration = 3000;
+		this.all[sId].direction = "alternate";
+		this.all[sId].loop = true;	
 	}
-	this.all[sId].set_easing(sEasing);
-	objButton.set_text(sEasing);
+	this.all[sId].easing = sEasing;
+	objButton.text = sEasing;
 }
 
 this.btnPlay_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)

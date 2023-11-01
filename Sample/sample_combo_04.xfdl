@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_combo_04_nexacro16" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -39,16 +39,16 @@ this.Radio00_onitemchanged = function(obj:Radio,e:ItemChangeEventInfo)
 	switch(e.postindex)
 	{
 		case 0:	/* DROPDOWN */
-			this.Combo00.set_type("dropdown");
+			this.Combo00.type = "dropdown";
 			break;
 		case 1:	/* SEARCH */
-			this.Combo00.set_type("search");
+			this.Combo00.type = "search";
 			break;
 		case 2:	/* FILTER */
-			this.Combo00.set_type("filter");
+			this.Combo00.type = "filter";
 			break;
 		case 3: /* FILTERLIKE: */
-			this.Combo00.set_type("filterlike");
+			this.Combo00.type = "filterlike";
 			break;
 		default:
 			trace("UNKNOWN TYPE");	

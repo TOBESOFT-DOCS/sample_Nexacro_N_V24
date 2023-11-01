@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_checkbox_03" width="1280" height="720" titletext="New Form" onbindingvaluechanged="sample_checkbox_03_onbindingvaluechanged">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -36,7 +36,7 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.sample_checkbox_03_onbindingvaluechanged = function(obj:nexacro.Form,e:nexacro.BindingValueChangedEventInfo)
 {
-	this.TextArea00.set_value("CheckBox00: "+this.CheckBox00.isChecked()+" / "+this.CheckBox00.value);
+	this.TextArea00.value = "CheckBox00: "+this.CheckBox00.isChecked()+" / "+this.CheckBox00.value;
 	this.TextArea00.insertText("\nCheckBox01: "+this.CheckBox01.isChecked()+" / "+this.CheckBox01.value);
 	this.TextArea00.insertText("\nCheckBox02: "+this.CheckBox02.isChecked()+" / "+this.CheckBox02.value);
 };

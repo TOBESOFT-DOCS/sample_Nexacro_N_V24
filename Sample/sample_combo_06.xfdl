@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_combo_06" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -29,14 +29,14 @@
 {
 	if(e.col!=0)
 	{
-		this.Grid00.set_visible(false);
+		this.Grid00.visible = false;
 		this.fn_comboEdit_set();
 	}
 };
 
 this.Combo00_ondropdown = function(obj:nexacro.Combo,e:nexacro.EventInfo)
 {
-	this.Grid00.set_visible(true);
+	this.Grid00.visible = true;
 	return false;
 };
 
@@ -52,7 +52,7 @@ this.fn_comboEdit_set = function()
 			
 		}
 	}	
-	this.Combo00.set_text(str_txt.substr(0, str_txt.length-1));
+	this.Combo00.text = str_txt.substr(0, str_txt.length-1);
 };
 ]]></Script>
     <Objects>

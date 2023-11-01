@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_combo_10" width="1280" height="720" titletext="New Form" onload="sample_combo_10_onload">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
@@ -41,18 +41,18 @@
     <Script type="xscript5.1"><![CDATA[
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Combo00.set_buttonsize("40 20");
+	this.Combo00.buttonsize = "40 20";
 };
 
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Combo00.set_buttonsize(0);
+	this.Combo00.buttonsize = 0;
 };
 
 this.sample_combo_10_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
-	this.Combo00.dropbutton.set_background("cornflowerblue");
+	this.Combo00.dropbutton.background = "cornflowerblue";
 };
 ]]></Script>
   </Form>

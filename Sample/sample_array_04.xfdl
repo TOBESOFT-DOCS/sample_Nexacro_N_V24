@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_array_04" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -27,7 +27,7 @@
     {
         sRtn += arrValue[i] + "\n";
     }	
-	this.TextArea00.set_value(sRtn);
+	this.TextArea00.value = sRtn;
 };
 ]]></Script>
   </Form>

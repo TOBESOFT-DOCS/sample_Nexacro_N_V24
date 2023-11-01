@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_animation_04" left="0" top="0" width="1024" height="768" titletext="New Form" onload="sample_animation_04_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -16,8 +16,8 @@
     this.addChild("Ani00", aniObj00);
     this.Ani00.addTarget("AniItem00", this.Button00, "left:300");
 	this.Ani00.setEventHandler("oncomplete", this.Ani00_oncomplete, this);
-	this.Ani00.set_loop(true);
-	this.Ani00.set_loopcount(2);
+	this.Ani00.loop = true;
+	this.Ani00.loopcount = 2;
 	
     var aniObj01 = new nexacro.Animation("Ani01", this);
     this.addChild("Ani01", aniObj01);
@@ -31,8 +31,8 @@ this.btnPlay_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.btnInit_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Button00.set_left(20);
-	this.Button01.set_left(20);
+	this.Button00.left = 20;
+	this.Button01.left = 20;
 };
 
 this.Ani00_oncomplete = function(obj:nexacro.Animation,e:nexacro.AnimationEventInfo)

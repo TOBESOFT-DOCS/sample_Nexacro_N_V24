@@ -13,12 +13,12 @@
 	var monthtext;
 	if(e.fromreferenceobject.id.includes("yearitem")) {
 		yeartext = e.fromreferenceobject.text;
-		this.Calendar00_00.set_value(yeartext);
+		this.Calendar00_00.value = yeartext;
 	}
 	if(e.fromreferenceobject.id.includes("monthitem")) {
 		yeartext = this.Calendar00.datepicker.head.yearstatic.text;
 		monthtext = e.fromreferenceobject.text;
-		this.Calendar00_00.set_value(yeartext+this.addZero(monthtext));
+		this.Calendar00_00.value = yeartext+this.addZero(monthtext);
 	}
 };
 

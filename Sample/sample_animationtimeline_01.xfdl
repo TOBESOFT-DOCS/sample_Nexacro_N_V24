@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_animationtimeline_01" left="0" top="0" width="1024" height="768" titletext="New Form" onload="sample_animationtimeline_01_onload">
     <Layouts>
       <Layout height="768" width="1024">
@@ -34,8 +34,8 @@ this.btnPlay_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.btnInit_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Button00.set_left(20);
-	this.Button01.set_left(20);
+	this.Button00.left = 20;
+	this.Button01.left = 20;
 };
 ]]></Script>
   </Form>

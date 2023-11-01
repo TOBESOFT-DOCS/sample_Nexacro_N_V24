@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_button_05" width="1024" height="768" titletext="New Form" background="">
     <Layouts>
       <Layout height="768" width="1024">
@@ -10,10 +10,10 @@
     <Script type="xscript5.1"><![CDATA[
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Static00.set_text('SPACE OR ENTER KEY');
+	this.Static00.text = 'SPACE OR ENTER KEY';
 	if(e.button!='none')
 	{
-		this.Static00.set_text('CLICK');
+		this.Static00.text = 'CLICK';
 	}
 };]]></Script>
     <Objects/>

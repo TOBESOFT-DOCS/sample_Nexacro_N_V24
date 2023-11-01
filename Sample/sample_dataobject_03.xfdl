@@ -56,7 +56,7 @@ this.DataObject00_onsuccess = function(obj:nexacro.DataObject,e:nexacro.DataObje
     else if(e.statuscode > 200)
     {
         e.preventDefault();
-		this.TextArea00.set_value(obj.getResponse());
+		this.TextArea00.value = obj.getResponse();
     }
 };
 
@@ -81,22 +81,22 @@ this.DataObject00_onload = function(obj:nexacro.DataObject,e:nexacro.DataObjectL
 		for(var key in objData)
 		{
 			var objColinfo = new ColumnInfo();
-			objColinfo.set_type("String");
-			objColinfo.set_datapath("@."+key);
+			objColinfo.type = "String";
+			objColinfo.datapath = "@."+key;
 			this.Dataset00.addColumnInfo(key, objColinfo);
 		}
-		this.Dataset00.set_binddataobject(obj.id);
-		this.Dataset00.set_dataobjectpath(strDataobjectpath);
-		this.Grid00.set_binddataset(this.Dataset00.name);
+		this.Dataset00.binddataobject = obj.id;
+		this.Dataset00.dataobjectpath = strDataobjectpath;
+		this.Grid00.binddataset = this.Dataset00.name;
 		this.Grid00.createFormat();
-		this.TextArea00.set_value("");
+		this.TextArea00.value = "";
 	}
 };
 
 this.DataObject00_onerror = function(obj:nexacro.DataObject,e:nexacro.DataObjectErrorEventInfo)
 {
 	trace(e.statuscode +":"+e.errormsg);
-	this.TextArea00.set_value(e.statuscode +":"+e.errormsg);
+	this.TextArea00.value = e.statuscode +":"+e.errormsg;
 };
 ]]></Script>
   </Form>

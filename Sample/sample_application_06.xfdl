@@ -33,9 +33,9 @@ this.check_active_form = function()
 	var objApp = nexacro.getApplication(); 	
 	var objForm = objApp.getActiveForm();
 	
-	this.Edit00.set_value(objForm.name);
-	this.Edit01.set_value(objForm.titletext);
-	this.Edit02.set_value(this.getFocus().parent.name);
+	this.Edit00.value = objForm.name;
+	this.Edit01.value = objForm.titletext;
+	this.Edit02.value = this.getFocus().parent.name;
 }
 ]]></Script>
   </Form>

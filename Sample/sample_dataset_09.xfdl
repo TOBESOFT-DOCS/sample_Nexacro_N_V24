@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_dataset_09" width="1280" height="720" titletext="New Form" locale="en_US" onload="sample_dataset_03_onload">
     <Layouts>
       <Layout height="720" width="1280">
@@ -86,7 +86,7 @@
 		temp_str += "getSum: "+this.Dataset00.getSum("Column1", nStartIdx, nEndIdx)+"\n";
 		temp_str += "getCount: "+this.Dataset00.getCount("Column1", nStartIdx, nEndIdx);
 	}
-	this.TextArea00.set_value(temp_str);
+	this.TextArea00.value = temp_str;
 };
 ]]></Script>
   </Form>

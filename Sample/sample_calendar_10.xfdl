@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_calendar_10" width="590" height="300" titletext="New Form">
     <Layouts>
       <Layout height="300" mobileorientation="landscape" width="590">
@@ -12,15 +12,15 @@
 	var nWeek = obj.getDayOfWeek();
 	if(nWeek == 5)
 	{
-		this.Calendar01.set_value (this.AddDateOffset(e.postvalue, 3));
+		this.Calendar01.value = this.AddDateOffset(e.postvalue, 3);
 	}
 	else if(nWeek == 6)
 	{
-		this.Calendar01.set_value (this.AddDateOffset(e.postvalue, 2));
+		this.Calendar01.value = this.AddDateOffset(e.postvalue, 2);
 	}
 	else 
 	{
-		this.Calendar01.set_value (this.AddDateOffset(e.postvalue, 1));
+		this.Calendar01.value = this.AddDateOffset(e.postvalue, 1);
 	}
 	this.setFocus(true, false);
 };

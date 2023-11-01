@@ -91,7 +91,7 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
 {
-	this.Combo00.set_type(e.postvalue);
+	this.Combo00.type = e.postvalue;
 };
 ]]></Script>
     <Objects/>

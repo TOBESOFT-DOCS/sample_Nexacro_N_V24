@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_calendar_05" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -24,10 +24,9 @@
 	// var nWeekS = new Date(dDate.addDate(7 * (parseInt(this.editWeek.value)-1)));
 	dDate.addDate(7 * (parseInt(this.editWeek.value)-1));
 	
-	this.calWeek.set_value(dDate.getFullYear()
+	this.calWeek.value = dDate.getFullYear()
 		+(dDate.getMonth()+1).toString().padLeft(2, "0")
-		+dDate.getDate().toString().padLeft(2, "0")
-	);
+		+dDate.getDate().toString().padLeft(2, "0");
 }]]></Script>
     <Objects/>
   </Form>

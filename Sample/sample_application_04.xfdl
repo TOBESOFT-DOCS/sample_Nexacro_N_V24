@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_application_04" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -12,12 +12,12 @@
     <Objects/>
     <Script type="xscript5.1"><![CDATA[this.btnSet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit00.set_value(nexacro.setPrivateProfile('TEST', this.editSet.value))
+	this.Edit00.value = nexacro.setPrivateProfile('TEST', this.editSet.value);
 };
 
 this.btnGet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.Edit00.set_value(nexacro.getPrivateProfile('TEST'))
+	this.Edit00.value = nexacro.getPrivateProfile('TEST');
 };
 ]]></Script>
   </Form>

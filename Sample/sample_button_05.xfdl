@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_button_05" width="1024" height="768" titletext="New Form" background="">
     <Layouts>
       <Layout height="768" width="1024">
@@ -11,8 +11,8 @@
     <Script type="xscript5.1"><![CDATA[
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.TextArea00.set_value(this.checkList(obj));
-	this.TextArea01.set_value(this.checkList(e));
+	this.TextArea00.value = this.checkList(obj);
+	this.TextArea01.value = this.checkList(e);
 };
 
 this.checkList = function(obj)

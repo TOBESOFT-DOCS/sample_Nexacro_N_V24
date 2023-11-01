@@ -125,7 +125,7 @@ this.btn_Delete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
 {
-	this.Dataset00.set_updatecontrol(e.postvalue);
+	this.Dataset00.updatecontrol = e.postvalue;
 };
 
 // Patching a resource

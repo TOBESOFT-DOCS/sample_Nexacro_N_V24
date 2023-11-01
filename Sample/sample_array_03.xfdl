@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_array_03" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
@@ -18,12 +18,12 @@
 
 this.fn_arrayStringSort = function(arrNo)
 {
-    this.Edit01.set_value(arrNo.sort());
+    this.Edit01.value = arrNo.sort();
 };
 
 this.fn_arrayNoSort = function(arrNo)
 {
-	this.Edit02.set_value(arrNo.sort(function(a, b){return a-b}));
+	this.Edit02.value = arrNo.sort(function(a, b){return a-b});
 };
 ]]></Script>
   </Form>

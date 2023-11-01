@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_dataset_05" width="1280" height="720" titletext="New Form" locale="en_US" onload="sample_dataset_03_onload">
     <Layouts>
       <Layout height="720" width="1280">
@@ -21,11 +21,11 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	objApp.gds_data.addRow();
 	objApp.gds_data.setColumn(objApp.gds_data.rowposition,"COL0","global COL0");
 	objApp.gds_data.setColumn(objApp.gds_data.rowposition,"COL1","global COL1");
-	this.Grid00.set_binddataset("gds_data");
+	this.Grid00.binddataset = "gds_data";
 	this.Grid00.createFormat();
 	
 	var objLdS = new Dataset;
-	objLdS.set_name("ds_data");
+	objLdS.name = "ds_data";
 	this.addChild("ds_data", objLdS);  
 	this.ds_data.addColumn("COL0","String");
 	this.ds_data.addColumn("COL1","String");
@@ -35,11 +35,11 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	this.ds_data.addRow();
 	this.ds_data.setColumn(this.ds_data.rowposition,"COL0","2");
 	this.ds_data.setColumn(this.ds_data.rowposition,"COL1","second");
-	this.Grid01.set_binddataset("ds_data");	
+	this.Grid01.binddataset = "ds_data";	
 	this.Grid01.createFormat();
 	
-    this.TextArea00.set_value('global dataset rowcount : ' + objApp.all["gds_data"].rowcount+'\n'
-		+'local  dataset rowcount : ' + this.all["ds_data"].rowcount);
+    this.TextArea00.value = 'global dataset rowcount : ' + objApp.all["gds_data"].rowcount+'\n'
+		+'local  dataset rowcount : ' + this.all["ds_data"].rowcount;
 };
 ]]></Script>
   </Form>

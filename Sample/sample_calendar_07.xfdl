@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_calendar_07" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -19,8 +19,8 @@
 	lunar.month = lunar.month < 10 ? "0"+lunar.month : lunar.month;
 	lunar.day = lunar.day   < 10 ? "0"+lunar.day   : lunar.day;
 	
-	this.Calendar01.set_value(String().concat(lunar.year, lunar.month, lunar.day));
-	this.CheckBox00.set_value(lunar.leapMonth);
+	this.Calendar01.value = String().concat(lunar.year, lunar.month, lunar.day);
+	this.CheckBox00.value = lunar.leapMonth;
 };
 
 this.myDate =	function (year, month, day, leapMonth)
