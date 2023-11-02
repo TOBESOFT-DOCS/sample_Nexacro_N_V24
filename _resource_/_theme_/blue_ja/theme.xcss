@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XCSS version="1.1">
+  <Predefines>
+    <Group id="Default_font">
+      <Define id="Meiryo12px" value="12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo12px" value="bold 12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo13px" value="bold 13px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo14px" value="bold 14px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo17px" value="bold 17px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+    </Group>
+  </Predefines>
   <CSSData><![CDATA[/* 
   nexacro Application Theme
   Name		   : blue.xtheme
   Published        : 2020-04-06
-  Last-modified    : 2023-10-23
+  Last-modified    : 2023-11-01
 */
 
 /* Frame/Form */
@@ -2260,8 +2269,7 @@
 					
 .TextField .label					
 {					
-	background : transparent;				
-	color : #D5D5D5;				
+	background : transparent;							
 	-nexa-text-align : left;				
 	font :  -nexa-define(--Meiryo12px);		
 	-nexa-padding : 0px 9px 0px 9px;				
@@ -2275,7 +2283,7 @@
 .TextField .label[userstatus=floating]					
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--BoldMeiryo12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;				
 }											
 .TextField .nulltext					
@@ -2287,15 +2295,14 @@
 .TextField .label[userstatus=floatinginvalid]					
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--BoldMeiryo12px);	
+	font :  -nexa-define(--Meiryo12px);	
 	-nexa-padding : 2px;				
 	color : #b00020;				
 }					
-						
-.TextField .label[userstatus=floatingvalid]					
+.TextField .label[status=focused][userstatus=floatingvalid], .TextField .label[status=mouseover][userstatus=floatingvalid]
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--BoldMeiryo12px);		
+	font :  -nexa-define(--Meiryo12px);		
 	-nexa-padding : 2px;				
 	color : #2E7D32;				
 }											
@@ -2324,8 +2331,7 @@
 {					
 	-nexa-border : 1px solid #b00020;				
 }					
-						
-.TextField .box[userstatus=valid]					
+.TextField .box[status=focused][userstatus=valid], .TextField .box[status=mouseover][userstatus=valid]					
 {					
 	-nexa-border : 1px solid #2E7D32;				
 }					
@@ -2357,16 +2363,10 @@
 {					
 	color : #b00020;				
 }											
-.TextField .helpertext[userstatus=valid]					
-{					
-	color : #2E7D32;				
-}
-
 								
 .MultiLineTextField .label					
 {					
-	background : transparent;				
-	color : #D5D5D5;				
+	background : transparent;					
 	-nexa-text-align : left;				
 	font :  -nexa-define(--Meiryo12px);			
 	-nexa-padding : 0px 9px 0px 9px;				
@@ -2378,7 +2378,7 @@
 .MultiLineTextField .label[userstatus=floating]					
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--BoldMeiryo12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;				
 }										
 .MultiLineTextField .nulltext					
@@ -2421,7 +2421,6 @@
 .DateField .label
 {
 	background : transparent;
-	color : gray;
 	-nexa-text-align : left;
 	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 0px 9px 0px 9px;
@@ -2431,11 +2430,10 @@
 {
 	color : #5a86cd;
 }
-
-.DateField .label[userstatus=floating]
+.DateField .label[userstatus=floating], .DateField .label[userstatus=floatingvalid]
 {
 	background : #ffffff;
-	font :  -nexa-define(--BoldMeiryo12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;
 }
 
@@ -2449,15 +2447,14 @@
 .DateField .label[userstatus=floatinginvalid]
 {
 	background : #ffffff;
-	font :  -nexa-define(--BoldMeiryo12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;
 	color : #b00020;
 }
-
-.DateField .label[userstatus=floatingvalid]
+.DateField .label[status=focused][userstatus=floatingvalid], .DateField .label[status=mouseover][userstatus=floatingvalid]
 {
 	background : #ffffff;
-	font :  -nexa-define(--BoldMeiryo12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;
 	color : #2E7D32;
 }
@@ -2488,8 +2485,7 @@
 {
 	-nexa-border : 1px solid #b00020;
 }
-
-.DateField .box[userstatus=valid]
+.DateField .box[status=focused][userstatus=valid], .DateField .box[status=mouseover][userstatus=valid]
 {
 	-nexa-border : 1px solid #2E7D32;
 }
@@ -2513,39 +2509,32 @@
 {	
 	-nexa-padding : 5px 0px 0px 15px;
 }
-
 .DateField .helpertext[userstatus=invalid]
 {
 	color : #b00020;
 }
 
-.DateField .helpertext[userstatus=valid]
-{
-	color : #2E7D32;
-}
-.DateRangePicker, .PopupDateRangePicker
+.DateRangePicker, .DateRangePickerControl, .PopupDateRangePicker
 {
 	-nexa-border : 1px solid #697888;
 	background : #eaeaea;
 }
-.DateRangePicker .datetabbutton, .PopupDateRangePicker  .datetabbutton
+.DateRangePicker .datetabbutton, .DateRangePickerControl .datetabbutton, .PopupDateRangePicker  .datetabbutton
 {
 	background: #eaeaea;
 	-nexa-border : 0px solid #dddddd,0px solid #dddddd,1px solid #dddddd;
 	-nexa-icon : url('theme://images/daterange.png');
 	
 }
-
-.DateRangePicker .timetabbutton, .PopupDateRangePicker  .timetabbutton
+.DateRangePicker .timetabbutton, .DateRangePickerControl .timetabbutton, .PopupDateRangePicker .timetabbutton
 {
 	background: #eaeaea;
 	-nexa-border : 0px solid #dddddd,0px solid #dddddd,1px solid #dddddd;
 	-nexa-icon : url('theme://images/timerange.png');
 	
 }
-
-.DateRangePicker .datetabbutton[userstatus=selected], .PopupDateRangePicker  .datetabbutton[userstatus=selected],
-.DateRangePicker .timetabbutton[userstatus=selected], .PopupDateRangePicker  .timetabbutton[userstatus=selected]
+.DateRangePicker .datetabbutton[userstatus=selected], .DateRangePickerControl .datetabbutton[userstatus=selected], .PopupDateRangePicker  .datetabbutton[userstatus=selected],
+.DateRangePicker .timetabbutton[userstatus=selected], .DateRangePickerControl .timetabbutton[userstatus=selected], .PopupDateRangePicker  .timetabbutton[userstatus=selected]
 {
 	background: #ffffff;
 	-nexa-border : 0px solid #125dae,0px solid #125dae,0px solid #125dae;
@@ -2553,18 +2542,17 @@
 	
 }
 
-.DateRangePicker .headline, .PopupDateRangePicker .headline
+.DateRangePicker .headline, .DateRangePickerControl .headline, .PopupDateRangePicker .headline
 {
 	background : #125dae;
 	-nexa-padding : 15px 15px;
 }
-
-.DateRangePicker .headline .splitline, .PopupDateRangePicker .headline .splitline
+.DateRangePicker .headline .splitline, .DateRangePickerControl .headline .splitline, .PopupDateRangePicker .headline .splitline
 {
 	-nexa-border : 1px solid #dddddd;
 }
-
 .DateRangePicker .headline .startdate, .DateRangePicker .headline .startdate[status=mouseover], .DateRangePicker .headline .startdate[status=focused], .DateRangePicker .headline .startdate[status=disabled],
+.DateRangePickerControl .headline .startdate, .DateRangePickerControl .headline .startdate[status=focused], .DateRangePickerControl .headline .startdate[status=disabled], 
 .PopupDateRangePicker .headline .startdate, .PopupDateRangePicker .headline .startdate[status=mouseover], .PopupDateRangePicker .headline .startdate[status=focused], .PopupDateRangePicker .headline .startdate[status=disabled]
 {
 	background : transparent;
@@ -2574,8 +2562,8 @@
 	-nexa-text-align : center;
 	-nexa-vertical-align : bottom;
 }
-
 .DateRangePicker .headline .enddate, .DateRangePicker .headline .enddate[status=mouseover], .DateRangePicker .headline .enddate[status=focused],.DateRangePicker .headline .enddate[status=disabled],
+.DateRangePickerControl  .headline .enddate, .DateRangePickerControl  .headline .enddate[status=mouseover], .DateRangePickerControl .headline .enddate[status=focused], .DateRangePickerControl .headline .enddate[status=disabled],
 .PopupDateRangePicker .headline .enddate, .PopupDateRangePicker .headline .enddate[status=mouseover], .PopupDateRangePicker .headline .enddate[status=focused], .PopupDateRangePicker .headline .enddate[status=disabled]
 {
 	background : transparent;
@@ -2586,6 +2574,7 @@
 	-nexa-border : 0px none;
 }
 .DateRangePicker .headline .startsubdate, .DateRangePicker .headline .startsubdate[status=mouseover], .DateRangePicker .headline .startsubdate[status=focused], .DateRangePicker .headline .startsubdate[status=disabled],
+.DateRangePickerControl .headline .startsubdate, .DateRangePickerControl .headline .startsubdate[status=mouseover], .DateRangePickerControl .headline .startsubdate[status=focused], .DateRangePickerControl .headline .startsubdate[status=disabled],
 .PopupDateRangePicker .headline .startsubdate, .PopupDateRangePicker .headline .startsubdate[status=mouseover], .PopupDateRangePicker .headline .startsubdate[status=focused], .PopupDateRangePicker .headline .startsubdate[status=disabled]
 {
 	background : transparent;
@@ -2597,6 +2586,7 @@
 	
 }
 .DateRangePicker .headline .endsubdate, .DateRangePicker .headline .endsubdate[status=mouseover], .DateRangePicker .headline .endsubdate[status=focused], .DateRangePicker .headline .endsubdate[status=disabled],
+.DateRangePickerControl .headline .endsubdate, .DateRangePickerControl .headline .endsubdate[status=mouseover], .DateRangePickerControl .headline .endsubdate[status=focused], .DateRangePickerControl .headline .endsubdate[status=disabled],
 .PopupDateRangePicker .headline .endsubdate, .PopupDateRangePicker .headline .endsubdate[status=mouseover], .PopupDateRangePicker .headline .endsubdate[status=focused], .PopupDateRangePicker .headline .endsubdate[status=disabled]
 {
 	background : transparent;
@@ -2606,167 +2596,151 @@
 	-nexa-vertical-align : top;
 		-nexa-border : 0px none;
 }
-.DateRangePicker .closebutton, .PopupDateRangePicker .closebutton
+.DateRangePicker .closebutton, .DateRangePickerControl .closebutton, .PopupDateRangePicker .closebutton
 {
 	background: transparent;
-	font :  -nexa-define(--BoldMeiryo14px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-border : 0px none;
+	-nexa-padding : 4px 6px;
 }
+.DateRangePicker .closebutton[status=focused], .DateRangePicker .closebutton[status=mouseover], 
+.DateRangePickerControl .closebutton[status=focused], .DateRangePickerControl .closebutton[status=mouseover],
+.PopupDateRangePicker .closebutton[status=focused], .PopupDateRangePicker .closebutton[status=mouseover]
 
-.DateRangePicker .datepickergroup .datepicker .body, .PopupDateRangePicker .datepickergroup .datepicker .body
+{
+	font :  -nexa-define(--BoldMeiryo12px);
+}
+.DateRangePicker .closebutton[userstatus=selected], .DateRangePicker .closebutton[userstatus=pushed],
+.DateRangePickerControl .closebutton[userstatus=selected], .DateRangePickerControl .closebutton[userstatus=pushed],
+.PopupDateRangePicker .closebutton[userstatus=selected], .PopupDateRangePicker .closebutton[userstatus=pushed]
+{
+	background: #d5d5d5;
+}
+.DateRangePicker .datepickergroup .datepicker .body, .DateRangePickerControl .datepickergroup .datepicker .body, .PopupDateRangePicker .datepickergroup .datepicker .body
 {
 	-nexa-border : 0px solid #125dae,0px solid #125dae,0px solid #697888;
 	-nexa-padding : 2px;
 }
-
-.DateRangePicker .datepickergroup .datepicker, .PopupDateRangePicker .datepickergroup .datepicker
+.DateRangePicker .datepickergroup .datepicker, .DateRangePickerControl .datepickergroup .datepicker, .PopupDateRangePicker .datepickergroup .datepicker
 {
 	-nexa-padding : 4px;
 }
-.DateRangePicker .datepickergroup .datepicker .body .selection, .PopupDateRangePicker .datepickergroup .datepicker .body .selection
+.DateRangePicker .datepickergroup .datepicker .body .selection, .DateRangePickerControl .datepickergroup .datepicker .body .selection, .PopupDateRangePicker .datepickergroup .datepicker .body .selection
 {
 	background : #dbe9ff;
 }
-.DateRangePicker .datepickergroup .datepicker .body[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body[status=disabled]
-{
-	-nexa-border : 0px solid #125dae;
-}
-
-.DateRangePicker .datepickergroup .datepicker .body .dayitem[status=focused], .PopupDateRangePicker .datepickergroup .datepicker .body .dayitem[status=focused]
-{
+ .DateRangePickerControl .datepickergroup .datepicker .body .dayitem[status=focused]{
 	background : transparent;
 	color : #333333;
 }
 
-.DateRangePicker .datepickergroup .datepicker .body .dayitem, .PopupDateRangePicker .datepickergroup .datepicker .body .dayitem
-{
+ .DateRangePickerControl .datepickergroup .datepicker .body .dayitem{
 	color : #333333;
 	background : transparent;
 }
-
-.DateRangePicker .datepickergroup .datepicker .body .dayitem[userstatus=selected], .PopupDateRangePicker .datepickergroup .datepicker .body .dayitem[userstatus=selected]
-{
+ .DateRangePickerControl .datepickergroup .datepicker .body .dayitem[userstatus=selected]{
 	color : #ffffff;
 	background : #125dae;
 }
-
-.DateRangePicker .datepickergroup .splitline, .PopupDateRangePicker .datepickergroup .splitline
+.DateRangePicker .datepickergroup .splitline, .DateRangePickerControl .datepickergroup .splitline, .PopupDateRangePicker .datepickergroup .splitline
 {
 	-nexa-border : 1px solid #dddddd;
 }
-
-.DateRangePicker .datepickergroup, .PopupDateRangePicker .datepickergroup
+.DateRangePicker .datepickergroup, .DateRangePickerControl .datepickergroup, .PopupDateRangePicker .datepickergroup
 {
 	background : #ffffff;
 	-nexa-padding : 5px;	
 	
 }
-
-.DateRangePicker .timepickergroup, .PopupDateRangePicker .timepickergroup
+.DateRangePicker .timepickergroup, .DateRangePickerControl .timepickergroup, .PopupDateRangePicker .timepickergroup
 {
 	background : #ffffff;
 	-nexa-padding : 10px;
 	
 }
-
-.DateRangePicker .timepickergroup .splitline, .PopupDateRangePicker .timepickergroup .splitline
+.DateRangePicker .timepickergroup .splitline, .DateRangePickerControl .timepickergroup .splitline, .PopupDateRangePicker .timepickergroup .splitline
 {
 	-nexa-border : 1px solid #dddddd;
 }
-.DateRangePicker .timepickergroup .timepicker, .PopupDateRangePicker .timepickergroup .timepicker
+.DateRangePicker .timepickergroup .timepicker, .DateRangePickerControl .timepickergroup .timepicker, .PopupDateRangePicker .timepickergroup .timepicker
 {
 	-nexa-padding : 10px;
 }
-
-.DateRangePicker .datepickergroup .datepicker .body .weekband, .PopupDateRangePicker .datepickergroup .datepicker .body .weekband
+.DateRangePicker .datepickergroup .datepicker .body .weekband, .DateRangePickerControl .datepickergroup .datepicker .body .weekband, .PopupDateRangePicker .datepickergroup .datepicker .body .weekband
 {
 	background : #ffffff;
 }
-
-.DateRangePicker .datepickergroup .datepicker .body .weekband[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body .weekband[status=disabled]
+.DateRangePicker .datepickergroup .datepicker .body .weekband[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .body .weekband[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body .weekband[status=disabled]
 {
 	background : #ffffff;
 }
-
-.DateRangePicker .datepickergroup .datepicker .head, .PopupDateRangePicker .datepickergroup .datepicker .head
+.DateRangePicker .datepickergroup .datepicker .head, .DateRangePickerControl .datepickergroup .datepicker .head, .PopupDateRangePicker .datepickergroup .datepicker .head
 {
 	background : #ffffff;
 	color : #333333;
 	-nexa-border : 0px solid #125dae;
 }
-
-.DateRangePicker .datepickergroup .datepicker .head .prevbutton
+.DateRangePicker .datepickergroup .datepicker .head .prevbutton, .DateRangePickerControl .datepickergroup .datepicker .head .prevbutton
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabprev.png');
 }
-
-.DateRangePicker .datepickergroup .datepicker .head .nextbutton
+.DateRangePicker .datepickergroup .datepicker .head .nextbutton, .DateRangePickerControl .datepickergroup .datepicker .head .nextbutton
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabnext.png');
 }
-.DateRangePicker .datepickergroup .datepicker .head .prevbutton[status=mouseover]
+.DateRangePicker .datepickergroup .datepicker .head .prevbutton[status=mouseover], .DateRangePickerControl .datepickergroup .datepicker .head .prevbutton[status=mouseover]
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabprev.png');
 }
-
-.DateRangePicker .datepickergroup .datepicker .head .prevbutton[userstatus=pushed]
+.DateRangePicker .datepickergroup .datepicker .head .prevbutton[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .head .prevbutton[status=disabled]
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabprev.png');
 }
-
-.DateRangePicker .datepickergroup .datepicker .head .prevbutton[status=disabled]
-{
-	-nexa-text-align : center;
-	color : #b00020;
-	-nexa-icon : url('theme://images/btn_WF_Tabprev.png');
-}.DateRangePicker .datepickergroup .datepicker .head .nextbutton[status=mouseover]
+.DateRangePicker .datepickergroup .datepicker .head .nextbutton[status=mouseover], .DateRangePickerControl .datepickergroup .datepicker .head .nextbutton[status=mouseover]
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabnext.png');
 }
-
-.DateRangePicker .datepickergroup .datepicker .head .nextbutton[userstatus=pushed]
+.DateRangePicker .datepickergroup .datepicker .head .nextbutton[userstatus=pushed], .DateRangePickerControl .datepickergroup .datepicker .head .nextbutton[userstatus=pushed]
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabnext.png');
 }
-
-.DateRangePicker .datepickergroup .datepicker .head .nextbutton[status=disabled]
+.DateRangePicker .datepickergroup .datepicker .head .nextbutton[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .head .nextbutton[status=disabled]
 {
 	-nexa-text-align : center;
 	color : #b00020;
 	-nexa-icon : url('theme://images/btn_WF_Tabnext.png');
-}.DateRangePicker .datepickergroup .datepicker .head[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .head[status=disabled]
+}
+.DateRangePicker .datepickergroup .datepicker .head[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .head[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .head[status=disabled]
 {
 	background : #ffffff;
 	-nexa-border : 0px solid #125dae;
 }
-
 .DateRangePicker .datepickergroup .datepicker .head .yearstatic,.DateRangePicker .datepickergroup .datepicker .head .monthstatic,
+.DateRangePickerControl .datepickergroup .datepicker .head .yearstatic,.DateRangePickerControl .datepickergroup .datepicker .head .monthstatic,
 .PopupDateRangePicker .datepickergroup .datepicker .head .yearstatic,.PopupDateRangePicker .datepickergroup .datepicker .head .monthstatic
 {
 	font :  -nexa-define(--BoldMeiryo14px);
 	color :#333333;
 	-nexa-padding : 0px 10px 0px 0px;
 }
-
-.DateRangePicker .datepickergroup .datepicker .body .weekitem, .PopupDateRangePicker .datepickergroup .datepicker .body .weekitem
+.DateRangePicker .datepickergroup .datepicker .body .weekitem, .DateRangePickerControl .datepickergroup .datepicker .body .weekitem, .PopupDateRangePicker .datepickergroup .datepicker .body .weekitem
 {
 	background : #ffffff;
 	color : #333333;
 }
-
-.DateRangePicker .datepickergroup .datepicker .body .weekitem[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body .weekitem[status=disabled]
+.DateRangePicker .datepickergroup .datepicker .body .weekitem[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .body .weekitem[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body .weekitem[status=disabled]
 {
 	background : #ffffff;
 }
@@ -2780,7 +2754,7 @@
 
  .TimePickerControl .delimiter
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 	color :#333333;
 	-nexa-text-align : center;
 	-nexa-vertical-align : middle;
@@ -2795,7 +2769,7 @@
 
 .TimePickerControl .ampmspinner .spinneritem[userstatus=selected], .TimePickerControl .hourspinner .spinneritem[userstatus=selected], .TimePickerControl .minspinner .spinneritem[userstatus=selected], .TimePickerControl .secspinner .spinneritem[userstatus=selected]
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 }
 
 .TimePickerControl .ampmspinner, .TimePickerControl .hourspinner, .TimePickerControl .minspinner, .TimePickerControl .secspinner
@@ -2819,13 +2793,8 @@
         
 }
 ]]></CSSData>
-  <Predefines>
-    <Group id="Default_font">
-      <Define id="Meiryo12px" value="12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo12px" value="bold 12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo13px" value="bold 13px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo14px" value="bold 14px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo17px" value="bold 17px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-    </Group>
-  </Predefines>
+  <CSSData type="desktop"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
 </XCSS>
