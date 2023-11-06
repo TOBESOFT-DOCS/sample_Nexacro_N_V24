@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XCSS version="1.0"><![CDATA[.Button.btn_TP_Menu01[status=mouseover],.Button.btn_TP_Menu01[userstatus=selected]
+<XCSS version="1.1">
+  <CSSData><![CDATA[.Button.btn_TP_Menu01[status=mouseover],.Button.btn_TP_Menu01[userstatus=selected]
 {
 	background : URL("imagerc::btn_TP_Menu01_O.png") no-repeat center center;
 }
@@ -341,7 +342,13 @@
     -nexa-border : 3px solid lawngreen;
 }
 
-.MultiCombo.sample_multicombo_04 .multicombotext
+.MultiCombo.sample_multicombo_04 .multicombolist .multicomboedit
 {
 	-nexa-border : 0px  none, 0px  none, 1px solid #d5d5d5;
-}]]></XCSS>
+}
+]]></CSSData>
+  <CSSData type="desktop"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
+</XCSS>

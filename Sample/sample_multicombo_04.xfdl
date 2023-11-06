@@ -3,11 +3,52 @@
   <Form id="TEST" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <MultiCombo id="MultiCombo00" taborder="0" text="MultiCombo00" left="25" top="25" width="200" height="50" edittype="count" type="search" innerdataset="Dataset00" codecolumn="Column0" datacolumn="Column1" cssclass="sample_multicombo_04"/>
+        <MultiCombo id="MultiCombo00" taborder="0" text="MultiCombo00" left="25" top="25" width="200" height="50" edittype="count" type="search" innerdataset="dsMultiCombo" codecolumn="code" datacolumn="data" readonlycolumn="readonly" cssclass="sample_multicombo_04"/>
         <CheckBox id="CheckBox00" taborder="1" text="dropdown" left="25" top="85" width="150" height="20" onchanged="CheckBox00_onchanged"/>
+        <MultiCombo id="MultiCombo01" taborder="2" text="MultiCombo01" left="366" top="48" width="245" height="57" innerdataset="dsMultiCombo" codecolumn="code" datacolumn="data" readonlycolumn="readonly" type="search"/>
       </Layout>
     </Layouts>
-    <Objects/>
+    <Objects>
+      <Dataset id="dsMultiCombo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">apple</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">banana</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">orange</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">kiwi</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">peach</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">strawberry</Col>
+            <Col id="code">6</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
     <Script type="xscript5.1"><![CDATA[// Setting styles when the edittype property value is "count"
 
 this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
@@ -15,12 +56,15 @@ this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChan
 	if(e.postvalue)
 	{
 		this.MultiCombo00.type = 'dropdown';
-		this.MultiCombo00.cssclass = "";	
+		//this.MultiCombo00.cssclass = "";	
+		this.MultiCombo00.set_cssclass("");	
 	}
 	else
 	{
 		this.MultiCombo00.type = 'search'
-		this.MultiCombo00.cssclass = "test";	
+		//this.MultiCombo00.cssclass = "sample_multicombo_04";
+		this.MultiCombo00.set_cssclass("sample_multicombo_04");
+		//this.MultiCombo00.multicomboedit.height = 15;
 	}
 };
 

@@ -3,7 +3,7 @@
   <Form id="sample_multicombo_02" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <MultiCombo id="MultiCombo00" taborder="0" text="MultiCombo00" left="180" top="25" width="365" height="270" edittype="multitag" innerdataset="dsMultiCombo" codecolumn="code" datacolumn="code" showselectallcheckbox="true" readonly="false" enable="true"/>
+        <MultiCombo id="MultiCombo00" taborder="0" text="MultiCombo00" left="180" top="25" width="365" height="270" edittype="multitag" innerdataset="dsMultiCombo" codecolumn="code" datacolumn="code" showselectallcheckbox="true" readonly="false" enable="true" buttonsize="0 0"/>
         <Grid id="Grid00" taborder="1" left="25" top="25" width="147" height="270" binddataset="dsMultiCombo" autofittype="col" selecttype="multirow" onselectchanged="Grid00_onselectchanged">
           <Formats>
             <Format id="default">

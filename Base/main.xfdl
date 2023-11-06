@@ -94,6 +94,7 @@ var strSampleFile = "";
 var strDocID = "";
 var strLang = "ko";//ko
 var strSubjectCol = "subject";//subject
+var strHideCol = "hide_sample";
 var strIdDocCol = "id_doc";//id_doc
 var menuList = new Array();
 var firstmenuList = new Object;
@@ -288,13 +289,18 @@ this.fn_callback = function(sTrId, nErrorCode, sErrorMsg)
  
 this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
+	this.ds_sample_list.filter(strHideCol + "== null");
+	this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
+	this.ds_sample_list.copyData(this.ds_sample_list_dummy);
+	
 	if(nexacro._lang)
 	{
 		strLang = nexacro._lang;
+		
 		if(strLang == "ja") {
 			strSubjectCol = "subject_ja";
 			//strIdDocCol = "id_doc_ja";
-			this.ds_sample_list.filter(strSubjectCol + "!= null");
+			this.ds_sample_list.filter(strSubjectCol + "!= null && "+strHideCol + "== null");
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
@@ -302,7 +308,7 @@ this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 			g_strAppInfo.setVariable("guideURL", "http://docs.nexaweb.jp/component_guide_nexacro_n_ja");
 		} else if(strLang == "zh") {
 			strSubjectCol = "subject_zh";
-			this.ds_sample_list.filter(strSubjectCol + "!= null");
+			this.ds_sample_list.filter(strSubjectCol + "!= null && "+strHideCol + "== null");
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
@@ -310,7 +316,7 @@ this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 			g_strAppInfo.setVariable("guideURL", "http://docs.tobesoft.com/developer_guide_nexacro_n_zh");
 		} else if(strLang == "en") {
 			strSubjectCol = "subject_en";
-			this.ds_sample_list.filter(strSubjectCol + "!= null");
+			this.ds_sample_list.filter(strSubjectCol + "!= null && "+strHideCol + "== null");
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
@@ -803,6 +809,7 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
           <Column id="tree_level" type="STRING" size="256"/>
           <Column id="search_subject" type="STRING" size="256"/>
           <Column id="keyword" type="STRING" size="256"/>
+          <Column id="hide_sample" type="STRING" size="256"/>
         </ColumnInfo>
         <Rows>
           <Row>
@@ -3479,6 +3486,7 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
             <Col id="keyword">edittype</Col>
             <Col id="subject_ja">edittypeプロパティ値が「count」である場合のスタイル設定</Col>
             <Col id="subject_en">Setting the style when the edittype property value is "count"</Col>
+            <Col id="hide_sample">true</Col>
           </Row>
           <Row>
             <Col id="category">PopupMenu</Col>
