@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_daterangepicker_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <DateRangePicker id="DateRangePicker00" taborder="0" left="50" top="50" width="420" height="285" startdate="20230731" useheadline="true"/>
+        <Grid id="Grid00" taborder="1" left="487" top="130" width="247" height="100" binddataset="Dataset00" autofittype="col" oncellposchanged="Grid00_oncellposchanged">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="mindate"/>
+                <Cell col="1" text="maxdate"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:mindate"/>
+                <Cell col="1" text="bind:maxdate"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Grid00_oncellposchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEventInfo)
+{
+    this.DateRangePicker00.mindate = this.Dataset00.getColumn(e.row, "mindate");
+	this.DateRangePicker00.maxdate = this.Dataset00.getColumn(e.row, "maxdate");
+};
+]]></Script>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="mindate" type="STRING" size="256"/>
+          <Column id="maxdate" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="mindate">20230710</Col>
+            <Col id="maxdate">20230813</Col>
+          </Row>
+          <Row>
+            <Col id="mindate">20230717</Col>
+            <Col id="maxdate">20230820</Col>
+          </Row>
+          <Row>
+            <Col id="mindate">20230724</Col>
+            <Col id="maxdate">20230827</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

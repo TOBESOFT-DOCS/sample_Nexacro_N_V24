@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_daterangepicker_02" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <DateField id="DateField00" taborder="0" left="50" top="50" width="193" height="54"/>
+        <DateField id="DateField01" taborder="1" left="50.00" top="96" width="193" height="54" ondropdown="DateField01_ondropdown"/>
+        <PopupDateRangePicker id="PopupDateRangePicker00" left="57.00" top="190" width="623" height="240" useheadline="false" ondayclick="PopupDateRangePicker00_ondayclick" useclosebutton="false" type="single" displaymonthcount="3" defaultrangeposition="2"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.DateField01_ondropdown = function(obj:nexacro.DateField,e:nexacro.EventInfo)
+{
+	this.PopupDateRangePicker00.trackPopupByComponent( "start", obj, 0,33);
+	e.preventDefault();
+};
+
+this.PopupDateRangePicker00_ondayclick = function(obj:nexacro.PopupDateRangePicker,e:nexacro.DateRangePickerDayClickEventInfo)
+{
+	this.DateField01.value = e.date;
+};
+
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

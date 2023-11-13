@@ -346,6 +346,21 @@
 {
 	-nexa-border : 0px  none, 0px  none, 1px solid #d5d5d5;
 }
+.TextField.sample_textfield_01 .box .trailingbutton[userstatus=valid]
+{
+	background : transparent url('imagerc::like50.png') no-repeat center center;
+}	
+
+.TextField.sample_textfield_01 .box .trailingbutton[userstatus=invalid]
+{
+	background : transparent URL('imagerc::angry50.png') no-repeat center center;			
+}
+
+.TextField.sample_textfield_02 .label[userstatus=floating]					
+{
+	font : 10px/normal "Arial";
+	color : red;
+}	
 ]]></CSSData>
   <CSSData type="desktop"><![CDATA[]]></CSSData>
   <CSSData type="mobile_large"><![CDATA[]]></CSSData>

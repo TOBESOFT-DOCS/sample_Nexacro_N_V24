@@ -48,6 +48,11 @@
     <Component type="JavaScript" id="CheckBoxSet" classname="nexacro.CheckBoxSet"/>
     <Component type="JavaScript" id="MultiCombo" classname="nexacro.MultiCombo"/>
     <Component type="JavaScript" id="Panel" classname="nexacro.Panel"/>
+    <Component type="JavaScript" id="TextField" classname="nexacro.TextField"/>
+    <Component type="JavaScript" id="MultiLineTextField" classname="nexacro.MultiLineTextField"/>
+    <Component type="JavaScript" id="DateField" classname="nexacro.DateField"/>
+    <Component type="JavaScript" id="DateRangePicker" classname="nexacro.DateRangePicker"/>
+    <Component type="JavaScript" id="PopupDateRangePicker" classname="nexacro.PopupDateRangePicker"/>
   </Components>
   <Services>
     <Service prefixid="theme" type="resource" url="./_resource_/_theme_/" version="0" communicationversion="0" include_subdir="true"/>

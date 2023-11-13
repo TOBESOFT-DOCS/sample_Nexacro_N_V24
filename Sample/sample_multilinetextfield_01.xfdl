@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_multilinetextfield_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <MultiLineTextField id="MultiLineTextField00" taborder="0" left="50" top="50" width="250" height="130" maxlength="100" wordWrap="english" oninput="MultiLineTextField00_oninput" usecharcount="false"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.MultiLineTextField00_oninput = function(obj:nexacro.MultiLineTextField,e:nexacro.InputEventInfo)
+{
+	var currentLength = this.MultiLineTextField00.getLength();
+	var maxAllowedLength = this.MultiLineTextField00.maxlength * 0.7;
+	if(currentLength > maxAllowedLength)
+	{
+		this.MultiLineTextField00.usecharcount = true;
+	} 	else 	{
+		this.MultiLineTextField00.usecharcount = false;		
+	}
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>
