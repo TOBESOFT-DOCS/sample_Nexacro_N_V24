@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_panel_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Div id="Div00" taborder="0" text="Div00" left="50" top="50" width="442" height="42" border="1px solid black">
+          <Layouts>
+            <Layout type="horizontal" flexwrap="wrap" verticalgap="5">
+              <Panel id="Panel00" taborder="4" left="1" top="1" width="220" height="40">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static00"/>
+                  <PanelItem id="PanelItem01" componentid="Edit00"/>
+                </Contents>
+              </Panel>
+              <Static id="Static00" taborder="0" text="First Name" left="43" top="38" width="100" height="40" textAlign="center"/>
+              <Edit id="Edit00" taborder="1" left="167" top="25" width="120" height="40"/>
+              <Panel id="Panel01" taborder="5" left="221" top="1" width="220" height="40">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static01"/>
+                  <PanelItem id="PanelItem01" componentid="Edit01"/>
+                </Contents>
+              </Panel>
+              <Static id="Static01" taborder="2" text="Last Name" left="288" top="26" width="100" height="40" textAlign="center"/>
+              <Edit id="Edit01" taborder="3" left="262" top="61" width="120" height="40"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="Button00" taborder="1" text="Button00" left="Div00:10.00" top="50" width="108" height="40" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.width = this.Div00.width * 0.5;
+	this.Div00.fittocontents = "height";
+	this.resetScroll();
+};
+
+this.Button00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00_00.width = this.Div00_00.width * 0.5;
+	this.Div00_00.fittocontents = "height";
+	this.resetScroll();
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>
