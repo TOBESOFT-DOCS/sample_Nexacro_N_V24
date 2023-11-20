@@ -198,7 +198,7 @@ this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubj
 					, ""
 					, "fn_callback"
 					, true); */
-	var url = "https://raw.githubusercontent.com/TOBESOFT-DOCS/sample_Nexacro_N/master/Sample/"+strSampleFile+".xfdl"; 
+	var url = "https://raw.githubusercontent.com/TOBESOFT-DOCS/sample_Nexacro_N_V24/master/Sample/"+strSampleFile+".xfdl"; 
 	request.open("GET", url, true);
 	request.send(null);
 	
@@ -748,7 +748,7 @@ this.pdiv_Menu_Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.Item
  */
  this.Div00_Static01_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
 {
-	strURL = "https://github.com/TOBESOFT-DOCS/sample_Nexacro_N/archive/master.zip";
+	strURL = "https://github.com/TOBESOFT-DOCS/sample_Nexacro_N_V24/archive/master.zip";
 	system.execBrowser(strURL);
 	try
 	{
