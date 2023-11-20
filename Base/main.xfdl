@@ -9,7 +9,7 @@
               <Static id="Static00" taborder="0" text="버전 정보, 기타 설명이 들어가는 자리" left="240" top="6" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" expr="" height="40" verticalAlign="bottom" right="634" color="white"/>
               <ImageViewer id="ImageViewer00" taborder="1" left="50" top="3" width="195" height="48" image="url('imagerc::nexacro_N_BI.png')" stretch="fit" background="transparent" border="0px none"/>
               <Button id="btn_Menu" taborder="2" cssclass="btn_TP_Menu01" left="0" top="0" width="60" height="100%" onclick="btn_Menu_onclick" tooltiptext="전체메뉴" tooltiptype="hover" border="0px none" cursor="default"/>
-              <Static id="Static01" taborder="3" text="&gt; 예제 프로젝트 소스코드 내려받기 (sample_Nexacro_N.zip)" top="5" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" expr="" height="20" verticalAlign="middle" right="20" color="white" width="430" textAlign="right" onclick="Div00_Static01_onclick"/>
+              <Static id="Static01" taborder="3" text="&gt; 예제 프로젝트 소스코드 내려받기 (sample_Nexacro_N_V24.zip)" top="5" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" expr="" height="20" verticalAlign="middle" right="20" color="white" width="430" textAlign="right" onclick="Div00_Static01_onclick"/>
               <Static id="Static02" taborder="4" text="&gt; 개발 가이드 전체 문서 보기" top="25" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" expr="" height="20" verticalAlign="middle" right="20" color="white" width="420" textAlign="right" onclick="Div00_Static02_onclick"/>
             </Layout>
           </Layouts>
@@ -166,7 +166,7 @@ var firstmenuList = new Object;
 this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubject)
 {
 	strSampleFile = strargSampleFile;
-	var strServiceURL = g_strAppInfo.serverURL + "/N/Service/viewsource.jsp?fileName=";
+	var strServiceURL = g_strAppInfo.serverURL + "/N_V24/Service/viewsource.jsp?fileName=";
 	if(strLang == "ko" || strLang == "en") {
 		this.Div04.form.Static01.cssclass = "Sta_TF_manualTitle";
 	} else if(strLang == "ja") {
@@ -208,7 +208,7 @@ this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubj
 	{
 		gtag('config', 'UA-126808471-1', {
 			'page_title' : strSubject,
-			'page_path': '/developer_guide/N/Sample/'+strSampleFile + ".xfdl.js"
+			'page_path': '/developer_guide/N_V24/Sample/'+strSampleFile + ".xfdl.js"
 		});
 	} catch (e) {
 		if (e instanceof ReferenceError) {
@@ -304,24 +304,24 @@ this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
-			g_strAppInfo.setVariable("docsURL", "http://docs.nexaweb.jp/r/a/component_guide_nexacro_n_ja/");
-			g_strAppInfo.setVariable("guideURL", "http://docs.nexaweb.jp/component_guide_nexacro_n_ja");
+			g_strAppInfo.setVariable("docsURL", "http://docs.nexaweb.jp/r/a/component_guide_nexacro_n_v24_ja/");
+			g_strAppInfo.setVariable("guideURL", "http://docs.nexaweb.jp/component_guide_nexacro_n_v24_ja");
 		} else if(strLang == "zh") {
 			strSubjectCol = "subject_zh";
 			this.ds_sample_list.filter(strSubjectCol + "!= null && "+strHideCol + "== null");
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
-			g_strAppInfo.setVariable("docsURL", "http://docs.tobesoft.com/r/a/developer_guide_nexacro_n_zh/");
-			g_strAppInfo.setVariable("guideURL", "http://docs.tobesoft.com/developer_guide_nexacro_n_zh");
+			g_strAppInfo.setVariable("docsURL", "http://docs.tobesoft.com/r/a/developer_guide_nexacro_n_v24_zh/");
+			g_strAppInfo.setVariable("guideURL", "http://docs.tobesoft.com/developer_guide_nexacro_n_v24_zh");
 		} else if(strLang == "en") {
 			strSubjectCol = "subject_en";
 			this.ds_sample_list.filter(strSubjectCol + "!= null && "+strHideCol + "== null");
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
-			g_strAppInfo.setVariable("docsURL", "http://docs.tobesoft.com/r/a/developer_guide_nexacro_n_en/");
-			g_strAppInfo.setVariable("guideURL", "http://docs.tobesoft.com/developer_guide_nexacro_n_en");
+			g_strAppInfo.setVariable("docsURL", "http://docs.tobesoft.com/r/a/developer_guide_nexacro_n_v24_en/");
+			g_strAppInfo.setVariable("guideURL", "http://docs.tobesoft.com/developer_guide_nexacro_n_v24_en");
 		}
 	}
 
@@ -3863,18 +3863,18 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
             <Col id="search_subject">1</Col>
             <Col id="tree_level">1</Col>
             <Col id="subject">입력값에 따라 유효성을 아이콘으로 표시하기</Col>
-            <Col id="id_doc_ja">14b50503781b9695</Col>
-            <Col id="id_doc">sample_textfield_01</Col>
+            <Col id="id_doc">14b50503781b9695</Col>
             <Col id="keyword">invalidtext, usetrailingbutton</Col>
+            <Col id="id_sample">sample_textfield_01</Col>
           </Row>
           <Row>
             <Col id="category">TextField</Col>
-            <Col id="id_doc">sample_textfield_02</Col>
+            <Col id="id_doc">572d0bd3fba1128a</Col>
             <Col id="tree_level">1</Col>
             <Col id="search_subject">1</Col>
             <Col id="subject">라벨 위치에 따라 컴포넌트 크기가 달라지나요?</Col>
-            <Col id="id_doc_ja">572d0bd3fba1128a</Col>
             <Col id="keyword">labelfloatingfixed, labelposition</Col>
+            <Col id="id_sample">sample_textfield_02</Col>
           </Row>
           <Row>
             <Col id="category">VideoPlayer</Col>
