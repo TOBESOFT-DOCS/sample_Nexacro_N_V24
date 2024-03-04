@@ -11,11 +11,6 @@
         <TextField id="TextField01_00" taborder="5" left="221.00" top="160" width="135" height="60" labeltext="TEST" labelposition="outside" labelfloatingfixed="true" usecharcount="false" contentheight="40" bottom="" footerheight="20" headerheight="20"/>
       </Layout>
     </Layouts>
-    <Script type="xscript5.1"><![CDATA[
-this.TextField02_onchanged = function(obj:nexacro.TextField,e:nexacro.ChangeEventInfo)
-{
-	
-};
-]]></Script>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
   </Form>
 </FDL>
