@@ -361,6 +361,34 @@
 	font : 10px/normal "Arial";
 	color : red;
 }	
+.Calendar.sample_calendar_12 .datepicker .body .dayitem[userstatus=friday],
+.Calendar.sample_calendar_12 .datepicker .body .dayitem[userstatus=saturday]
+{
+	color : #ff4c5e;
+}
+
+.Calendar.sample_calendar_12 .datepicker .body .dayitem[status=mouseover][userstatus=friday],
+.Calendar.sample_calendar_12 .datepicker .body .dayitem[status=mouseover][userstatus=saturday],
+.Calendar.sample_calendar_12 .datepicker .body .dayitem[status=mouseover][userstatus=sunday],
+{
+	color : #ffffff;
+}
+
+.Calendar.sample_calendar_12 .datepicker .body .dayitem[userstatus=sunday]
+{
+	color : #333333;
+}
+
+.Calendar.sample_calendar_12 .datepicker .body .weekitem[userstatus=friday],
+.Calendar.sample_calendar_12 .datepicker .body .weekitem[userstatus=saturday]
+{
+	color : #ff7986;
+}
+
+.Calendar.sample_calendar_12 .datepicker .body .weekitem[userstatus=sunday]
+{
+	color : #ffffff;
+}
 ]]></CSSData>
   <CSSData type="desktop"><![CDATA[]]></CSSData>
   <CSSData type="mobile_large"><![CDATA[]]></CSSData>

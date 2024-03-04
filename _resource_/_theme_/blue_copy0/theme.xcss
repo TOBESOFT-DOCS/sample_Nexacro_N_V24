@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XCSS version="1.1">
-  <Predefines>
-    <Group id="Default_font">
-      <Define id="MalgunGothic12px" value="12px &quot;Malgun Gothic&quot;"/>
-      <Define id="BoldMalgunGothic12px" value="bold 12px &quot;Malgun Gothic&quot;"/>
-      <Define id="BoldMalgunGothic13px" value="bold 13px &quot;Malgun Gothic&quot;"/>
-      <Define id="BoldMalgunGothic14px" value="bold 14px &quot;Malgun Gothic&quot;"/>
-      <Define id="BoldMalgunGothic17px" value="bold 17px &quot;Malgun Gothic&quot;"/>
-    </Group>
-  </Predefines>
   <CSSData><![CDATA[/* 
   nexacro Application Theme
   Name		   : blue.xtheme
@@ -19,7 +10,7 @@
 /* Frame/Form */
 .Form
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : #ffffff;
 	-nexa-border : 0px none;
@@ -260,7 +251,7 @@
 
 .Combo .combolist,.ComboControl .combolist
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : #ffffff;
 	-nexa-border : 1px solid #b1b1b1;
@@ -317,7 +308,7 @@
 /* head */
 .Grid .head .row .cell
 {
-	font : -nexa-define(--BoldMalgunGothic12px);
+	font : -nexa-define(--BoldMeiryo12px);
 	color : #2f2f2f;
 	background : linear-gradient(to top, #eff0f0, #f9fafa);
 	-nexa-border : 1px solid #cacaca;
@@ -419,7 +410,7 @@
 
 .Grid .summary .row .cell
 {
-	font :  -nexa-define(--BoldMalgunGothic12px);
+	font :  -nexa-define(--BoldMeiryo12px);
 	color : #333333;
 	background : #fdfbe5;
 	-nexa-border : 1px solid #c8c1c2;
@@ -454,7 +445,7 @@
 /* cellbutton (Same as ButtonControl) */
 .GridCellControl .cellbutton
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : linear-gradient(to top,#eaeaea,#ffffff);
 	-nexa-border : 1px solid #c2c2c2;
@@ -481,24 +472,24 @@
 /* cellcalendar (Same as CalendarControl) */
 .GridCellControl .cellcalendar
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* cellcheckbox (Same as CheckBoxControl) */
 .GridCellControl .cellcheckbox
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* cellcombo (Same as ComboControl) */
 .GridCellControl .cellcombo
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 .GridCellControl .cellcombo .combolist
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 }
 
@@ -510,7 +501,7 @@
 /* celledit (Same as EditControl) */
 .GridCellControl .celledit
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	background : #ffffff;
 	-nexa-border : 1px solid #d5d5d5;
 	-nexa-padding : 1px 9px 0px 9px;
@@ -570,7 +561,7 @@
 /* cellmaskedit(Same as MaskEditControl) */
 .GridCellControl .cellmaskedit
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	background : #ffffff;
 	-nexa-border : 1px solid #d5d5d5;
 	-nexa-padding : 1px 9px 0px 9px;
@@ -590,19 +581,19 @@
 /* cellprogressbar (Same as ProgressBarControl) */
 .GridCellControl .cellprogressbar
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* celltextarea (Same as TextAreaControl) */
 .GridCellControl .celltextarea
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* celltreeitem: */
 .GridCellControl .celltreeitem .treeitemtext
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #666666;
 }
 
@@ -820,7 +811,7 @@
 
 .Menu .menuitem
 {
-	font :  -nexa-define(--BoldMalgunGothic13px);
+	font :  -nexa-define(--BoldMeiryo13px);
 	color : #ffffff;
 	-nexa-padding : 0px 30px 0px 30px;
 	cursor : pointer;
@@ -841,7 +832,7 @@
 }
 .Menu .menupopupmenu
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : #0753a5;
 	-nexa-border : 1px solid #034389;
@@ -951,7 +942,7 @@
 /* PopupMenu */
 .PopupMenu,.PopupMenuControl
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : #ffffff;
 	-nexa-border : 1px solid #b5b5b5;
@@ -1432,7 +1423,7 @@
 
 .DatePickerControl .head .yearstatic,.DatePickerControl .head .monthstatic
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 	color : #ffffff;
 	-nexa-padding : 0px 10px 0px 0px;
 }
@@ -1449,7 +1440,7 @@
 
 .DatePickerControl .head .yearspin .spinedit,.DatePickerControl .head .monthspin .spinedit
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 	color : #ffffff;
 	background : #0042a0;
 }
@@ -1618,7 +1609,7 @@
 .DatePickerControl .body .yearitem[status=focused]
 {
 	color : #ffffff;
-	background : #125dae;
+	background : #8da3c7;
 }
 .DatePickerControl .body .yearitem[userstatus=selected]
 {
@@ -1789,7 +1780,7 @@
 /* TitleBar */
 .TitleBarControl
 {
-	font :  -nexa-define(--BoldMalgunGothic12px);
+	font :  -nexa-define(--BoldMeiryo12px);
 	color : #ffffff;
 	background : #003284;
 	-nexa-padding : 0px 0px 0px 10px;
@@ -1902,13 +1893,13 @@
 {
 	-nexa-border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
 	background : #ffffff;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 .ListView .detail
 {
 	-nexa-border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
 	background : #f9f9f9;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 .ListView .body[userstatus=selected]
 {
@@ -1939,7 +1930,7 @@
 /* cellbutton (Same as ButtonControl) */
 .ListViewCellControl .cellbutton
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : linear-gradient(to top,#eaeaea,#ffffff);
 	-nexa-border : 1px solid #c2c2c2;
@@ -1966,24 +1957,24 @@
 /* cellcalendar (Same as CalendarControl) */
 .ListViewCellControl .cellcalendar
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* cellcheckbox (Same as CheckBoxControl) */
 .ListViewCellControl .cellcheckbox
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* cellcombo (Same as ComboControl) */
 .ListViewCellControl .cellcombo
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 .ListViewCellControl .cellcombo .combolist
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 }
 
@@ -1995,7 +1986,7 @@
 /* celledit (Same as EditControl) */
 .ListViewCellControl .celledit
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	background : #ffffff;
 	-nexa-border : 1px solid #d5d5d5;
 	-nexa-padding : 1px 9px 0px 9px;
@@ -2023,7 +2014,7 @@
 /* cellmaskedit (Same as MaskEditControl) */
 .ListViewCellControl .cellmaskedit
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	background : #ffffff;
 	-nexa-border : 1px solid #d5d5d5;
 	-nexa-padding : 1px 9px 0px 9px;
@@ -2043,13 +2034,13 @@
 /* cellprogressbar (Same as ProgressBarControl) */
 .ListViewCellControl .cellprogressbar
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 /* celltextarea (Same as TextAreaControl) */
 .ListViewCellControl .celltextarea
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 }
 
 .ListView .body .expandbar
@@ -2142,10 +2133,8 @@
 	color : #999999;
 	background : #efefef;
 }
-
-.MultiCombo .multicombolist .multicomboedit,.MultiComboControl .multicombolist .multicomboedit
-{
-	/* Same as EditControl */
+.MultiCombo .multicombolist .multicomboedit, .MultiComboControl .multicombolist .multicomboedit
+{	/* Same as EditControl */
 }
 
 .MultiCombo .dropbutton,.MultiComboControl .dropbutton
@@ -2234,7 +2223,7 @@
 
 .MultiComboListControl .checkboxset
 {
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	color : #555555;
 	background : #ffffff;
 	-nexa-border : 0px none;
@@ -2268,42 +2257,43 @@
 	background : #125dae;
 	-nexa-icon : url('theme://images/chk_WF_Box_S.png');
 }
-			
+					
 .TextField .label					
 {					
-	background : transparent;						
+	background : transparent;							
 	-nexa-text-align : left;				
-	font :  -nexa-define(--MalgunGothic12px);		
+	font :  -nexa-define(--Meiryo12px);		
 	-nexa-padding : 0px 9px 0px 9px;				
 }					
 						
-.TextField .label[status=focused][userstatus=floating],.TextField .label[status=mouseover][userstatus=floating]	
+.TextField .label[status=focused][userstatus=floating], .TextField .label[status=mouseover][userstatus=floating]	
 {					
 	color : #5a86cd;			
-}											
+}					
+						
 .TextField .label[userstatus=floating], .TextField .label[userstatus=floatingvalid]				
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;				
 }											
 .TextField .nulltext					
 {				
 	color : #999999;				
-	font :  -nexa-define(--MalgunGothic12px);			
+	font :  -nexa-define(--Meiryo12px);			
 	-nexa-padding : 0px 9px 0px 9px;				
 }										
 .TextField .label[userstatus=floatinginvalid]					
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--MalgunGothic12px);	
+	font :  -nexa-define(--Meiryo12px);	
 	-nexa-padding : 2px;				
 	color : #b00020;				
 }					
-.TextField .label[status=focused][userstatus=floatingvalid], .TextField .label[status=mouseover][userstatus=floatingvalid]				
+.TextField .label[status=focused][userstatus=floatingvalid], .TextField .label[status=mouseover][userstatus=floatingvalid]
 {					
 	background : #ffffff;				
-	font :  -nexa-define(--MalgunGothic12px);		
+	font :  -nexa-define(--Meiryo12px);		
 	-nexa-padding : 2px;				
 	color : #2E7D32;				
 }											
@@ -2327,12 +2317,12 @@
 {
 	color : #999999;
 	background : #efefef;	
-}										
+}
 .TextField .box[userstatus=invalid]					
 {					
 	-nexa-border : 1px solid #b00020;				
-}									
-.TextField .box[status=focused][userstatus=valid], .TextField .box[status=mouseover][userstatus=valid]		
+}					
+.TextField .box[status=focused][userstatus=valid], .TextField .box[status=mouseover][userstatus=valid]					
 {					
 	-nexa-border : 1px solid #2E7D32;				
 }					
@@ -2345,12 +2335,12 @@
 {
 	color : #999999;
 	background : transparent url('theme://images/valid.png') no-repeat center center;
-}											
+}														
 .TextField .box .prefixtext,.TextField .box .postfixtext					
 {					
 	color : #999999;				
 	-nexa-padding : 0px 9px;				
-}										
+}											
 .TextField .charcounttext					
 {					
 	-nexa-text-align : right;				
@@ -2363,12 +2353,13 @@
 .TextField .helpertext[userstatus=invalid]					
 {					
 	color : #b00020;				
-}
+}											
+								
 .MultiLineTextField .label					
 {					
-	background : transparent;								
+	background : transparent;					
 	-nexa-text-align : left;				
-	font :  -nexa-define(--MalgunGothic12px);			
+	font :  -nexa-define(--Meiryo12px);			
 	-nexa-padding : 0px 9px 0px 9px;				
 }											
 .MultiLineTextField .label[status=focused][userstatus=floating],.MultiLineTextField .label[status=mouseover][userstatus=floating]					
@@ -2378,12 +2369,13 @@
 .MultiLineTextField .label[userstatus=floating]					
 {					
 	background : #ffffff;				
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;				
 }										
 .MultiLineTextField .nulltext					
 {					
 	color : #999999;				
-	font :  -nexa-define(--MalgunGothic12px);			
+	font :  -nexa-define(--Meiryo12px);			
 	-nexa-padding : 0px 9px 0px 9px;				
 }										
 .MultiLineTextField .box					
@@ -2392,12 +2384,12 @@
 	background : #ffffff;				
 	border-radius : 3px;				
 	-nexa-vertical-align : middle;				
-	-nexa-padding : 1px 9px 9px 9px;					
+	-nexa-padding : 1px 9px 9px 9px;							
 }										
 .MultiLineTextField .box[status=focused],.MultiLineTextField .box[status=mouseover]			
 {					
 	-nexa-border : 1px solid #5a86cd;				
-}
+}	
 .MultiLineTextField .box[status=readonly]
 {
 	color : #999999;
@@ -2406,7 +2398,7 @@
 {
 	color : #999999;
 	background : #efefef;	
-}										
+}
 .MultiLineTextField .charcounttext					
 {					
 	-nexa-text-align : right;				
@@ -2417,12 +2409,11 @@
 	-nexa-padding : 5px 0px 0px 15px;				
 }
 
-
 .DateField .label
 {
 	background : transparent;
 	-nexa-text-align : left;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 0px 9px 0px 9px;
 }
 
@@ -2430,34 +2421,35 @@
 {
 	color : #5a86cd;
 }
-.DateField .label[userstatus=floating], .DateField .label[userstatus=floatingvalid]	
+.DateField .label[userstatus=floating], .DateField .label[userstatus=floatingvalid]
 {
 	background : #ffffff;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;
 }
 
 .DateField .nulltext
 {
 	color : #999999;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 0px 9px 0px 9px;
 }
 
 .DateField .label[userstatus=floatinginvalid]
 {
 	background : #ffffff;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;
 	color : #b00020;
 }
 .DateField .label[status=focused][userstatus=floatingvalid], .DateField .label[status=mouseover][userstatus=floatingvalid]
 {
 	background : #ffffff;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-padding : 2px;
 	color : #2E7D32;
 }
+
 .DateField .box
 {
 	-nexa-border : 1px solid #D5D5D5;
@@ -2466,6 +2458,7 @@
 	-nexa-vertical-align : middle;
 	-nexa-padding : 1px 9px 0px 9px;
 }
+
 .DateField .box[status=focused],.DateField .box[status=mouseover]
 {
 	-nexa-border : 1px solid #5a86cd;
@@ -2483,7 +2476,6 @@
 {
 	-nexa-border : 1px solid #b00020;
 }
-
 .DateField .box[status=focused][userstatus=valid], .DateField .box[status=mouseover][userstatus=valid]
 {
 	-nexa-border : 1px solid #2E7D32;
@@ -2504,7 +2496,6 @@
 	color : #999999;
 	background : transparent url('theme://images/dropdown_valid.png') no-repeat center center;
 }
-
 .DateField .helpertext
 {	
 	-nexa-padding : 5px 0px 0px 15px;
@@ -2526,7 +2517,6 @@
 	-nexa-icon : url('theme://images/daterange.png');
 	
 }
-
 .DateRangePicker .timetabbutton, .DateRangePickerControl .timetabbutton, .PopupDateRangePicker .timetabbutton
 {
 	background: #eaeaea;
@@ -2534,7 +2524,6 @@
 	-nexa-icon : url('theme://images/timerange.png');
 	
 }
-
 .DateRangePicker .datetabbutton[userstatus=selected], .DateRangePickerControl .datetabbutton[userstatus=selected], .PopupDateRangePicker  .datetabbutton[userstatus=selected],
 .DateRangePicker .timetabbutton[userstatus=selected], .DateRangePickerControl .timetabbutton[userstatus=selected], .PopupDateRangePicker  .timetabbutton[userstatus=selected]
 {
@@ -2549,7 +2538,6 @@
 	background : #125dae;
 	-nexa-padding : 15px 15px;
 }
-
 .DateRangePicker .headline .splitline, .DateRangePickerControl .headline .splitline, .PopupDateRangePicker .headline .splitline
 {
 	-nexa-border : 1px solid #dddddd;
@@ -2560,10 +2548,10 @@
 {
 	background : transparent;
 	color : #ffffff;
-	font :  -nexa-define(--BoldMalgunGothic17px);
+	font :  -nexa-define(--BoldMeiryo17px);
 	-nexa-border : 0px none;
 	-nexa-text-align : center;
-	-nexa-vertical-align : middle;
+	-nexa-vertical-align : middle;	
 }
 .DateRangePicker .headline .enddate, .DateRangePicker .headline .enddate[status=mouseover], .DateRangePicker .headline .enddate[status=focused],.DateRangePicker .headline .enddate[status=disabled],
 .DateRangePickerControl  .headline .enddate, .DateRangePickerControl  .headline .enddate[status=mouseover], .DateRangePickerControl .headline .enddate[status=focused], .DateRangePickerControl .headline .enddate[status=disabled],
@@ -2571,7 +2559,7 @@
 {
 	background : transparent;
 	color : #ffffff;
-	font :  -nexa-define(--BoldMalgunGothic17px);
+	font :  -nexa-define(--BoldMeiryo17px);
 	-nexa-text-align : center;
 	-nexa-vertical-align : middle;
 	-nexa-border : 0px none;
@@ -2582,7 +2570,7 @@
 {
 	background : transparent;
 	color : #ffffff;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-border : 0px none;
 	-nexa-text-align : center;
 	-nexa-vertical-align : middle;
@@ -2594,7 +2582,7 @@
 {
 	background : transparent;
 	color : #ffffff;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-text-align : center;
 	-nexa-vertical-align : middle;
 	-nexa-border : 0px none;
@@ -2602,7 +2590,7 @@
 .DateRangePicker .closebutton, .DateRangePickerControl .closebutton, .PopupDateRangePicker .closebutton
 {
 	background: transparent;
-	font :  -nexa-define(--MalgunGothic12px);
+	font :  -nexa-define(--Meiryo12px);
 	-nexa-border : 0px none;
 	-nexa-padding : 4px 6px;
 }
@@ -2611,7 +2599,7 @@
 .PopupDateRangePicker .closebutton[status=focused], .PopupDateRangePicker .closebutton[status=mouseover]
 
 {
-	font :  -nexa-define(--BoldMalgunGothic12px);
+	font :  -nexa-define(--BoldMeiryo12px);
 }
 .DateRangePicker .closebutton[userstatus=selected], .DateRangePicker .closebutton[userstatus=pushed],
 .DateRangePickerControl .closebutton[userstatus=selected], .DateRangePickerControl .closebutton[userstatus=pushed],
@@ -2632,14 +2620,11 @@
 {
 	background : #dbe9ff;
 }
-.DateRangePicker .datepickergroup .datepicker .body[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .body[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body[status=disabled]
-{
-	-nexa-border : 0px solid #125dae;
-}
  .DateRangePickerControl .datepickergroup .datepicker .body .dayitem[status=focused]{
 	background : transparent;
 	color : #333333;
 }
+
  .DateRangePickerControl .datepickergroup .datepicker .body .dayitem{
 	color : #333333;
 	background : transparent;
@@ -2652,14 +2637,12 @@
 {
 	-nexa-border : 1px solid #dddddd;
 }
-
 .DateRangePicker .datepickergroup, .DateRangePickerControl .datepickergroup, .PopupDateRangePicker .datepickergroup
 {
 	background : #ffffff;
 	-nexa-padding : 5px;	
 	
 }
-
 .DateRangePicker .timepickergroup, .DateRangePickerControl .timepickergroup, .PopupDateRangePicker .timepickergroup
 {
 	background : #ffffff;
@@ -2703,11 +2686,6 @@
 	-nexa-text-align : center;
 	-nexa-icon : url('theme://images/btn_WF_Tabprev.png');
 }
-.DateRangePicker .datepickergroup .datepicker .head .prevbutton[userstatus=pushed], .DateRangePickerControl .datepickergroup .datepicker .head .prevbutton[userstatus=pushed]
-{
-	-nexa-text-align : center;
-	-nexa-icon : url('theme://images/btn_WF_Tabprev.png');
-}
 .DateRangePicker .datepickergroup .datepicker .head .prevbutton[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .head .prevbutton[status=disabled]
 {
 	-nexa-text-align : center;
@@ -2737,7 +2715,7 @@
 .DateRangePickerControl .datepickergroup .datepicker .head .yearstatic,.DateRangePickerControl .datepickergroup .datepicker .head .monthstatic,
 .PopupDateRangePicker .datepickergroup .datepicker .head .yearstatic,.PopupDateRangePicker .datepickergroup .datepicker .head .monthstatic
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 	color :#333333;
 	-nexa-padding : 0px 10px 0px 0px;
 }
@@ -2746,7 +2724,6 @@
 	background : #ffffff;
 	color : #333333;
 }
-
 .DateRangePicker .datepickergroup .datepicker .body .weekitem[status=disabled], .DateRangePickerControl .datepickergroup .datepicker .body .weekitem[status=disabled], .PopupDateRangePicker .datepickergroup .datepicker .body .weekitem[status=disabled]
 {
 	background : #ffffff;
@@ -2761,7 +2738,7 @@
 
  .TimePickerControl .delimiter
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 	color :#333333;
 	-nexa-text-align : center;
 	-nexa-vertical-align : middle;
@@ -2776,9 +2753,8 @@
 
 .TimePickerControl .ampmspinner .spinneritem[userstatus=selected], .TimePickerControl .hourspinner .spinneritem[userstatus=selected], .TimePickerControl .minspinner .spinneritem[userstatus=selected], .TimePickerControl .secspinner .spinneritem[userstatus=selected]
 {
-	font :  -nexa-define(--BoldMalgunGothic14px);
+	font :  -nexa-define(--BoldMeiryo14px);
 }
-
 .TimePickerControl .ampmspinner .spinneritem[userstatus=selected][status=focused], .TimePickerControl .hourspinner .spinneritem[userstatus=selected][status=focused], .TimePickerControl .minspinner .spinneritem[userstatus=selected][status=focused], .TimePickerControl .secspinner .spinneritem[userstatus=selected][status=focused]
 {
 	color :#333333;
@@ -2803,9 +2779,15 @@
 	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
 	-nexa-border : 1px solid #cccccc, 0px none, 0px none;
         
-}]]></CSSData>
-  <CSSData type="desktop"><![CDATA[]]></CSSData>
-  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
-  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
-  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
+}
+]]></CSSData>
+  <Predefines>
+    <Group id="Default_font">
+      <Define id="Meiryo12px" value="12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo12px" value="bold 12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo13px" value="bold 13px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo14px" value="bold 14px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo17px" value="bold 17px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+    </Group>
+  </Predefines>
 </XCSS>

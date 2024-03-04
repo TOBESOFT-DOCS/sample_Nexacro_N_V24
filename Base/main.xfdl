@@ -1432,6 +1432,15 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
             <Col id="subject_en">Delivering the information of selected year and month</Col>
           </Row>
           <Row>
+            <Col id="category">Calendar</Col>
+            <Col id="subject">다른 요일을 휴일로 표시하기</Col>
+            <Col id="id_sample">sample_calendar_12</Col>
+            <Col id="id_doc">590bb7c3c6319c46</Col>
+            <Col id="tree_level">1</Col>
+            <Col id="search_subject">1</Col>
+            <Col id="keyword">590bb7c3c6319c46</Col>
+          </Row>
+          <Row>
             <Col id="category">CheckBox</Col>
             <Col id="subject">CheckBox</Col>
             <Col id="tree_level">0</Col>
@@ -3882,6 +3891,15 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
             <Col id="keyword">labelfloatingfixed, labelposition</Col>
             <Col id="id_sample">sample_textfield_02</Col>
             <Col id="subject_en">Does the component size change depending on the label position?</Col>
+          </Row>
+          <Row>
+            <Col id="category">TextField</Col>
+            <Col id="id_doc">11bcded1f17b3c48</Col>
+            <Col id="tree_level">1</Col>
+            <Col id="search_subject">1</Col>
+            <Col id="subject">라벨 위치와 상관없이 같은 크기로 컴포넌트 표시하기</Col>
+            <Col id="keyword">contentheight, headerheight, footerheight</Col>
+            <Col id="id_sample">sample_textfield_03</Col>
           </Row>
           <Row>
             <Col id="category">VideoPlayer</Col>
