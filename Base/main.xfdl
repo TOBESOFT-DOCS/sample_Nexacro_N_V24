@@ -176,7 +176,7 @@ this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubj
 	}
 	this.Div04.form.Static01.text = strCategory + " > " + strSubject;
 	
-	this.Div01.form.WebBrowser00.url = g_strAppInfo.docsURL + strDocID;
+	this.Div01.form.WebBrowser00.url = this.fn_getHttps(g_strAppInfo.docsURL) + strDocID;
 	//일본어 분기되는 소스 처리
 	if(strLang == "ja") {
 		switch(strSampleFile) {
@@ -777,7 +777,7 @@ this.Div03_Static02_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventIn
 
 this.Div00_Static02_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
 {
-	strURL = g_strAppInfo.guideURL + "#" + strDocID;
+	strURL = this.fn_getHttps(g_strAppInfo.guideURL) + "#" + strDocID;
 	system.execBrowser(strURL);
 };
 
@@ -785,7 +785,17 @@ this.pdiv_Menu_Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo
 {
 	this.pdiv_Menu.closePopup();
 };
-]]></Script>
+
+this.fn_getHttps = function(targetString)
+{
+	var currentProtocol = window.location.protocol;
+	if(currentProtocol === "https:") {
+		return targetString.replace(/^http:/i, 'https:');
+	}
+	else {
+		return targetString;
+	}
+}]]></Script>
     <Objects>
       <Dataset id="ds_source">
         <ColumnInfo>
