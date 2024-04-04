@@ -145,7 +145,7 @@
 	
 	this.exportObj.exportfilename = "ExcelExportFile";
 	this.exportObj.exporttype = nexacro.ExportTypes.EXCEL2007;
-	this.exportObj.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
+	this.exportObj.exporturl = "https://edu.tobesoft.com/developer_guide/XExportImport";
 	
 	this.exportObj.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, "Sheet1!A1");
 	

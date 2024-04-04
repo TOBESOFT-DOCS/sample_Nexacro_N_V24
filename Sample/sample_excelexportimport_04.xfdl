@@ -184,7 +184,7 @@
 {
 	this.exportObj = new ExcelExportObject("Export00", this);
 
-	this.exportObj.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
+	this.exportObj.exporturl = "https://edu.tobesoft.com/developer_guide/XExportImport";
 	this.exportObj.exportfilename = "ExcelExportFile00";
 	this.exportObj.exporttype = nexacro.ExportTypes.EXCEL2007;
 	this.exportObj.clearExportItems(nexacro.ExportItemTypes.GRID);
@@ -200,7 +200,7 @@ this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	this.exportObj1 = new ExcelExportObject("Export01", this);
 
-	this.exportObj1.exporturl = "http://demo.nexacro.com/developer_guide/XExportImport";
+	this.exportObj1.exporturl = "https://edu.tobesoft.com/developer_guide/XExportImport";
 	this.exportObj1.exportfilename = "ExcelExportFile01";
 	this.exportObj1.exporttype = nexacro.ExportTypes.EXCEL2007;
 	this.exportObj1.clearExportItems(nexacro.ExportItemTypes.GRID);

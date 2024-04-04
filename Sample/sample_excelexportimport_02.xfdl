@@ -40,7 +40,7 @@
 	this.importObj = new ExcelImportObject("Import00", this);
 	
 	this.importObj.importtype = nexacro.ImportTypes.EXCEL;
-	this.importObj.importurl = "http://demo.nexacro.com/developer_guide/XImport";
+	this.importObj.importurl = "https://edu.tobesoft.com/developer_guide/XImport";
 	
 	this.importObj.addEventHandler("onsuccess", this.Import00_onsuccess, this);
 	this.importObj.addEventHandler("onerror", this.Import00_onerror, this);
