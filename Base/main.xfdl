@@ -185,7 +185,10 @@ this.fn_LoadContents = function(strDocID, strargSampleFile, strCategory, strSubj
 			break;
 		case 'sample_static_05':
 			strSampleFile = 'sample_static_05_01';
-			break;			
+			break;		
+		case 'sample_grid_68':
+			strSampleFile = 'sample_grid_68_01';
+			break;				
 		}
 	}
 	this.Div03.form.Tab00.tp_description.url = "Sample::" + strSampleFile + ".xfdl";
