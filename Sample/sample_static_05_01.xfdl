@@ -21,7 +21,7 @@
             </Rows>
           </Dataset>
         </Radio>
-        <Static id="staticWorkplace" taborder="2" text="2.しょくば" left="60" top="206" width="70" height="57" font="normal bold 10pt &quot;Arial&quot;" background="yellow" textAlign="center" padding="0px 2px"/>
+        <Static id="staticWorkplace" taborder="2" text="2.職場" left="60" top="206" width="70" height="57" font="normal bold 10pt &quot;Arial&quot;" background="yellow" textAlign="center" padding="0px 2px"/>
         <Static id="staticName" taborder="1" text="1.氏名" left="60" top="123" height="57" font="normal bold 10pt &quot;Arial&quot;" background="yellow" textAlign="center" padding="0px 2px" width="70"/>
         <CheckBox id="checkboxFit" taborder="3" text="Fit To Contents" left="160" top="50" width="125" height="20" onchanged="checkboxFit_onchanged"/>
         <Edit id="editName" taborder="4" left="140" top="123" width="140" height="57"/>
@@ -35,7 +35,7 @@ this.radioLang_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEv
 	trace(e.postindex, e.posttext, e.postvalue);
 	if(e.postvalue == "JAP")	{
 		this.staticName.text = "1.氏名";
-		this.staticWorkplace.text = "2.しょくば";
+		this.staticWorkplace.text = "2.職場";
 	} else if(e.postvalue == "ENG")	{
 		this.staticName.text = "1. First name";
 		this.staticWorkplace.text = "2. place of work";
