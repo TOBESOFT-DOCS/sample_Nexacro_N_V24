@@ -307,8 +307,8 @@ this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 			this.ds_sample_list_dummy.copyData(this.ds_sample_list, true);
 			this.ds_sample_list.copyData(this.ds_sample_list_dummy);
 			//this.ds_sample_list_dummy.copyData(this.ds_sample_list);
-			g_strAppInfo.setVariable("docsURL", "http://docs.nexaweb.jp/r/a/component_guide_nexacro_n_v24_ja/");
-			g_strAppInfo.setVariable("guideURL", "http://docs.nexaweb.jp/component_guide_nexacro_n_v24_ja");
+			g_strAppInfo.setVariable("docsURL", "http://docs.tobesoft.co.jp/r/a/component_guide_nexacro_n_v24_ja/");
+			g_strAppInfo.setVariable("guideURL", "http://docs.tobesoft.co.jp/component_guide_nexacro_n_v24_ja");
 		} else if(strLang == "zh") {
 			strSubjectCol = "subject_zh";
 			this.ds_sample_list.filter(strSubjectCol + "!= null && "+strHideCol + "== null");
