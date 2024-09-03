@@ -3,7 +3,7 @@
   <Environment themeid="theme::blue" filesecurelevel="all" userfontid="font::sample_common_font.xfont" datatyperule="2.0" icon="url('imagerc::56e72089fac4e4e9.ico')">
     <ScreenDefinition>
       <Screen id="Screen_D" type="desktop" userzoom="true" themeid="theme::blue"/>
-      <Screen id="Screen_ja" type="desktop" locale="ja_JP" themeid="theme::blue_ja" specifiedlocale="ja_JP"/>
+      <Screen id="Screen_ja" type="desktop" locale="ja_JP" themeid="theme::blue_ja_old" specifiedlocale="ja_JP"/>
       <Screen id="Screen_zh" type="desktop" specifiedlocale="zh_CN" themeid="theme::blue_zh"/>
     </ScreenDefinition>
     <Variables/>
