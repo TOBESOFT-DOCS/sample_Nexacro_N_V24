@@ -651,7 +651,7 @@
 				<Col id="id_doc">590bb7c3c6319c46</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">1</Col>
-				<Col id="keyword">userstatus</Col>
+				<Col id="keyword"></Col>
 			</Row>
 			<Row>
 				<Col id="category">CheckBox</Col>
