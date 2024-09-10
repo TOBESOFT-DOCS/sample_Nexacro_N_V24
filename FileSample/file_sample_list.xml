@@ -1289,7 +1289,7 @@
 				<Col id="id_doc">6ef9b81ab84f282a</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.setRealRowSize, Grid.extendsizetype</Col>
+				<Col id="keyword">Grid.setRealRowSize, Grid.extendsizetype, Grid.rowcount</Col>
 				<Col id="subject_ja">ツリービューのRowの高さを階層ごとに指定する</Col>
 				<Col id="subject_zh">直接指定Grid组件的Row高度</Col>
 				<Col id="subject_en">Directly Specifying Grid Component Row Height</Col>
@@ -1762,7 +1762,7 @@
 				<Col id="id_doc">b29d8368e4a87181</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.currentcell</Col>
+				<Col id="keyword">Grid.currentcell, Grid.autofittype, Grid.autosizingtype</Col>
 				<Col id="subject_ja">expr内で使用できるプロパティ</Col>
 				<Col id="id_doc_ja">1b492634c9aa2d9c</Col>
 				<Col id="subject_zh">expr中可用的属性</Col>
@@ -2392,9 +2392,10 @@
 				<Col id="id_doc">09826ad3bfb1b680</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Dataset.copyRow</Col>
+				<Col id="keyword"></Col>
 				<Col id="subject_zh">在对数据进行排序时在顶部显示null值</Col>
 				<Col id="subject_en">Displaying null Value on Top when Sorting Data</Col>
+				<Col id="hide_sample">true</Col>
 			</Row>
 			<Row>
 				<Col id="subject">데이터 너비에 맞추어 컬럼 너비 조절하기</Col>
@@ -3162,7 +3163,7 @@
 				<Col id="id_sample">sample_videoplayer_01</Col>
 				<Col id="id_doc">35d2e5935c3619c8</Col>
 				<Col id="search_subject">1</Col>
-				<Col id="keyword">VideoPlayer.url</Col>
+				<Col id="keyword"></Col>
 				<Col id="subject_ja">VideoPlayerの作成</Col>
 				<Col id="subject_zh"/>
 				<Col id="subject_en">Creating VideoPlayer</Col>
