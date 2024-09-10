@@ -1133,7 +1133,7 @@
 				<Col id="id_sample">sample_grid_04</Col>
 				<Col id="id_doc">2d3da18bc229dbf0</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Dataset.findRow, Dataset.findRowExpr</Col>
+				<Col id="keyword">Dataset.findRow, Dataset.findRowExpr, Grid.selectRow</Col>
 				<Col id="id_doc_ja">79ae3a1a685934d5</Col>
 				<Col id="subject_ja">条件に合致する特定のレコードの検索</Col>
 				<Col id="subject_zh">搜索符合条件的特定记录</Col>
@@ -1263,7 +1263,7 @@
 				<Col id="id_doc">403c48b9e2765706</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.selectArea, Grid.showselection</Col>
+				<Col id="keyword">Grid.selectArea, Grid.showselection, Grid.clearSelect</Col>
 				<Col id="subject_ja">プロパティ設定して選択したCellの枠線を表示する</Col>
 				<Col id="id_doc_ja">809dde0e5d0b6299</Col>
 				<Col id="subject_zh">指定属性以显示选定的单元格边框线</Col>
@@ -1289,7 +1289,7 @@
 				<Col id="id_doc">6ef9b81ab84f282a</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.setRealRowSize, Grid.extendsizetype, Grid.rowcount</Col>
+				<Col id="keyword">Grid.setRealRowSize, Grid.extendsizetype, Grid.rowcount, Grid.getDatasetRow</Col>
 				<Col id="subject_ja">ツリービューのRowの高さを階層ごとに指定する</Col>
 				<Col id="subject_zh">直接指定Grid组件的Row高度</Col>
 				<Col id="subject_en">Directly Specifying Grid Component Row Height</Col>
@@ -1697,7 +1697,7 @@
 				<Col id="id_doc">2c9fa071715771f3</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">System.screenToClientX , System.screenToClientY, Component.trackPopupByComponent, Component.closePopup</Col>
+				<Col id="keyword">System.screenToClientX , System.screenToClientY, Component.trackPopupByComponent, Component.closePopup, Component.oncelldblclick</Col>
 				<Col id="subject_ja">PopupDivで選択した値をデータとして入力する</Col>
 				<Col id="id_doc_ja">83ae5957bb2aa3fd</Col>
 				<Col id="subject_zh">将PopupDiv中选定的值作为数据输入</Col>
@@ -1968,7 +1968,7 @@
 				<Col id="subject">편집중인 값 가져오기</Col>
 				<Col id="id_sample">sample_grid_86</Col>
 				<Col id="id_doc">0fc09477662aa3e3</Col>
-				<Col id="keyword">Component.getEditingValue, Component.getEditingText, Component.setEditingValue</Col>
+				<Col id="keyword">Component.getEditingValue, Component.getEditingText, Component.setEditingValue, Component.getCurEditType, Component.getEditText</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="subject_ja">編集中の値を取得する</Col>
@@ -1983,7 +1983,7 @@
 				<Col id="id_doc">51baaa93baa23018</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.isTreeLeafRow</Col>
+				<Col id="keyword">Grid.isTreeLeafRow, Grid.isTreeRootRow</Col>
 				<Col id="subject_zh">一次展开子节点</Col>
 				<Col id="subject_en">Expanding Child Nodes at Once</Col>
 			</Row>
@@ -2016,7 +2016,7 @@
 				<Col id="id_doc">834556969cccb070</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Component.getEditingText, Component.getCellText</Col>
+				<Col id="keyword">Component.getEditingText, Component.getCellText, Grid.oncellposchanged</Col>
 				<Col id="subject_zh">显示在单元格中输入的字符串长度</Col>
 				<Col id="subject_en">Displaying String Length Entered in Cell</Col>
 			</Row>
@@ -2225,7 +2225,7 @@
 				<Col id="id_doc">0c6cf3d39041e305</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.treeinitstatus, Grid.setTreeStatus</Col>
+				<Col id="keyword">Grid.treeinitstatus, Grid.setTreeStatus, Grid.getTreeParentRow</Col>
 				<Col id="subject_ja">特定位置の親ツリービューのみ展開</Col>
 				<Col id="id_doc_ja">21a08d3db21b74b9</Col>
 				<Col id="subject_zh">仅展开特定位置的父树</Col>
@@ -2379,7 +2379,7 @@
 				<Col id="id_doc">d06856ea3d21e892</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.getTreeChildCount, Grid.getCellText, Grid.treeusebutton, Grid.treeuseline</Col>
+				<Col id="keyword">Grid.getTreeChildCount, Grid.getCellText, Grid.treeusebutton, Grid.treeuseline, Grid.getTreeChildRow</Col>
 				<Col id="subject_ja">ツリー構造内の子の情報を確認する</Col>
 				<Col id="id_doc_ja">88ba5e0d8d29c94f</Col>
 				<Col id="subject_zh">确认树形结构中的子信息</Col>
@@ -2462,7 +2462,7 @@
 				<Col id="id_doc">672c8e2ba8f887e1</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="keyword">Grid.getRealRowSize, Grid.getTreeRow</Col>
+				<Col id="keyword">Grid.getRealRowSize, Grid.getTreeRow, Grid.getBindDataset</Col>
 				<Col id="subject_zh">展开或折叠树时使低级数据可见</Col>
 				<Col id="subject_en">Showing Lower-level Data when Expanding/Collapsing Tree</Col>
 			</Row>
