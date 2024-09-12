@@ -3,7 +3,7 @@
   <Form id="sample_textfield_01" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <TextField id="TextField00" taborder="0" left="50.00" top="50" width="270" height="90" usetrailingbutton="true" inputtype="email" invalidtext="Invalid email format" cssclass="sample_textfield_01"/>
+        <TextField id="TextField00" taborder="0" left="50.00" top="50" width="270" height="90" usetrailingbutton="true" inputtype="email" invalidtext="Invalid email format" cssclass="sample_textfield_01" usehelpertext="true"/>
       </Layout>
     </Layouts>
   </Form>
