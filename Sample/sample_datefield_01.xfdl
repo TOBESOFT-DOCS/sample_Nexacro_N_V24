@@ -3,7 +3,7 @@
   <Form id="sample_datefield_01" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <DateField id="DateField00" taborder="0" left="50.00" top="50" width="150" height="60" inputtype="time"/>
+        <DateField id="DateField00" taborder="0" left="50.00" top="50" width="150" height="60" inputtype="time" format="h:mm:ss aa"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.DateField01_ondropdown = function(obj:nexacro.DateField,e:nexacro.EventInfo)
