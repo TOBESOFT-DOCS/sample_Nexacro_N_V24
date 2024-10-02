@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_93" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <Grid id="Grid00" taborder="0" left="40" top="111" width="242" height="132" binddataset="Dataset00" summ="Y">
+        <Grid id="Grid00" taborder="0" left="40" top="111" width="242" height="132" binddataset="Dataset00" user_summ="Y">
           <Formats>
             <Format id="default">
               <Columns>
@@ -28,7 +28,7 @@
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid01" taborder="1" left="311" top="110" width="243" height="137" binddataset="Dataset01" summ="Y">
+        <Grid id="Grid01" taborder="1" left="311" top="110" width="243" height="137" binddataset="Dataset01" user_summ="Y">
           <Formats>
             <Format id="default">
               <Columns>
@@ -169,7 +169,7 @@ this.fn_setSumm = function(obj)
 	for(var i=0; i<obj.all.length; i++){
 		if( obj.all[i].toString() == "[object Grid]" ){
 			objGrd = obj.all[i];
-			if( objGrd.summ == "Y"){
+			if( objGrd.user_summ == "Y"){
 				objDs = obj.all[objGrd.binddataset];	
 				var idx = objDs.addRow();
 				for(var j=0; j<objGrd.getCellCount("body"); j++){
