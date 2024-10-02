@@ -109,7 +109,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.onlayoutchanged</Col>
-				<Col id="subject_ja">画面サイズに応じてレイアウトを変更</Col>
+				<Col id="subject_ja">画面サイズに応じたレイアウトの切り替え</Col>
 				<Col id="id_doc_ja">408788af3549885b</Col>
 				<Col id="subject_zh">根据界面大小更改布局</Col>
 				<Col id="subject_en">Changing Layout According to Screen Size</Col>
@@ -122,7 +122,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Layout.stepcount, Component.positionstep, Form.setStepIndex</Col>
-				<Col id="subject_ja">画面をステップ単位に分割</Col>
+				<Col id="subject_ja">ステップ単位の画面分割</Col>
 				<Col id="id_doc_ja">26f85b8fd05ac734</Col>
 				<Col id="subject_zh">按step分割界面</Col>
 				<Col id="subject_en">Dividing Screen into Steps</Col>
@@ -135,8 +135,6 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.go</Col>
-				<Col id="subject_ja">画面を移動</Col>
-				<Col id="id_doc_ja">2e1721593c644042</Col>
 				<Col id="subject_zh">移动界面</Col>
 				<Col id="subject_en">Moving Screen</Col>
 			</Row>
@@ -149,6 +147,7 @@
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.components, Form.objects, Form.all</Col>
 				<Col id="subject_zh">访问对象</Col>
+				<Col id="subject_ja">オブジェクトへのアクセス</Col>
 				<Col id="subject_en">Accessing Object</Col>
 			</Row>
 			<Row>
@@ -171,6 +170,7 @@
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.setTimer, Form.ontimer, Form.killTimer</Col>
 				<Col id="subject_zh">用定时器显示时间</Col>
+				<Col id="subject_ja">タイマー機能を用いた時刻の表示</Col>
 				<Col id="subject_en">Displaying Time with Timer</Col>
 			</Row>
 			<Row>
@@ -214,7 +214,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.transaction</Col>
-				<Col id="subject_ja">サーバーとtransaction処理する</Col>
+				<Col id="subject_ja">サーバー連携（トランザクション）</Col>
 				<Col id="id_doc_ja">c2f8a20f163fe165</Col>
 				<Col id="subject_zh">处理服务器和transaction</Col>
 				<Col id="subject_en">Processing transaction with Server</Col>
@@ -901,7 +901,7 @@
 				<Col id="id_doc">db1a56890e08a7b3</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">Edit.autoskip, Component.maxlength, Component.taborder</Col>
-				<Col id="subject_ja">自動的にフォーカスを移動</Col>
+				<Col id="subject_ja">自動フォーカス移動</Col>
 				<Col id="id_doc_ja">29572e1ce995627b</Col>
 				<Col id="subject_zh">移动自动焦点</Col>
 				<Col id="subject_en">Shifting Auto Focus</Col>
@@ -1160,7 +1160,7 @@
 				<Col id="id_doc">8248b677d4c1b860</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.selecttype, ItemChangeEventInfo.posttext</Col>
-				<Col id="subject_ja">複数のレコードを選択</Col>
+				<Col id="subject_ja">複数レコードの選択</Col>
 				<Col id="id_doc_ja">b4ab16e5b9ce561f</Col>
 				<Col id="subject_zh">选择多个记录</Col>
 				<Col id="subject_en">Selecting Multiple Records</Col>
@@ -1173,7 +1173,7 @@
 				<Col id="id_doc">252cd965e21b43b7</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.selecttype, Grid.getSelectedDatasetRows, Dataset.deleteMultiRows</Col>
-				<Col id="subject_ja">複数のレコード削除</Col>
+				<Col id="subject_ja">複数レコードの削除</Col>
 				<Col id="id_doc_ja">3aa4fd6a8ee82d9a</Col>
 				<Col id="subject_zh">删除多个记录</Col>
 				<Col id="subject_en">Deleting Multiple Records</Col>
@@ -1187,7 +1187,7 @@
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.appendData</Col>
 				<Col id="id_doc_ja">dcca8b2e00d9b081</Col>
-				<Col id="subject_ja">他のデータセットのレコード追加</Col>
+				<Col id="subject_ja">他のDatasetのレコードの追加</Col>
 				<Col id="subject_zh">添加其他数据集的记录</Col>
 				<Col id="subject_en">Adding Records of Other Datasets</Col>
 			</Row>
@@ -1199,7 +1199,7 @@
 				<Col id="id_doc">11eaaf5b460a5800</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.getRowCount</Col>
-				<Col id="subject_ja">レコード数を数える</Col>
+				<Col id="subject_ja">レコード件数の取得</Col>
 				<Col id="id_doc_ja">419fb3af5bc6e812</Col>
 				<Col id="subject_zh">获取记录数</Col>
 				<Col id="subject_en">Getting Number of Records</Col>
@@ -1225,7 +1225,7 @@
 				<Col id="id_doc">88d3606f8aac951f</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.applyChange, Dataset.reset</Col>
-				<Col id="subject_ja">変更内容データセットに反映する/元に戻す</Col>
+				<Col id="subject_ja">変更内容をDatasetに反映する/元に戻す</Col>
 				<Col id="id_doc_ja">58b975e58af417ec</Col>
 				<Col id="subject_zh">将修改内容反映/还原到数据集</Col>
 				<Col id="subject_en">Reflecting/Resetting Changes to Dataset</Col>
@@ -1264,7 +1264,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.selectArea, Grid.showselection, Grid.clearSelect</Col>
-				<Col id="subject_ja">プロパティ設定して選択したCellの枠線を表示する</Col>
+				<Col id="subject_ja">選択中のCellの枠線を表示する</Col>
 				<Col id="id_doc_ja">809dde0e5d0b6299</Col>
 				<Col id="subject_zh">指定属性以显示选定的单元格边框线</Col>
 				<Col id="subject_en">Displaying Cell Boarder by Specifying Property</Col>
@@ -1358,7 +1358,7 @@
 				<Col id="id_doc">e1b5be29cd1980a9</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.cellsizingtype</Col>
-				<Col id="subject_ja">Cellのサイズを調節する (Rowのサイズを一括調節)</Col>
+				<Col id="subject_ja">Cellのサイズの調整 (Rowサイズの一括変更)</Col>
 				<Col id="id_doc_ja">a53f92eca0a50e2a</Col>
 				<Col id="subject_zh">调整Cell大小(批量调整Row大小)</Col>
 				<Col id="subject_en">Adjusting Cell Size (Batch Adjustment of Row Size)</Col>
@@ -1371,7 +1371,7 @@
 				<Col id="id_doc">57649bc49372d244</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.cellsizingtype, Grid.extendsizetype</Col>
-				<Col id="subject_ja">Cellのサイズを調節(特定のRowサイズ調節)</Col>
+				<Col id="subject_ja">Cellのサイズの調整（Rowサイズの個別変更）</Col>
 				<Col id="id_doc_ja">802bafdf486cbe8c</Col>
 				<Col id="subject_zh">调整Cell大小(特定Row大小)</Col>
 				<Col id="subject_en">Adjusting Cell Size (Adjustment of Specific Row Size)</Col>
@@ -1672,7 +1672,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Component.maskeditformat</Col>
-				<Col id="subject_ja">一部のデータをマスクする</Col>
+				<Col id="subject_ja">データマスキング</Col>
 				<Col id="id_doc_ja">a3b95ca5b0d4ef5d</Col>
 				<Col id="subject_zh">隐藏并显示部分数据</Col>
 				<Col id="subject_en">Hiding &amp; Displaying Some Data</Col>
@@ -1685,7 +1685,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword"></Col>
-				<Col id="subject_ja">選択したRow全体のColumnを入力状態に変換する</Col>
+				<Col id="subject_ja">選択したRowの全てのColumnを入力モードに切り替える</Col>
 				<Col id="id_doc_ja">8b36e9351143f621</Col>
 				<Col id="subject_zh">将选定的Row全部列转换为输入状态</Col>
 				<Col id="subject_en">Converting Entire Column of Selected Row to Input State</Col>
@@ -1750,7 +1750,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">GridCellControl.displaytype, System.execBrowser</Col>
-				<Col id="subject_ja">URLリンクをクリックした際に該当サイトへ移動する</Col>
+				<Col id="subject_ja">URLリンクのクリック時にWebページを開く</Col>
 				<Col id="id_doc_ja">395095994281740c</Col>
 				<Col id="subject_zh">单击URL链接时转到相应站点</Col>
 				<Col id="subject_en">Moving to Site when Clicking URL Link</Col>
@@ -1893,7 +1893,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.getEditValue, Grid.setEditValue</Col>
-				<Col id="subject_ja">Gridで特定のテキストだけを入力する</Col>
+				<Col id="subject_ja">Gridで特定のテキストの入力のみ許可する</Col>
 				<Col id="id_doc_ja">033aef03441879d2</Col>
 				<Col id="subject_zh">在Grid中只输入特定文本</Col>
 				<Col id="subject_en">Entering Only Specific Text in Grid</Col>
@@ -1906,7 +1906,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.suppresshorzcell</Col>
-				<Col id="subject_ja">横のセルと値が同じ場合、1つのCellで表示する</Col>
+				<Col id="subject_ja">隣のCellと同じ値である場合、1つのCellにまとめて表示する</Col>
 				<Col id="id_doc_ja">3252660a486be9fd</Col>
 				<Col id="subject_zh">将具有相同水平值的单元格标记为一个单元格</Col>
 				<Col id="subject_en">Displaying Cells with Same Horizontal Value as One Cell</Col>
@@ -1919,7 +1919,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.mergeCell, Grid.splitCell</Col>
-				<Col id="subject_ja">指定した領域のCellを一つのCellに表示する</Col>
+				<Col id="subject_ja">指定した領域のCellを1つのCellにまとめて表示する</Col>
 				<Col id="id_doc_ja">d912da5e165bba88</Col>
 				<Col id="subject_zh">将所需区域的单元格标记为一个单元格</Col>
 				<Col id="subject_en">Displaying Cells of Desired Area as One Cell</Col>
@@ -1932,7 +1932,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.selectstartcol, Grid.selectendcol, Grid.selectstartrow, Grid.selectendrow</Col>
-				<Col id="subject_ja">選択した領域のCellを1つのセルで表示する</Col>
+				<Col id="subject_ja">選択した領域のCellを1つのCellにまとめて表示する</Col>
 				<Col id="id_doc_ja">77575d8af8c2cb75</Col>
 				<Col id="subject_zh">将所选区域的单元格显示为一个单元格</Col>
 				<Col id="subject_en">Displaying Cells of Selected Area as One Cell</Col>
@@ -2085,7 +2085,7 @@
 				<Col id="id_doc">f555e80cc2b47f22</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.getRowLevel, GridCellControl.cssclass, GridCellControl.expr</Col>
-				<Col id="subject_ja">小計の名前と背景色設定</Col>
+				<Col id="subject_ja">小計の名前と背景色の設定</Col>
 				<Col id="id_doc_ja">f8ffc5738d1ec2ef</Col>
 				<Col id="subject_zh">设置小计名称和背景色</Col>
 				<Col id="subject_en">Setting Subtotal Name &amp; Background Color</Col>
@@ -2124,7 +2124,7 @@
 				<Col id="id_doc">33c1574e75c1c1f6</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.keystring, Form.objects, Grid.getCellCount, Grid.getCellText, Grid.getCellProperty, Grid.setCellProperty</Col>
-				<Col id="subject_ja">ヘッダ部クリックによるソート制御</Col>
+				<Col id="subject_ja">ヘッダーのクリックによるソート制御</Col>
 				<Col id="id_doc_ja">ef7283eb7d703163</Col>
 				<Col id="subject_zh">使用表头事件排序</Col>
 				<Col id="subject_en">Sorting Using Header Event</Col>
@@ -2189,7 +2189,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Component.radioitemcodevalue</Col>
-				<Col id="subject_ja">Gridでradioitemを用いた簡単なアンケート</Col>
+				<Col id="subject_ja">Gridでradioitemを用いた簡単なアンケート実施</Col>
 				<Col id="subject_en">Implementing a simple survey in Grid (use radioitem)</Col>
 			</Row>
 			<Row>
@@ -2213,7 +2213,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.getRowType, Dataset.getGroupRangeCount</Col>
-				<Col id="subject_ja">1件だけある小計削除</Col>
+				<Col id="subject_ja">1件のみのデータは小計を非表示にする</Col>
 				<Col id="id_doc_ja">191a5ebcf5720acf</Col>
 				<Col id="subject_zh">删除只有1项的小计</Col>
 				<Col id="subject_en">Deleting Subtotal with Only 1 Item</Col>
@@ -2239,7 +2239,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">GridCellControl.displaytype</Col>
-				<Col id="subject_ja">領収証を計算する</Col>
+				<Col id="subject_ja">レシート計算</Col>
 				<Col id="id_doc_ja">dd89f2d2236621de</Col>
 				<Col id="subject_zh">计算收据</Col>
 				<Col id="subject_en">Calculating Receipts</Col>
@@ -2265,7 +2265,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.appendContentsRow, Grid.appendContentsCol</Col>
-				<Col id="subject_ja">動的にGridコンポーネントを作成してデータをバインドする</Col>
+				<Col id="subject_ja">動的にGridコンポーネントを生成しデータをバインドする</Col>
 				<Col id="id_doc_ja">82362e9293cf75b7</Col>
 				<Col id="subject_zh">动态生成Grid组件并绑定数据</Col>
 				<Col id="subject_en">Dynamically Creating Grid Component &amp; Binding Data</Col>
@@ -2278,7 +2278,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.getCellValue, Grid.getCellRect</Col>
-				<Col id="subject_ja">ドラッグ＆ドロップでコンポーネントの文字列移動</Col>
+				<Col id="subject_ja">ドラッグ＆ドロップによるコンポーネントのテキストのコピー</Col>
 				<Col id="id_doc_ja">fe7d6f5eb675797b</Col>
 				<Col id="subject_zh">用拖放移动Grid组件的字符串</Col>
 				<Col id="subject_en">Moving String of Grid Component by Drag &amp; Drop</Col>
@@ -2291,7 +2291,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.scrollTo</Col>
-				<Col id="subject_ja">2つのGridコンポーネントのスクロールを同時に動かす</Col>
+				<Col id="subject_ja">2つのGridコンポーネントを同時にスクロールさせる</Col>
 				<Col id="id_doc_ja">81e4708ec41bac8c</Col>
 				<Col id="subject_zh">同时移动两个Grid组件的滚动</Col>
 				<Col id="subject_en">Moving Scroll of 2 Grid Components Simultaneously</Col>
@@ -2304,7 +2304,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Component.redrawExprCell</Col>
-				<Col id="subject_ja">チェックされたRowの数を返す</Col>
+				<Col id="subject_ja">チェックを入れたRowの件数を返す</Col>
 				<Col id="id_doc_ja">01a7a6f10a8fe757</Col>
 				<Col id="subject_zh">返回选中的Row数字</Col>
 				<Col id="subject_en">Returning Checked Row Number</Col>
@@ -2330,7 +2330,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.findRowExpr</Col>
-				<Col id="subject_ja">重複した項目を削除する</Col>
+				<Col id="subject_ja">重複する項目の削除</Col>
 				<Col id="id_doc_ja">29b449571296fd82</Col>
 				<Col id="subject_zh">删除重复项目</Col>
 				<Col id="subject_en">Removing Duplicates</Col>
@@ -2343,8 +2343,6 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">GridCellControl.displaytype</Col>
-				<Col id="subject_ja">Radioボタンを表現</Col>
-				<Col id="id_doc_ja">be1bdb26a43afd79</Col>
 				<Col id="subject_zh">表示Radio按钮</Col>
 				<Col id="subject_en">Displaying Radio Button</Col>
 			</Row>
@@ -2440,7 +2438,6 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.getBindCellIndex, Grid.getCellPos</Col>
-				<Col id="subject_ja">クリックしたセルのスタイル表示</Col>
 				<Col id="subject_zh">显示单击的单元格</Col>
 				<Col id="subject_en">Displaying Clicked Cell</Col>
 			</Row>
@@ -3778,6 +3775,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.getCaseSum</Col>
 				<Col id="subject_zh">根据条件计算数据平均值和总和</Col>
+				<Col id="subject_ja">条件付きでデータの平均値および合計値の計算</Col>
 				<Col id="subject_en">Calculating Data Average &amp; Sum by Conditions</Col>
 			</Row>
 			<Row>
@@ -3789,6 +3787,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.getColumnInfo</Col>
 				<Col id="subject_zh">确认列信息并更改type属性值</Col>
+				<Col id="subject_ja">カラムの情報の取得およびtypeプロパティ値の変更</Col>
 				<Col id="subject_en">Checking Column Information &amp; Changing type Property Value</Col>
 			</Row>
 			<Row>
@@ -3800,6 +3799,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.getRowType, Dataset.getOrgColumn, Dataset.getDeletedRowCount, Dataset.getDeletedColumn</Col>
 				<Col id="subject_zh">确认删除的Row信息</Col>
+				<Col id="subject_ja">削除済のRow情報の取得</Col>
 				<Col id="subject_en">Checking Deleted Row Information</Col>
 			</Row>
 			<Row>
@@ -3811,6 +3811,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Application.addVariable</Col>
 				<Col id="subject_zh">通过脚本生成Dataset</Col>
+				<Col id="subject_ja">スクリプトによるDatasetの生成</Col>
 				<Col id="subject_en">Creating Dataset with Script</Col>
 			</Row>
 			<Row>
@@ -3822,6 +3823,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.getColCount</Col>
 				<Col id="subject_zh">恢复更改的列信息</Col>
+				<Col id="subject_ja">変更されたカラム情報を元に戻す</Col>
 				<Col id="subject_en">Restoring Changed Column Information</Col>
 			</Row>
 			<Row>
@@ -3833,6 +3835,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.updatecontrol</Col>
 				<Col id="subject_zh">更改RowType</Col>
+				<Col id="subject_ja">RowTypeの変更</Col>
 				<Col id="subject_en">Changing RowType</Col>
 			</Row>
 			<Row>
@@ -3844,6 +3847,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.filter</Col>
 				<Col id="subject_zh">不区分大小写过滤</Col>
+				<Col id="subject_ja">大文字と小文字を区別せずにフィルタリングする</Col>
 				<Col id="subject_en">Filtering without Case Sensitivity</Col>
 			</Row>
 			<Row>
@@ -3855,6 +3859,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="keyword">Dataset.getGroupRangeStart, Dataset.getGroupRangeCount</Col>
 				<Col id="subject_zh">获取与分组数据相关的计算值</Col>
+				<Col id="subject_ja">グルーピングしたデータに対してサマリー情報を求める</Col>
 				<Col id="subject_en">Getting Calculation Values Related to Grouped Data</Col>
 			</Row>
 			<Row>
@@ -3864,6 +3869,7 @@
 				<Col id="id_sample">sample_dataset_10</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">5</Col>
+				<Col id="subject_ja">ソート時のオプションの設定</Col>
 				<Col id="keyword">Dataset.keystring</Col>
 			</Row>
 			<Row>
