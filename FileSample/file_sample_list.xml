@@ -1346,7 +1346,7 @@
 				<Col id="subject">Grid 레이아웃</Col>
 				<Col id="tree_level">0</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="subject_ja">Gridレイアウト</Col>
+				<Col id="subject_ja">Gridのレイアウト</Col>
 				<Col id="subject_zh">Grid布局</Col>
 				<Col id="subject_en">Grid Layout</Col>
 			</Row>
@@ -1531,7 +1531,7 @@
 				<Col id="subject">Grid 셀</Col>
 				<Col id="tree_level">0</Col>
 				<Col id="search_subject">2</Col>
-				<Col id="subject_ja">Gridセル</Col>
+				<Col id="subject_ja">Gridのセル</Col>
 				<Col id="subject_zh">Grid单元格</Col>
 				<Col id="subject_en">Grid Cell</Col>
 			</Row>
@@ -2176,7 +2176,7 @@
 				<Col id="id_doc">96e390279a5283bf</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Dataset.setColumn</Col>
-				<Col id="subject_ja">Gridで簡単なアンケート実装</Col>
+				<Col id="subject_ja">Gridで簡単なアンケートの実装</Col>
 				<Col id="id_doc_ja">4562da470410f5f2</Col>
 				<Col id="subject_zh">在Grid中实现简单的问卷调查</Col>
 				<Col id="subject_en">Implementing Simple Survey in Grid</Col>
@@ -2189,7 +2189,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Component.radioitemcodevalue</Col>
-				<Col id="subject_ja">Gridでradioitemを用いた簡単なアンケート実施</Col>
+				<Col id="subject_ja">Gridでradioitemを用いた簡単なアンケートの実装</Col>
 				<Col id="subject_en">Implementing a simple survey in Grid (use radioitem)</Col>
 			</Row>
 			<Row>
@@ -3764,6 +3764,7 @@
 				<Col id="tree_level">0</Col>
 				<Col id="search_subject">5</Col>
 				<Col id="subject_zh">Dataset</Col>
+				<Col id="subject_ja">Dataset</Col>
 				<Col id="subject_en">Dataset</Col>
 			</Row>
 			<Row>
