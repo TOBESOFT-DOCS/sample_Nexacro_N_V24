@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XCSS version="1.1">
+  <Predefines>
+    <Group id="Default_font">
+      <Define id="Meiryo12px" value="12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo12px" value="bold 12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo13px" value="bold 13px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo14px" value="bold 14px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+      <Define id="BoldMeiryo17px" value="bold 17px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
+    </Group>
+  </Predefines>
   <CSSData><![CDATA[/* 
   nexacro Application Theme
   Name		   : blue.xtheme
   Published        : 2020-04-06
-  Last-modified    : 2024-08-27
+  Last-modified    : 2024-11-20
 */
 
 /* Frame/Form */
@@ -1616,15 +1625,6 @@
 	color : #ffffff;
 	background : #125dae;
 }
-.DatePickerControl .body .yearitem[userstatus=trailingyear]
-{
-	color : #989898;
-}
-.DatePickerControl .body .yearitem[status=mouseover][userstatus=trailingyear]
-{
-	color : #ffffff;
-
-}
 .DatePickerControl .body .yearitem[status=disabled]
 {
 	color : #cdcdcd;
@@ -2825,13 +2825,8 @@
         
 }
 ]]></CSSData>
-  <Predefines>
-    <Group id="Default_font">
-      <Define id="Meiryo12px" value="12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo12px" value="bold 12px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo13px" value="bold 13px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo14px" value="bold 14px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-      <Define id="BoldMeiryo17px" value="bold 17px &quot;Meiryo&quot;, &quot;Verdana&quot;, &quot;Roboto&quot;, &quot;Droid Sans&quot;, &quot;游ゴシック&quot;, &quot;YuGothic&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS Gothic&quot;, &quot;sans-serif&quot;"/>
-    </Group>
-  </Predefines>
+  <CSSData type="desktop"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
 </XCSS>

@@ -13,7 +13,7 @@
   nexacro Application Theme
   Name		   : blue.xtheme
   Published        : 2020-04-06
-  Last-modified    : 2024-08-27
+  Last-modified    : 2024-11-20
 */
 
 /* Frame/Form */
@@ -1624,15 +1624,6 @@
 {
 	color : #ffffff;
 	background : #125dae;
-}
-.DatePickerControl .body .yearitem[userstatus=trailingyear]
-{
-	color : #989898;
-}
-.DatePickerControl .body .yearitem[status=mouseover][userstatus=trailingyear]
-{
-	color : #ffffff;
-
 }
 .DatePickerControl .body .yearitem[status=disabled]
 {
