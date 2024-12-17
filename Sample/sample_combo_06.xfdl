@@ -3,8 +3,8 @@
   <Form id="sample_combo_06" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
-        <Combo id="Combo00" taborder="0" text="" left="105" top="61" width="275" height="29" ondropdown="Combo00_ondropdown"/>
-        <Grid id="Grid00" taborder="1" left="105" top="90" width="275" height="100" binddataset="Dataset00" autofittype="col" oncellclick="Grid00_oncellclick" visible="false">
+        <Combo id="Combo00" taborder="0" text="" left="50" top="50" width="275" height="29" ondropdown="Combo00_ondropdown"/>
+        <Grid id="Grid00" taborder="1" left="50" top="79" width="275" height="100" binddataset="Dataset00" autofittype="col" oncellclick="Grid00_oncellclick" visible="false">
           <Formats>
             <Format id="default">
               <Columns>
@@ -52,7 +52,7 @@ this.fn_comboEdit_set = function()
 			
 		}
 	}	
-	this.Combo00.text = str_txt.substr(0, str_txt.length-1);
+	this.Combo00.text = str_txt.substring(0, str_txt.length-1);
 };
 ]]></Script>
     <Objects>

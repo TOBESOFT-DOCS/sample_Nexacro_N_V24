@@ -140,11 +140,11 @@ this.fn_localDate = function(strDate, timezone)
 	var d = new nexacro.Date(strDate);
 	d.addSeconds(Number(timezone));
 	//return d.toLocaleString(this.locale, { hour12: false });
-    var year = d.getFullYear().toString().padLeft(4, "0");
-    var month = (d.getMonth()+1).toString().padLeft(2, "0");
-    var day = d.getDate().toString().padLeft(2, "0");
-	var hour = d.getHours().toString().padLeft(2, "0");
-	var minute = d.getMinutes().toString().padLeft(2, "0");
+    var year = d.getFullYear().toString().padStart(4, "0");
+    var month = (d.getMonth()+1).toString().padStart(2, "0");
+    var day = d.getDate().toString().padStart(2, "0");
+	var hour = d.getHours().toString().padStart(2, "0");
+	var minute = d.getMinutes().toString().padStart(2, "0");
 	return year+"/"+month+"/"+day+" "+hour+":"+minute;
 }
 

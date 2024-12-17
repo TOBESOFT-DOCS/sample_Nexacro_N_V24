@@ -34,8 +34,8 @@
 	
 	var objDate = new Date();
 	var sRtn =  objDate.getFullYear()+"/"
-		+ (objDate.getMonth()+1).toString().padLeft(2, "0")+"/"
-		+ objDate.getDate().toString().padLeft(2, "0");
+		+ (objDate.getMonth()+1).toString().padStart(2, "0")+"/"
+		+ objDate.getDate().toString().padStart(2, "0");
 	return sRtn;
 };
 

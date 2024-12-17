@@ -3,7 +3,7 @@
   <Form id="sample_grid_37" width="1024" height="768" titletext="New Form" onload="Form_onload">
     <Layouts>
       <Layout height="768" width="1024">
-        <Grid id="Grid00" taborder="1" left="32" top="40" width="560" height="211" binddataset="Dataset00" autofittype="col" autosizingtype="row" extendsizetype="none" autosizebandtype="body" text="" autoenter="none" fillareatype="none" selecttype="multirow" cellsizingtype="none" cellmovingtype="none" cellsizebandtype="body" border="" selectscrollmode="select" onkeydown="Grid_onkeydown">
+        <Grid id="Grid00" taborder="1" left="50" top="50" width="560" height="211" binddataset="Dataset00" autofittype="col" autosizingtype="row" extendsizetype="none" autosizebandtype="body" text="" autoenter="none" fillareatype="none" selecttype="multirow" cellsizingtype="none" cellmovingtype="none" cellsizebandtype="body" border="" selectscrollmode="select" onkeydown="Grid_onkeydown">
           <Formats>
             <Format id="default">
               <Columns>
@@ -55,7 +55,7 @@
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid01" taborder="0" left="32" top="272" width="560" height="211" binddataset="Dataset01" autofittype="col" autosizingtype="row" extendsizetype="none" autosizebandtype="body" text="" autoenter="none" fillareatype="none" selecttype="multirow" cellsizingtype="none" cellmovingtype="none" cellsizebandtype="body" border="" selectscrollmode="select" onkeydown="Grid_onkeydown">
+        <Grid id="Grid01" taborder="0" left="50" top="280" width="560" height="211" binddataset="Dataset01" autofittype="col" autosizingtype="row" extendsizetype="none" autosizebandtype="body" text="" autoenter="none" fillareatype="none" selecttype="multirow" cellsizingtype="none" cellmovingtype="none" cellsizebandtype="body" border="" selectscrollmode="select" onkeydown="Grid_onkeydown">
           <Formats>
             <Format id="default">
               <Columns>
@@ -246,7 +246,7 @@ this.Grid_onkeydown = function(obj:nexacro.Grid,e:nexacro.KeyEventInfo)
 			}
 
 			//copy from selected row to Buff variable
-			Buff = sClip.substr(0, sClip.length-1);			
+			Buff = sClip.substring(0, sClip.length-1);			
 		}
 		
 		//Ctrl + v key

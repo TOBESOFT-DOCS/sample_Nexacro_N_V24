@@ -3,9 +3,9 @@
   <Form id="sample_date_02" width="1280" height="720" titletext="New Form" locale="en_US" ontimer="sample_date_01_ontimer">
     <Layouts>
       <Layout height="720" width="1280">
-        <Button id="Button00" taborder="0" text="Button00" left="220" top="49" width="90" height="31" onclick="Button00_onclick"/>
-        <TextArea id="TextArea00" taborder="1" left="56" top="90" width="254" height="120"/>
-        <MaskEdit id="MaskEdit00" taborder="2" left="56" top="49" width="154" height="31" format="####/##/##" type="string"/>
+        <Button id="Button00" taborder="0" text="Button00" left="214" top="50" width="90" height="31" onclick="Button00_onclick"/>
+        <TextArea id="TextArea00" taborder="1" left="50" top="90" width="254" height="120"/>
+        <MaskEdit id="MaskEdit00" taborder="2" left="50" top="50" width="154" height="31" format="####/##/##" type="string"/>
       </Layout>
     </Layouts>
     <Objects/>
@@ -27,22 +27,22 @@ this.fn_lastDay = function(sDate)
     }
     else 
     {
-	    dDate = new Date(parseInt(sDate.substr(0,4)), parseInt(sDate.substr(4,2)), 1);
+	    dDate = new Date(parseInt(sDate.substring(0,4)), parseInt(sDate.substring(4,6)), 1);
 	    dDate.addDate(-1);	
     }
 	
     var sRtn =  dDate.getFullYear()
-	+ (dDate.getMonth()+1).toString().padLeft(2, "0")
-	+ dDate.getDate().toString().padLeft(2, "0");  
+	+ (dDate.getMonth()+1).toString().padStart(2, "0")
+	+ dDate.getDate().toString().padStart(2, "0");  
 	
 	return sRtn;
 };
 
 this.fn_hanGulWeek = function(sDate) 
 {
-    var dDate    = new Date(parseInt(sDate.substr(0,4))
-		, parseInt(sDate.substr(4,2))-1
-		, parseInt(sDate.substr(6,2)));
+    var dDate    = new Date(parseInt(sDate.substring(0,4))
+		, parseInt(sDate.substring(4,6))-1
+		, parseInt(sDate.substring(6,8)));
     var sDay     = dDate.getDay();
 	var arrweek  = new Array("Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.");		
 	var sRtn     = arrweek[sDay];

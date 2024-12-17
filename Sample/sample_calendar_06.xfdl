@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_calendar_06" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -16,14 +16,14 @@
 	var colorTextcolorcolumn = "red";
 	
 	var currDate = new Date();
-	var year = currDate.getFullYear().toString().padLeft(4, "0");	
+	var year = currDate.getFullYear().toString().padStart(4, "0");	
 	
 	for(var i=1;i<13;i++) {
 		var rIdx = this.dsHoliday.addRow();
 		this.dsHoliday.setColumn(rIdx, "backgroundcolumn", colorBackgroundcolumn);
 		this.dsHoliday.setColumn(rIdx, "textcolorcolumn", colorTextcolorcolumn);
 		this.dsHoliday.setColumn(rIdx, "bordercolumn", colorBordercolumn);
-		this.dsHoliday.setColumn(rIdx, "datecolumn", (year+i.toString().padLeft(2, "0"))+"01");	
+		this.dsHoliday.setColumn(rIdx, "datecolumn", (year+i.toString().padStart(2, "0"))+"01");	
 		
 	}
 }]]></Script>

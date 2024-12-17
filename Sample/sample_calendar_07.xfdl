@@ -3,21 +3,26 @@
   <Form id="sample_calendar_07" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
-        <Calendar id="Calendar00" taborder="0" left="63" top="56" width="157" height="30" onchanged="Calendar00_onchanged"/>
-        <Calendar id="Calendar01" taborder="1" left="63" top="100" width="157" height="30" enable="false"/>
-        <CheckBox id="CheckBox00" taborder="2" text="leap month" left="230" top="100" width="95" height="20" enable="false"/>
+        <Calendar id="Calendar00" taborder="0" left="50" top="50" width="157" height="30" onchanged="Calendar00_onchanged"/>
+        <Calendar id="Calendar01" taborder="1" left="50" top="100" width="157" height="30" enable="false"/>
+        <CheckBox id="CheckBox00" taborder="2" text="leap month" left="230" top="105" width="95" height="20" enable="false"/>
       </Layout>
     </Layouts>
     <Objects/>
     <Script type="xscript5.1"><![CDATA[this.Calendar00_onchanged = function(obj:nexacro.Calendar,e:nexacro.ChangeEventInfo)
 {
 	var c = new String(obj.value);
-	var y = c.substr(0,4);
-	var m = c.substr(4,2);
-	var d = c.substr(6,2);
+	var y = c.substring(0,4);
+	var m = c.substring(4,6);
+	var d = c.substring(6,8);
 	var lunar = this.lunarCalc(y, m, d, 1);
-	lunar.month = lunar.month < 10 ? "0"+lunar.month : lunar.month;
-	lunar.day = lunar.day   < 10 ? "0"+lunar.day   : lunar.day;
+	
+    function padZero(value) {
+        return value < 10 ? "0" + value : value;
+    }
+	
+	lunar.month = padZero(lunar.month);
+	lunar.day = padZero(lunar.day);
 	
 	this.Calendar01.value = String().concat(lunar.year, lunar.month, lunar.day);
 	this.CheckBox00.value = lunar.leapMonth;

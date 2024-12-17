@@ -3,11 +3,11 @@
   <Form id="sample_string_11" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <Edit id="Edit00" taborder="0" left="49" top="41" width="211" height="39"/>
-        <Button id="Button00" taborder="1" text="isDate" left="270" top="41" width="70" height="39" onclick="Button00_onclick"/>
-        <Edit id="Edit01" taborder="2" left="49" top="139" width="211" height="39" enable="false"/>
-        <Edit id="Edit02" taborder="3" left="49" top="90" width="211" height="39"/>
-        <Button id="Button01" taborder="4" text="isTime" left="270" top="90" width="70" height="39" onclick="Button01_onclick"/>
+        <Edit id="Edit00" taborder="0" left="50" top="50" width="211" height="39"/>
+        <Button id="Button00" taborder="1" text="isDate" left="270" top="50" width="70" height="39" onclick="Button00_onclick"/>
+        <Edit id="Edit01" taborder="2" left="49" top="148" width="211" height="39" enable="false"/>
+        <Edit id="Edit02" taborder="3" left="49" top="99" width="211" height="39"/>
+        <Button id="Button01" taborder="4" text="isTime" left="270" top="99" width="70" height="39" onclick="Button01_onclick"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[
@@ -19,9 +19,9 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.fn_checkDate = function(sDate) 
 {
-    var nYear  = Number(sDate.toString().substr(0,4));
-    var nMonth = Number(sDate.toString().substr(5,2));
-    var nDate  = Number(sDate.toString().substr(8,2));
+    var nYear  = Number(sDate.toString().substring(0,4));
+    var nMonth = Number(sDate.toString().substring(5,7));
+    var nDate  = Number(sDate.toString().substring(8,10));
 	
     if ( nMonth > 12 || nMonth < 1)
     {
@@ -81,9 +81,9 @@ this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 this.fn_checkTime = function(sTime) 
 {
-    var nHH = Number(sTime.toString().substr(0,2));
-    var nMM = Number(sTime.toString().substr(3,2));
-    var nSS = Number(sTime.toString().substr(6,2));
+    var nHH = Number(sTime.toString().substring(0,2));
+    var nMM = Number(sTime.toString().substring(3,5));
+    var nSS = Number(sTime.toString().substring(6,8));
 	
     if (nHH > 24 || nHH < 0)
     {

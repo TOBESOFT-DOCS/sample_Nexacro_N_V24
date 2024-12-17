@@ -3,7 +3,7 @@
   <Form id="sample_grid_34" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
-        <Grid id="Grid00" taborder="0" left="32" top="40" width="560" height="211" binddataset="Dataset00" autofittype="col" autosizingtype="row" extendsizetype="none" autosizebandtype="body" text="" autoenter="none" fillareatype="none" selecttype="row" cellsizingtype="none" cellmovingtype="none" cellsizebandtype="body" border="" onheadclick="Grid00_onheadclick">
+        <Grid id="Grid00" taborder="0" left="50" top="50" width="560" height="211" binddataset="Dataset00" autofittype="col" autosizingtype="row" extendsizetype="none" autosizebandtype="body" text="" autoenter="none" fillareatype="none" selecttype="row" cellsizingtype="none" cellmovingtype="none" cellsizebandtype="body" border="" onheadclick="Grid00_onheadclick">
           <Formats>
             <Format id="default">
               <Columns>
@@ -120,15 +120,15 @@
             var sColId = (obj.getCellProperty("body", e.col,"text")).toString().split(":");
 			
 			/* If the previous sort in ascending order, it will be sorted in descending order */
-			if (sHeadText.substr(nLen) == "▲") 
+			if (sHeadText.substring(nLen) == "▲") 
 			{
-				obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▼");
+				obj.setCellProperty( "head", i, "text", sHeadText.substring(0, nLen)+ "▼");
 				objDs.keystring = "S:-" + sColId[1];
 			}
 			/* If the previous sort in descending order, it will be sorted in ascending order */
-			else if (sHeadText.substr(nLen) == "▼") 
+			else if (sHeadText.substring(nLen) == "▼") 
 			{
-				obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▲");
+				obj.setCellProperty( "head", i, "text", sHeadText.substring(0, nLen)+ "▲");
 				objDs.keystring = "S:+" + sColId[1];
 			}
 			/* If first sort, it will sort in ascending order */
@@ -143,9 +143,9 @@
 		{
 
 			/* Remove the arrow indication is displayed in the head cell which are arranged previously */
-			if (sHeadText.substr(nLen) == "▲" || sHeadText.substr(nLen) == "▼") 
+			if (sHeadText.substring(nLen) == "▲" || sHeadText.substring(nLen) == "▼") 
 			{
-				obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen));
+				obj.setCellProperty( "head", i, "text", sHeadText.substring(0, nLen));
 			}
 
 		}
