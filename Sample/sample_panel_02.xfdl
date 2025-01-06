@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_panel_02" width="1280" height="720" titletext="New Form" onload="sample_panel_02_onload">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Static id="staMenuClick" taborder="3" text="Static00" left="50" top="105" width="500" height="200" font="bold 48px/normal &quot;Arial&quot;" textAlign="center"/>
+        <Div id="divUpMenu" taborder="0" text="divUpMenu" left="50" top="50" width="500" height="50" background="lightgray">
+          <Layouts>
+            <Layout type="table"/>
+          </Layouts>
+        </Div>
+        <Div id="divSubMenu" taborder="1" text="divSubMenu" left="50" top="divUpMenu:5" width="500" height="100" visible="false" background="lightgray">
+          <Layouts>
+            <Layout type="table"/>
+          </Layouts>
+        </Div>
+        <CheckBox id="ckAdminUser" taborder="2" text="Admin User" left="585" top="50" width="95" height="21" onchanged="ckAdminUser_onchanged" value="true"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[// https://demo.tobesoft.com/?menu_id=2008
+
+const LEFT = 0;
+const TOP = 0;
+const FULL_WIDTH = "100%"
+const FULL_HEIGHT = "100%"
+const MENU_HEIGHT = 30;	
+
+
+this.sample_panel_02_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.initializeMegaMenu();
+};
+
+this.initializeMegaMenu = function (adminFilter="")
+{
+	this.fnRemoveComponent(this.divUpMenu);
+	this.fnRemoveComponent(this.divSubMenu);
+	
+	this.dsMegaMenu.filter("MENU_LVL == 1"+adminFilter);
+	const MENU_COUNT = this.dsMegaMenu.rowcount;
+	
+	const TABLETEMPLATE_VALUE = this.generateMenuString(MENU_COUNT);
+	this.divUpMenu.form.setFluidLayoutProperty("default", "tabletemplate", TABLETEMPLATE_VALUE);
+	this.divSubMenu.form.setFluidLayoutProperty("default", "tabletemplate", TABLETEMPLATE_VALUE);
+	
+	let subMenuMaxCount = 0;
+	
+	for (let i=0;i<MENU_COUNT;i++) {
+		let menuCd = this.dsMegaMenu.getColumn(i, "MENU_CD");
+		let menuNm = this.dsMegaMenu.getColumn(i, "MENU_NM");
+		
+		// Create MainMenu Static
+		this.createStatic("sta_"+menuCd, FULL_HEIGHT, menuNm, i, "center", this.divUpMenu);
+		
+		// Create SubMenu Panel
+		let subMenuPanel = this.createPanel("panel_"+menuCd, FULL_HEIGHT, i, this.divSubMenu);
+		
+		// Create & Add SubMenu Static
+		let subMenuTitleStatic = this.createStatic("sta_sub_"+menuCd, MENU_HEIGHT, menuNm, i, "center", this.divSubMenu);
+		subMenuTitleStatic.color = "red";
+		subMenuPanel.addItem(subMenuTitleStatic.name, subMenuTitleStatic.id);		
+		
+		this.dsMegaMenu.filter("UP_MENU_CD == '" + menuCd + "'");
+		
+		let nSubCount = this.dsMegaMenu.rowcount;
+		if(nSubCount > subMenuMaxCount) subMenuMaxCount = nSubCount;
+		
+		for (let j=0;j<nSubCount;j++) {
+			let subMenuCd = this.dsMegaMenu.getColumn(j, "MENU_CD");
+			let subMenuNm = this.dsMegaMenu.getColumn(j, "MENU_NM");
+			
+			let objSubMenuSta = this.createStatic("subSta_"+subMenuCd, MENU_HEIGHT, subMenuNm, i, "left", this.divSubMenu);
+			subMenuPanel.addItem(objSubMenuSta.name, objSubMenuSta.id);
+		}
+		this.dsMegaMenu.filter("MENU_LVL == 1"+adminFilter);
+	}
+	this.divSubMenu.height = (subMenuMaxCount+1)*MENU_HEIGHT;
+};
+
+this.createStatic = function (id, height, text, tablecellindex, textAlign, targetDiv) {
+    let objStatic = new Static();
+    objStatic.init(id, LEFT, TOP, FULL_WIDTH, height);
+    objStatic.text = text;
+    objStatic.tablecellarea = "0 / "+tablecellindex;
+    objStatic.textAlign = textAlign;
+	objStatic.addEventHandler("onclick", this.fnMenuOnClick, this);
+	targetDiv.addChild(objStatic.name, objStatic);
+	objStatic.show();	
+    return objStatic;
+};
+
+this.createPanel = function (id, height, tablecellindex, targetDiv) {
+    let objPanel = new Panel();
+    objPanel.init(id, LEFT, TOP, FULL_WIDTH, height);
+    objPanel.tablecellarea = "0 / "+tablecellindex;;
+	objPanel.type = "vertical";
+	targetDiv.addChild(objPanel.name, objPanel);
+	objPanel.show();	
+    return objPanel;
+};
+
+this.generateMenuString = function(menuCount) {
+    const repeatedString = "1* ".repeat(menuCount).trim();
+    return "1* / "+repeatedString;
+}
+
+this.toggleSubMenuVisibility = function () {
+    this.divSubMenu.visible = !this.divSubMenu.visible;
+};
+
+this.fnMenuOnClick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	this.toggleSubMenuVisibility();
+	this.staMenuClick.text = obj.text;
+}
+
+this.fnRemoveComponent = function(targetDiv) {
+    if (targetDiv.form.components.length > 0) {
+        for (let i = targetDiv.form.components.length - 1; i >= 0; i--) {
+            let component = targetDiv.form.components[i];
+            targetDiv.removeChild(component.name);
+            component.destroy();
+        }
+    }
+};
+
+this.ckAdminUser_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	if(e.postvalue)
+		this.initializeMegaMenu();
+	else
+		this.initializeMegaMenu(" && ADMIN_MENU != 1");
+};
+]]></Script>
+    <Objects>
+      <Dataset id="dsMegaMenu">
+        <ColumnInfo>
+          <Column id="MENU_CD" type="STRING" size="8"/>
+          <Column id="UP_MENU_CD" type="STRING" size="8"/>
+          <Column id="MENU_NM" type="STRING" size="50"/>
+          <Column id="MENU_LVL" type="INT" size="1"/>
+          <Column id="ADMIN_MENU" type="INT" size="1"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="MENU_CD">010000</Col>
+            <Col id="MENU_LVL">0</Col>
+            <Col id="UP_MENU_CD">0</Col>
+            <Col id="MENU_NM">Component</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_CD">010100</Col>
+            <Col id="UP_MENU_CD">010000</Col>
+            <Col id="MENU_NM">Basic Component</Col>
+            <Col id="MENU_LVL">1</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010101</Col>
+            <Col id="MENU_NM">Button</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010102</Col>
+            <Col id="MENU_NM">CheckBox</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010103</Col>
+            <Col id="MENU_NM">CheckBoxSet</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010104</Col>
+            <Col id="MENU_NM">Combo</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010105</Col>
+            <Col id="MENU_NM">Edit</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010106</Col>
+            <Col id="MENU_NM">Listbox</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010107</Col>
+            <Col id="MENU_NM">MultiCombo</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010100</Col>
+            <Col id="MENU_CD">010108</Col>
+            <Col id="MENU_NM">Radio</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_CD">010200</Col>
+            <Col id="UP_MENU_CD">010000</Col>
+            <Col id="MENU_NM">File Transfer</Col>
+            <Col id="MENU_LVL">1</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010200</Col>
+            <Col id="MENU_CD">010201</Col>
+            <Col id="MENU_NM">File Upload</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010200</Col>
+            <Col id="MENU_CD">010202</Col>
+            <Col id="MENU_NM">File Download</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_CD">010300</Col>
+            <Col id="UP_MENU_CD">010000</Col>
+            <Col id="MENU_NM">List</Col>
+            <Col id="MENU_LVL">1</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010300</Col>
+            <Col id="MENU_CD">010301</Col>
+            <Col id="MENU_NM">ListView</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_CD">010400</Col>
+            <Col id="UP_MENU_CD">010000</Col>
+            <Col id="MENU_NM">Menu UI</Col>
+            <Col id="MENU_LVL">1</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010400</Col>
+            <Col id="MENU_NM">Menu</Col>
+            <Col id="MENU_CD">010401</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010400</Col>
+            <Col id="MENU_NM">Mega Menu</Col>
+            <Col id="MENU_CD">010402</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010400</Col>
+            <Col id="MENU_NM">Tree</Col>
+            <Col id="MENU_CD">010403</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010400</Col>
+            <Col id="MENU_NM">Accordion</Col>
+            <Col id="MENU_CD">010404</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">0</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_CD">010500</Col>
+            <Col id="UP_MENU_CD">010000</Col>
+            <Col id="MENU_NM">Admin</Col>
+            <Col id="MENU_LVL">1</Col>
+            <Col id="ADMIN_MENU">1</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010500</Col>
+            <Col id="MENU_NM">Menus</Col>
+            <Col id="MENU_CD">010501</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">1</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010500</Col>
+            <Col id="MENU_NM">Members</Col>
+            <Col id="MENU_CD">010502</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">1</Col>
+          </Row>
+          <Row>
+            <Col id="UP_MENU_CD">010500</Col>
+            <Col id="MENU_NM">Deposits</Col>
+            <Col id="MENU_CD">010503</Col>
+            <Col id="MENU_LVL">2</Col>
+            <Col id="ADMIN_MENU">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>
