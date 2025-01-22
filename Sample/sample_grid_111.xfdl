@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_grid_111" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout height="768" width="1024">
+        <Grid id="Grid00" taborder="1" left="40" top="40" width="313" height="176" binddataset="Dataset00" oncellclick="Grid00_oncellclick" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="First"/>
+                <Cell col="1" text="Middle"/>
+                <Cell col="2" text="Last"/>
+                <Cell col="3" text="Tel"/>
+              </Band>
+              <Band id="body">
+                <Cell colspan="3">
+                  <Cell text="bind:First"/>
+                  <Cell col="1" text="bind:Middle"/>
+                  <Cell col="2" text="bind:Last"/>
+                </Cell>
+                <Cell col="3" rowspan="2">
+                  <Cell text="bind:Tel_M"/>
+                  <Cell row="1" text="bind:Tel_O"/>
+                </Cell>
+                <Cell row="1"/>
+                <Cell row="1" col="1"/>
+                <Cell row="1" col="2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Edit id="Edit00" taborder="0" left="40" top="226" width="198" height="53"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="First" type="STRING" size="256"/>
+          <Column id="Middle" type="STRING" size="256"/>
+          <Column id="Last" type="STRING" size="256"/>
+          <Column id="Tel_M" type="STRING" size="256"/>
+          <Column id="Tel_O" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="First">John</Col>
+            <Col id="Middle"/>
+            <Col id="Last">Doe</Col>
+            <Col id="Tel_M">10-12345678</Col>
+            <Col id="Tel_O">25-12345670</Col>
+          </Row>
+          <Row>
+            <Col id="First">Jane</Col>
+            <Col id="Middle"/>
+            <Col id="Last">Roe</Col>
+            <Col id="Tel_M">10-56781234</Col>
+            <Col id="Tel_O">25-6781234</Col>
+          </Row>
+          <Row>
+            <Col id="First">Dick</Col>
+            <Col id="Last">Public</Col>
+            <Col id="Middle">Fitzgerald</Col>
+            <Col id="Tel_M">10-12345678</Col>
+            <Col id="Tel_O">21-2345678</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var subcellcount = this.Grid00.getSubCellCount("body", e.cell);
+	var bCheck = false;
+	for(var i=0;i<subcellcount;i++)
+	{
+		bCheck = isPointInsideRect(this.Grid00.getSubCellRect(e.row, e.cell, i), e.clientx, e.clienty);
+		if(bCheck)
+		{
+			this.Edit00.value = this.Grid00.getSubCellValue(e.row, e.cell, i);
+			break;
+		}
+	}	
+};
+
+function isPointInsideRect(rect, x, y) {
+    return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+}
+]]></Script>
+  </Form>
+</FDL>

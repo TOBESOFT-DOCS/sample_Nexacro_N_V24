@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_edit_11" width="1280" height="720" titletext="New Form" onload="sample_edit_11_onload">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="Static00" taborder="0" left="25" top="25" width="191" height="60" usedecorate="true"/>
+        <Edit id="Edit00" taborder="1" left="25" top="25" width="200" height="60" onkeyup="Edit00_onkeyup" opacity="0.2"/>
+        <Edit id="Edit00_00" taborder="2" left="25" top="110" width="200" height="60" opacity="0.2"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[this.sample_edit_11_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.Static00.left = nexacro.toNumber(this.Edit00.left) + 10;
+	this.Static00.top = nexacro.toNumber(this.Edit00.top) + 2;
+	this.Static00.height = nexacro.toNumber(this.Edit00.height) - 3;
+	this.Static00.width = nexacro.toNumber(this.Edit00.width) - 20;
+};
+
+this.Edit00_onkeyup = function(obj:nexacro.Edit,e:nexacro.KeyEventInfo)
+{
+	var temp = obj.value;
+	if(temp)
+	{
+		temp = temp.replace(/([a-zA-Z]+)/g, "<fc v='red'>$1</fc>");
+	}
+	this.Static00.text = temp;
+};
+]]></Script>
+  </Form>
+</FDL>

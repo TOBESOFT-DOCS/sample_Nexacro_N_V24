@@ -972,6 +972,15 @@
 				<Col id="subject_en">Allowing Only Korean Input</Col>
 			</Row>
 			<Row>
+				<Col id="category">Edit</Col>
+				<Col id="subject">Edit 컴포넌트에 스타일 적용하기</Col>
+				<Col id="id_sample">sample_edit_11</Col>
+				<Col id="id_doc">dbece406bb8f5dae</Col>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">1</Col>
+				<Col id="keyword">Static.usedecorate</Col>
+			</Row>			
+			<Row>
 				<Col id="category">FileDialog</Col>
 				<Col id="subject">FileDialog</Col>
 				<Col id="tree_level">0</Col>
@@ -2043,6 +2052,24 @@
 				<Col id="subject_en">Checking Merged Cell Checkbox</Col>
 			</Row>
 			<Row>
+				<Col id="category">Grid 셀</Col>
+				<Col id="subject">인접한 셀에 표시되는 데이터가 같으면 하나의 셀로 표시하기</Col>
+				<Col id="id_sample">sample_grid_110</Col>
+				<Col id="id_doc">a971bae7522eae9c</Col>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">2</Col>
+				<Col id="keyword">Grid.mergeCell, Grid.getFormatColCount, Grid.getCellValue</Col>
+			</Row>	
+			<Row>
+				<Col id="category">Grid 셀</Col>
+				<Col id="subject">세로로 병합한 셀 클릭 시 정보 확인하기</Col>
+				<Col id="id_sample">sample_grid_111</Col>
+				<Col id="id_doc">3499ea142e3e3711</Col>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">2</Col>
+				<Col id="keyword">Grid.getSubCellCount, Grid.getSubCellRect, Grid.getSubCellValue</Col>
+			</Row>				
+			<Row>
 				<Col id="category">Grid 응용</Col>
 				<Col id="subject">Grid 응용</Col>
 				<Col id="tree_level">0</Col>
@@ -2817,6 +2844,15 @@
 				<Col id="subject_ja">コンポーネントのグルーピング</Col>
 				<Col id="subject_en">Grouping Components</Col>
 			</Row>
+			<Row>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">1</Col>
+				<Col id="category">Panel</Col>
+				<Col id="subject">메가 메뉴 만들기</Col>
+				<Col id="id_doc">97508aabf5199534</Col>
+				<Col id="id_sample">sample_panel_02</Col>
+				<Col id="keyword">Form.setFluidLayoutProperty, Component.tablecellarea</Col>
+			</Row>			
 			<Row>
 				<Col id="category">PopupMenu</Col>
 				<Col id="subject">PopupMenu</Col>
