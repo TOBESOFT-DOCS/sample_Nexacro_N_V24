@@ -249,7 +249,9 @@ var this_form = this;
  *	응답된 문자열에서 스크립트 부분을 분리해 ds_source Dataset 오브젝트에 담습니다.
  */
 request.onreadystatechange = function() {
-  if (request.readyState == 4)
+	var strNoScript = "This sample code uses Source(XML) exclusively, with no scripting involved.";
+	
+	if (request.readyState == 4)
 		var responseText = request.responseText;
 		if(responseText)
 		{
@@ -262,11 +264,14 @@ request.onreadystatechange = function() {
 			{
 				body_str = responseText.substring(0, start_point).trim() + String.fromCharCode(10) + responseText.substring(end_point+end_point_str.length).trim();
 				script_str = responseText.substring(start_point+start_point_str.length, end_point);
+				if(script_str.length === 0) {
+					script_str = strNoScript;
+				}
 			}
 			else 
 			{
 				body_str = responseText;
-				script_str = 'No scripts are used';
+				script_str = strNoScript;//'No scripts are used';
 			}
 
 			this_form.ds_source.setColumn(0, 0, body_str);

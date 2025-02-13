@@ -5,17 +5,12 @@
       <Layout height="720" width="1280">
         <TextField id="TextField00" taborder="0" left="50.00" top="50" width="135" height="80" cssclass="sample_textfield_02" labeltext="TEST" helpertext="helpertext area" usehelpertext="true"/>
         <TextField id="TextField01" taborder="1" left="221" top="50" width="135" height="80" labeltext="TEST" labelposition="outside" cssclass="sample_textfield_02" helpertext="helpertext area" usehelpertext="true"/>
-        <TextField id="TextField02" taborder="2" left="392" top="50" width="135" height="80" labeltext="TEST" onchanged="TextField02_onchanged" labelposition="inside" cssclass="sample_textfield_02" helpertext="helpertext area" usehelpertext="true"/>
+        <TextField id="TextField02" taborder="2" left="392" top="50" width="135" height="80" labeltext="TEST" labelposition="inside" cssclass="sample_textfield_02" helpertext="helpertext area" usehelpertext="true"/>
         <TextField id="TextField00_00" taborder="3" left="50.00" top="160" width="135" height="80" usetrailingbutton="true" cssclass="sample_textfield_01" labeltext="TEST" labelfloatingfixed="true" usecharcount="false"/>
         <TextField id="TextField02_00" taborder="4" left="392.00" top="160" width="135" height="80" labeltext="TEST" labelposition="inside" labelfloatingfixed="true" usecharcount="false"/>
         <TextField id="TextField01_00" taborder="5" left="221.00" top="160" width="135" height="80" labeltext="TEST" labelposition="outside" labelfloatingfixed="true" usecharcount="false"/>
       </Layout>
     </Layouts>
-    <Script type="xscript5.1"><![CDATA[
-this.TextField02_onchanged = function(obj:nexacro.TextField,e:nexacro.ChangeEventInfo)
-{
-	
-};
-]]></Script>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
   </Form>
 </FDL>
