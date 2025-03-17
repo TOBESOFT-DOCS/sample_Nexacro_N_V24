@@ -1023,6 +1023,7 @@
 				<Col id="subject">GoogleMap</Col>
 				<Col id="tree_level">0</Col>
 				<Col id="search_subject">1</Col>
+				<Col id="subject_ja">GoogleMap</Col>
 				<Col id="subject_zh">GoogleMap</Col>
 				<Col id="subject_en">GoogleMap</Col>
 			</Row>
@@ -1034,6 +1035,7 @@
 				<Col id="id_doc">640aad51a01a85c5</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">GoogleMap.load, GoogleMap.showzoom, GoogleMap.addItem, GoogleMap.removeItem</Col>
+				<Col id="subject_ja">地図にマーカーの追加および削除</Col>
 				<Col id="subject_zh">在地图上添加和删除标记</Col>
 				<Col id="subject_en">Adding/Removing Marker on Map</Col>
 			</Row>
@@ -1045,6 +1047,7 @@
 				<Col id="id_doc">2c1fd1b2665f63b5</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">GoogleMap.load, GoogleMap.showzoom, GoogleMap.addItem, GoogleMap.removeItem</Col>
+				<Col id="subject_ja">地図に円の追加／削除</Col>
 				<Col id="subject_zh">在地图上添加和删除圆</Col>
 				<Col id="subject_en">Adding/Removing Circle on Map</Col>
 			</Row>
@@ -1064,6 +1067,7 @@
 				<Col id="subject">Graphics</Col>
 				<Col id="tree_level">0</Col>
 				<Col id="search_subject">1</Col>
+				<Col id="subject_ja">Graphics</Col>
 				<Col id="subject_zh">Graphics</Col>
 				<Col id="subject_en">Graphics</Col>
 			</Row>
@@ -1075,6 +1079,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">Component.strokepen</Col>
+				<Col id="subject_ja">直線を引く</Col>
 				<Col id="subject_zh">画线</Col>
 				<Col id="subject_en">Drawing Lines</Col>
 			</Row>
@@ -1086,6 +1091,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">GraphicsImage.setImageLoadEventHandler, Component.getObjectByID</Col>
+				<Col id="subject_ja">複数の図形をまとめて処理する方法</Col>
 				<Col id="subject_zh">将线或图形分组处理</Col>
 				<Col id="subject_en">Processing Lines or Shapes by Grouping</Col>
 			</Row>
@@ -1097,6 +1103,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">Graphics.clear</Col>
+				<Col id="subject_ja">簡単なお絵描きツールの作り方</Col>
 				<Col id="subject_zh">制作简单的画板</Col>
 				<Col id="subject_en">Creating Simple Paint</Col>
 			</Row>
@@ -1668,7 +1675,7 @@
 				<Col id="id_doc">78841889251123b9</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.getSubCellProperty, Grid.setSubCellProperty</Col>
-				<Col id="subject_ja">サブCellプロパティ設定</Col>
+				<Col id="subject_ja">SubCellのプロパティ設定</Col>
 				<Col id="id_doc_ja">bc42f9ca0701c13d</Col>
 				<Col id="subject_zh">设置子单元格属性</Col>
 				<Col id="subject_en">Setting Sub-cell Properties</Col>
@@ -1915,7 +1922,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.suppresshorzcell</Col>
-				<Col id="subject_ja">隣のCellと同じ値である場合、1つのCellにまとめて表示する</Col>
+				<Col id="subject_ja">横方向に同じ値である複数のCellを1つのCellにまとめて表示する</Col>
 				<Col id="id_doc_ja">3252660a486be9fd</Col>
 				<Col id="subject_zh">将具有相同水平值的单元格标记为一个单元格</Col>
 				<Col id="subject_en">Displaying Cells with Same Horizontal Value as One Cell</Col>
@@ -2004,6 +2011,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.setCellProperty</Col>
+				<Col id="subject_ja">ツリービューでpaddingプロパティの適用</Col>
 				<Col id="subject_zh">在树形式中应用padding属性</Col>
 				<Col id="subject_en">Applying Padding Property in Tree Format</Col>
 			</Row>
@@ -2015,6 +2023,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Component.suppress</Col>
+				<Col id="subject_ja">チェックボックスのCellの結合</Col>
 				<Col id="subject_zh">合并显示复选框</Col>
 				<Col id="subject_en">Merging &amp; Displaying Checkboxes</Col>
 			</Row>
@@ -2026,6 +2035,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Component.getEditingText, Component.getCellText, Grid.oncellposchanged</Col>
+				<Col id="subject_ja">Cellに入力した文字列の長さを表示する</Col>
 				<Col id="subject_zh">显示在单元格中输入的字符串长度</Col>
 				<Col id="subject_en">Displaying String Length Entered in Cell</Col>
 			</Row>
@@ -2037,6 +2047,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">Grid.getDisplayText</Col>
+				<Col id="subject_ja">ツリービューでマスク文字の適用</Col>
 				<Col id="subject_zh">将掩码字符应用于树格式</Col>
 				<Col id="subject_en">Applying Mask Character to Tree Format</Col>
 			</Row>
@@ -2048,6 +2059,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
 				<Col id="keyword">GridClickEventInfo.fromreferenceobject</Col>
+				<Col id="subject_ja">結合されたCellのチェックボックスの処理方法</Col>
 				<Col id="subject_zh">选中合并单元格的复选框</Col>
 				<Col id="subject_en">Checking Merged Cell Checkbox</Col>
 			</Row>
@@ -2058,6 +2070,7 @@
 				<Col id="id_doc">a971bae7522eae9c</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
+				<Col id="subject_ja">隣接するCellのデータが同じである場合に1つのCellにまとめて表示する</Col>
 				<Col id="keyword">Grid.mergeCell, Grid.getFormatColCount, Grid.getCellValue</Col>
 			</Row>	
 			<Row>
@@ -2067,6 +2080,7 @@
 				<Col id="id_doc">3499ea142e3e3711</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">2</Col>
+				<Col id="subject_ja">縦方向に結合されたCellのクリック時に情報を取得する</Col>
 				<Col id="keyword">Grid.getSubCellCount, Grid.getSubCellRect, Grid.getSubCellValue</Col>
 			</Row>				
 			<Row>
