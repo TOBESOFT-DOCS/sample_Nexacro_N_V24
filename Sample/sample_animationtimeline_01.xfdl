@@ -15,21 +15,21 @@
 	var anitimeObj = new nexacro.AnimationTimeline("Anitime00", this);
 	this.addChild("Anitime00", anitimeObj);
 	
-    var aniObj00 = new nexacro.Animation("Ani00", this);
-    this.addChild("Ani00", aniObj00);
-    this.Ani00.addTarget("AniItem00", this.Button00, "left:300");
-	
-    var aniObj01 = new nexacro.Animation("Ani01", this);
-    this.addChild("Ani01", aniObj01);
-    this.Ani01.addTarget("AniItem00", this.Button01, "left:300");  
-	
+	var aniObj00 = new nexacro.Animation("Ani00", this);
+	this.addChild("Ani00", aniObj00);
+	this.Ani00.addTarget("AniItem00", this.Button00, "left:300");
+
+	var aniObj01 = new nexacro.Animation("Ani01", this);
+	this.addChild("Ani01", aniObj01);
+	this.Ani01.addTarget("AniItem00", this.Button01, "left:300");  
+
 	this.Anitime00.addTarget("AniTimeItem00", aniObj00);
 	this.Anitime00.addTarget("AniTimeItem01", aniObj01);
 };
 
 this.btnPlay_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-    this.Anitime00.play();
+	this.Anitime00.play();
 };
 
 this.btnInit_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)

@@ -24,13 +24,6 @@
 this.Div00_Div01_ondrag = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
 {
 	return true;
-};
-
-/*
-this.Div00_ondrop = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
-{
-	this.Div00.form.resetScroll();
-};
-*/]]></Script>
+};]]></Script>
   </Form>
 </FDL>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_52" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -68,39 +68,38 @@
         </Rows>
       </Dataset>
     </Objects>
-    <Script type="xscript5.1"><![CDATA[
-this.Grid00_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+    <Script type="xscript5.1"><![CDATA[this.Grid00_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
 	var iCnt=0;
 	
-    for (var j = e.cell; j >= 0; j--) 
-    {
-        var iColCur = this.Grid00.getCellProperty("Head", j, "col");
-        var iCell = e.cell;
+	for (var j = e.cell; j >= 0; j--)
+	{
+		var iColCur = this.Grid00.getCellProperty("Head", j, "col");
+		var iCell = e.cell;
 		
-        for (var i = iCell; i >= 0; i--) 
-        {
-            if (this.Grid00.getCellProperty("Head", i, "row") == 0 
+		for (var i = iCell; i >= 0; i--) 
+		{
+			if (this.Grid00.getCellProperty("Head", i, "row") == 0 
 				&& iColCur == this.Grid00.getCellProperty("Head", i, "col")) 
-            {             
-                if (iCnt==0) 
-                {
-                    var iCol = this.Grid00.getCellProperty("Head", i, "col");					
-                    var iSpan = this.Grid00.getCellProperty("Head", i, "colspan")-1;
-                    var iTotCol = iCol + iSpan;                    
-                    for (var k = 0; k <= iTotCol; k++)
-                    {
-                        this.Grid00.setFormatColProperty(k, "band", "left");
-                    }
+			{			 
+				if (iCnt==0) 
+				{
+					var iCol = this.Grid00.getCellProperty("Head", i, "col");
+					var iSpan = this.Grid00.getCellProperty("Head", i, "colspan")-1;
+					var iTotCol = iCol + iSpan;
+					for (var k = 0; k <= iTotCol; k++)
+					{
+						this.Grid00.setFormatColProperty(k, "band", "left");
+					}
 					for(var l = iTotCol;l<this.Grid00.getCellCount("head"); l++)
 					{
-					   this.Grid00.setFormatColProperty(k, "band", "body");
+						this.Grid00.setFormatColProperty(k, "band", "body");
 					}
-                }
-                iCnt++;
-            } 
-        }
-    } 
+				}
+				iCnt++;
+			} 
+		}
+	}
 };
 ]]></Script>
   </Form>
