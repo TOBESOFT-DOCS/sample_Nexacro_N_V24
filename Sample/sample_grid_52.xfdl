@@ -77,12 +77,12 @@
 		var iColCur = this.Grid00.getCellProperty("Head", j, "col");
 		var iCell = e.cell;
 		
-		for (var i = iCell; i >= 0; i--) 
+		for (var i = iCell; i >= 0; i--)
 		{
 			if (this.Grid00.getCellProperty("Head", i, "row") == 0 
-				&& iColCur == this.Grid00.getCellProperty("Head", i, "col")) 
-			{			 
-				if (iCnt==0) 
+				&& iColCur == this.Grid00.getCellProperty("Head", i, "col"))
+			{
+				if (iCnt==0)
 				{
 					var iCol = this.Grid00.getCellProperty("Head", i, "col");
 					var iSpan = this.Grid00.getCellProperty("Head", i, "colspan")-1;
@@ -97,7 +97,7 @@
 					}
 				}
 				iCnt++;
-			} 
+			}
 		}
 	}
 };
