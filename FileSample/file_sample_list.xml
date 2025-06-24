@@ -4073,6 +4073,15 @@
 				<Col id="subject_zh">以XML格式连接Open API并在Grid组件中显示</Col>
 				<Col id="subject_en">onnecting XML Format Open API &amp; Displaying in Grid Component</Col>
 			</Row>
+			<Row>
+				<Col id="id_sample">sample_nexacro_01</Col>
+				<Col id="id_doc">155386c57676f946</Col>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">9</Col>
+				<Col id="keyword">155386c57676f946</Col>
+				<Col id="category">nexacroObject</Col>
+				<Col id="subject">간단한 틱택토(Tic-Tac-Toe) 게임 만들기</Col>
+			</Row>			
 		</Rows>
 	</Dataset>
 </Root>
