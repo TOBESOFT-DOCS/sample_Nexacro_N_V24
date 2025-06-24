@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_nexacro_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Div id="Div00" taborder="0" text="Div00" left="30" top="30" width="200" height="200" border="1px solid black">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* 1* / 1* 1* 1*" tabletemplatearea="">
+              <Static id="Static00" taborder="0" text="" left="46" top="44" width="100%" height="100%" tablecellarea="0/0" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static01" taborder="1" text="" left="88" top="23" width="100%" height="100%" tablecellarea="0/1" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static02" taborder="2" text="" left="146" top="25" width="100%" height="100%" tablecellarea="0/2" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static03" taborder="3" text="" left="16" top="79" width="100%" height="100%" tablecellarea="1/0" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static04" taborder="4" text="" left="109" top="85" width="100%" height="100%" tablecellarea="1/1" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static05" taborder="5" text="" left="179" top="96" width="100%" height="100%" tablecellarea="1/2" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static06" taborder="6" text="" left="28" top="141" width="100%" height="100%" tablecellarea="2/0" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static07" taborder="7" text="" left="83" top="154" width="100%" height="100%" tablecellarea="2/1" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+              <Static id="Static08" taborder="8" text="" left="152" top="156" width="100%" height="100%" tablecellarea="2/2" border="1px solid black" onclick="Static_onclick" textAlign="center" verticalAlign="middle" font="18px/normal &quot;Verdana&quot;"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <TextArea id="TextArea00" taborder="1" left="247" top="31" width="327" height="309" value="It's your turn.&#10;"/>
+        <Button id="Button00" taborder="2" text="reset" left="80" top="240" width="100" height="40" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[const board = Array(9).fill(null);
+const player = "X";
+const computer = "O";
+let gameOver = false;
+let isPlayerTurn = true;
+
+this.Static_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	this.handlePlayerMove(e.fromobject);
+};
+
+this.handlePlayerMove = function (targetObj) {
+	let index = Number((targetObj.id).substring(7));
+	if (!isPlayerTurn || board[index] || gameOver) return;
+	
+	board[index] = player;
+	targetObj.text = player;
+
+	const result = this.checkWinner(player, "Player");
+	if (result.winner) {
+		return;
+	}
+	if (result.isDraw) {
+		return;
+	}
+	this.TextArea00.insertText("It's the computer's turn. Thinking about"+"\n");
+	isPlayerTurn = false;
+	nexacro.setTimeout(this, this.computerMove, 2000);
+}
+
+this.computerMove = function () {
+	if (gameOver) return;
+	
+	const emptyIndices = board.map((cell, idx) => cell ? null : idx).filter(idx => idx !== null);
+	if (emptyIndices.length === 0) return;
+	const randomIndex = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+	board[randomIndex] = computer;
+	
+	this.Div00.form.components["Static0"+randomIndex].text = computer;
+	this.TextArea00.insertText("The index specified by the computer: "+randomIndex+"\n");
+
+	const result = this.checkWinner(player, "Computer");
+	if (result.winner) {
+		return;
+	}
+	if (result.isDraw) {
+		return;
+	}
+	isPlayerTurn = true;
+	this.TextArea00.insertText("It's your turn."+"\n");
+}
+
+this.checkWinner = function(symbol, messageTarget) {
+	const winPatterns = [
+		[0,1,2],[3,4,5],[6,7,8],
+		[0,3,6],[1,4,7],[2,5,8],
+		[0,4,8],[2,4,6]
+	];
+	for (let pattern of winPatterns) {
+		if (pattern.every(function(idx) {
+			return board[idx] === symbol;
+		})) {
+			for(let index of pattern) {
+				this.Div00.form.components["Static0"+index].background = "yellow";
+			}
+			this.TextArea00.insertText(messageTarget + " wins!\n");
+			gameOver = true;
+			return { winner: symbol, pattern: pattern, isDraw: false };
+		}
+	}
+    if (!board.includes(null)) {
+        this.TextArea00.insertText("Tie!\n");
+        gameOver = true;
+        return { winner: null, pattern: null, isDraw: true };
+    }
+    return { winner: null, pattern: null, isDraw: false };
+}
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	for (let i = 0; i < 9; i++) {
+		board[i] = null;
+		this.Div00.form.components["Static0"+i].text = "";
+		this.Div00.form.components["Static0"+i].background = "";
+	}
+	gameOver = false;
+	this.TextArea00.value = "It's your turn."+"\n";
+};
+]]></Script>
+  </Form>
+</FDL>
