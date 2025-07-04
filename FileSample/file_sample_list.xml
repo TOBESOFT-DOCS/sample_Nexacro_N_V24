@@ -979,6 +979,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">1</Col>
 				<Col id="keyword">Static.usedecorate</Col>
+				<Col id="subject_en">Applying Styles to the Edit Component</Col>
 			</Row>			
 			<Row>
 				<Col id="category">FileDialog</Col>
@@ -2072,6 +2073,7 @@
 				<Col id="search_subject">2</Col>
 				<Col id="subject_ja">隣接するCellのデータが同じである場合に1つのCellにまとめて表示する</Col>
 				<Col id="keyword">Grid.mergeCell, Grid.getFormatColCount, Grid.getCellValue</Col>
+				<Col id="subject_en">Merging Adjacent Cells with Identical Data</Col>
 			</Row>	
 			<Row>
 				<Col id="category">Grid 셀</Col>
@@ -2082,6 +2084,7 @@
 				<Col id="search_subject">2</Col>
 				<Col id="subject_ja">縦方向に結合されたCellのクリック時に情報を取得する</Col>
 				<Col id="keyword">Grid.getSubCellCount, Grid.getSubCellRect, Grid.getSubCellValue</Col>
+				<Col id="subject_en">Retrieving Information When Clicking Vertically Merged Cells</Col>
 			</Row>				
 			<Row>
 				<Col id="category">Grid 응용</Col>
@@ -2866,6 +2869,7 @@
 				<Col id="id_doc">97508aabf5199534</Col>
 				<Col id="id_sample">sample_panel_02</Col>
 				<Col id="keyword">Form.setFluidLayoutProperty, Component.tablecellarea</Col>
+				<Col id="subject_en">Creating a Mega Menu</Col>
 			</Row>			
 			<Row>
 				<Col id="category">PopupMenu</Col>
@@ -4081,6 +4085,7 @@
 				<Col id="keyword">NexacroAPI.setTimeout</Col>
 				<Col id="category">nexacroObject</Col>
 				<Col id="subject">간단한 틱택토(Tic-Tac-Toe) 게임 만들기</Col>
+				<Col id="subject_en">Creating a Simple Tic-Tac-Toe Game</Col>
 			</Row>			
 		</Rows>
 	</Dataset>
