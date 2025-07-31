@@ -3934,6 +3934,7 @@
 				<Col id="search_subject">5</Col>
 				<Col id="subject_zh">ExcelObject</Col>
 				<Col id="subject_en">ExcelObject</Col>
+				<Col id="subject_ja">ExcelObject</Col>
 			</Row>
 			<Row>
 				<Col id="category">ExcelObject</Col>
@@ -3945,6 +3946,7 @@
 				<Col id="keyword">ExcelExportObject.exportfilename,ExcelExportObject.exporturl,ExcelExportObject.addExportItem,ExcelExportObject.addEventHandler,ExcelExportObject.exportData</Col>
 				<Col id="subject_zh">将Grid导出为excel文件</Col>
 				<Col id="subject_en">Exporting Grid as Excel File (Export)</Col>
+				<Col id="subject_ja">GridをExcelファイルにエクスポートする（エクスポート）</Col>
 			</Row>
 			<Row>
 				<Col id="category">ExcelObject</Col>
@@ -3956,6 +3958,7 @@
 				<Col id="keyword">ExcelImportObject.importtype, ExcelImportObject.importurl, ExcelImportObject.addEventHandler, ExcelImportObject.importData</Col>
 				<Col id="subject_zh">读取excel文件，用Grid显示(导入)</Col>
 				<Col id="subject_en">Reading Excel File to Show on Grid (Import)</Col>
+				<Col id="subject_ja">Excelファイルを読み込んでGridに表示する（インポート）</Col>
 			</Row>
 			<Row>
 				<Col id="category">ExcelObject</Col>
@@ -3967,6 +3970,7 @@
 				<Col id="keyword">ExcelExportObject.getExportItem, ExcelExportObject.setExportItem, ExportItem.exportimage</Col>
 				<Col id="subject_zh">将Grid中的图像导出为excel文件</Col>
 				<Col id="subject_en">Exporting Grid Image as Excel File</Col>
+				<Col id="subject_ja">Gridの画像をExcelファイルにエクスポートする</Col>
 			</Row>
 			<Row>
 				<Col id="category">ExcelObject</Col>
@@ -3978,6 +3982,7 @@
 				<Col id="keyword">ExcelExportObject.clearExportItems, ExcelExportObject.addExportItem</Col>
 				<Col id="subject_zh">将多个Grid数据导出到excel文件</Col>
 				<Col id="subject_en">Exporting Multiple Grid Data as Excel File</Col>
+				<Col id="subject_ja">複数のGridのデータをExcelファイルにエクスポートする</Col>
 			</Row>
 			<Row>
 				<Col id="category">DataObject</Col>
@@ -4043,6 +4048,7 @@
 				<Col id="search_subject">9</Col>
 				<Col id="subject_zh">nexacroObject</Col>
 				<Col id="subject_en">nexacroObject</Col>
+				<Col id="subject_ja">nexacroObject</Col>
 			</Row>
 			<Row>
 				<Col id="id_sample">sample_nexacro_decimal_01</Col>
@@ -4054,6 +4060,7 @@
 				<Col id="subject">Grid 컴포넌트에서 BIGDECIMAL 타입 사용하기</Col>
 				<Col id="subject_zh">在Grid组件中使用BIGDECIMAL类型</Col>
 				<Col id="subject_en">Using BIGDECIMAL Type in Grid Component</Col>
+				<Col id="subject_ja">GridコンポーネントでのBIGDECIMALタイプの使用</Col>
 			</Row>
 			<Row>
 				<Col id="id_sample">sample_nexacro_decimal_02</Col>
@@ -4065,6 +4072,7 @@
 				<Col id="subject">1경(京)보다 큰 값 연산하기</Col>
 				<Col id="subject_zh">计算大于1京的值</Col>
 				<Col id="subject_en">Calculating Value Greater than 10q</Col>
+				<Col id="subject_ja">1京より大きい値の演算</Col>
 			</Row>
 			<Row>
 				<Col id="id_sample">sample_nexacro_domparser_01</Col>
@@ -4076,6 +4084,7 @@
 				<Col id="subject">XML 형식의 Open API 연결해서 Grid 컴포넌트에 표시하기</Col>
 				<Col id="subject_zh">以XML格式连接Open API并在Grid组件中显示</Col>
 				<Col id="subject_en">onnecting XML Format Open API &amp; Displaying in Grid Component</Col>
+				<Col id="subject_ja">XML形式のOpen APIに接続してGridコンポーネントに表示する</Col>
 			</Row>
 			<Row>
 				<Col id="id_sample">sample_nexacro_01</Col>
@@ -4086,6 +4095,7 @@
 				<Col id="category">nexacroObject</Col>
 				<Col id="subject">간단한 틱택토(Tic-Tac-Toe) 게임 만들기</Col>
 				<Col id="subject_en">Creating a Simple Tic-Tac-Toe Game</Col>
+				<Col id="subject_ja">簡単なTic-Tac-Toeゲーム</Col>
 			</Row>			
 		</Rows>
 	</Dataset>
