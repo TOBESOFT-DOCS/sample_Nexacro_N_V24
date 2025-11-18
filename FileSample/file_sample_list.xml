@@ -1018,6 +1018,7 @@
 				<Col id="keyword">Component.datatype, Component.filelist, FileUpTransfer.addFile, FileUpTransfer.upload</Col>
 				<Col id="subject_zh">上传选定的文件</Col>
 				<Col id="subject_en">Uploading Selected File</Col>
+				<Col id="subject_ja">ファイルを選択してアップロードする</Col>
 			</Row>
 			<Row>
 				<Col id="category">GoogleMap</Col>
