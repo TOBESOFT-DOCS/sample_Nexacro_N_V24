@@ -1007,6 +1007,7 @@
 				<Col id="subject">FileUpTransfer</Col>
 				<Col id="subject_zh">FileUpTransfer</Col>
 				<Col id="subject_en">FileUpTransfer</Col>
+				<Col id="subject_ja">FileUpTransfer</Col>
 			</Row>
 			<Row>
 				<Col id="search_subject">1</Col>
