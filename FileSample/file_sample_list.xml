@@ -242,6 +242,15 @@
 				<Col id="subject_en">Modifying All Component Properties</Col>
 			</Row>
 			<Row>
+				<Col id="category">Form</Col>
+				<Col id="subject">서버와 transaction 처리하기 (Promise 사용)</Col>
+				<Col id="id_sample">sample_form_12</Col>
+				<Col id="id_doc">5544e6c970cb6ff9</Col>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">4</Col>
+				<Col id="keyword">Form.transaction</Col>
+			</Row>			
+			<Row>
 				<Col id="category">Frames</Col>
 				<Col id="subject">Frames</Col>
 				<Col id="tree_level">0</Col>
@@ -2087,7 +2096,16 @@
 				<Col id="subject_ja">縦方向に結合されたCellのクリック時に情報を取得する</Col>
 				<Col id="keyword">Grid.getSubCellCount, Grid.getSubCellRect, Grid.getSubCellValue</Col>
 				<Col id="subject_en">Retrieving Information When Clicking Vertically Merged Cells</Col>
-			</Row>				
+			</Row>		
+			<Row>
+				<Col id="category">Grid 셀</Col>
+				<Col id="subject">새로 받은 데이터와 기존 데이터를 비교하기</Col>
+				<Col id="id_sample">sample_grid_112</Col>
+				<Col id="id_doc">9c96230470864f13</Col>
+				<Col id="tree_level">1</Col>
+				<Col id="search_subject">2</Col>
+				<Col id="keyword">Dataset.getColumn, Dataset.copyData, Dataset.useclientlayout</Col>
+			</Row>	
 			<Row>
 				<Col id="category">Grid 응용</Col>
 				<Col id="subject">Grid 응용</Col>
