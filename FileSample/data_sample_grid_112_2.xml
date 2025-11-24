@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dataset id="TEST">
+	<ColumnInfo>
+		<Column id="NAME" type="STRING" size="256" />
+		<Column id="PRICE" type="INT" size="256" />
+	</ColumnInfo>
+	<Rows>
+		<Row>
+			<Col id="NAME">Item A</Col>
+			<Col id="PRICE">9007</Col>
+		</Row>
+		<Row>
+			<Col id="NAME">Item B</Col>
+			<Col id="PRICE">58</Col>
+		</Row>
+		<Row>
+			<Col id="NAME">Item C</Col>
+			<Col id="PRICE">1045</Col>
+		</Row>
+		<Row>
+			<Col id="NAME">Item D</Col>
+			<Col id="PRICE">18304</Col>
+		</Row>
+		<Row>
+			<Col id="NAME">Item E</Col>
+			<Col id="PRICE">558</Col>
+		</Row>
+		<Row>
+			<Col id="NAME">Item F</Col>
+			<Col id="PRICE">7993</Col>
+		</Row>
+		<Row>
+			<Col id="NAME">Item G</Col>
+			<Col id="PRICE">25389</Col>
+		</Row>
+	</Rows>
+</Dataset>

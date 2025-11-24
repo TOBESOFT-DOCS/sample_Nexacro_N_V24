@@ -389,6 +389,22 @@
 {
 	color : #ffffff;
 }
+
+.Grid .body .row .cell.sample_grid_112_blue
+{
+    color : blue;
+    background : #e5e5ff;
+    -nexa-border : 1px solid #dbdee2;
+    -nexa-padding : 4px 4px 4px 4px;
+}
+
+.Grid .body .row .cell.sample_grid_112_red
+{
+    color : red;
+    background : #ffe5e5;
+    -nexa-border : 1px solid #dbdee2;
+    -nexa-padding : 4px 4px 4px 4px;
+}
 ]]></CSSData>
   <CSSData type="desktop"><![CDATA[]]></CSSData>
   <CSSData type="mobile_large"><![CDATA[]]></CSSData>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_application_02" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout height="768" width="1024">
+        <Button id="btnTransaction" taborder="0" text="Transaction TEST" left="48" top="31" width="120" height="50" right="" bottom="" onclick="btnTransaction_onclick"/>
+        <Radio id="radioTransaction" taborder="1" left="193" top="31" width="127" height="50" right="" bottom="" codecolumn="codecolumn" datacolumn="datacolumn" index="0" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">ASync</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn"/>
+                <Col id="datacolumn">Sync</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <TextArea id="TextArea00" taborder="2" left="48" top="100" width="272" height="120"/>
+        <CheckBox id="CheckBox00" taborder="3" text="Use Promise" left="280" top="31" width="150" height="20"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[var bAsync = true;
+var bPromise = false;
+
+var strCallbackFunc;
+var strSvcID = "TEST";
+var strURL = "FileSample::sample_form_10_file.xml";
+var strOutDatasets = "Dataset00=TEST";
+
+this.btnTransaction_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.TextArea00.value = "";
+	this.fn_addlog("Before Transaction");
+	strCallbackFunc = this.CheckBox00.value ? null : "fn_test";
+	bPromise = this.CheckBox00.value;
+	bAsync = this.radioTransaction.value;
+
+	if(bPromise && !bAsync)
+	{
+		this.runPromiseSync();
+	} else {
+		var req = this.transaction(strSvcID,strURL, null, strOutDatasets, null, strCallbackFunc, bAsync);
+		if(req && bPromise)
+		{
+			req.then(res => {
+				this.fn_test(strSvcID, res);
+			})
+			.catch(err => trace("Error: "+err));
+		}
+		this.fn_addlog("After Transaction");
+	}
+};
+
+this.runPromiseSync = async function()
+{
+	var res = await this.transaction(strSvcID,strURL, null, strOutDatasets, null);
+	this.fn_test(strSvcID, res);
+	this.fn_addlog("After Transaction");
+}
+
+this.fn_test = function(strSvcID, nErrorCode, strErrorMag = "")
+{
+	this.fn_addlog("Transaction rowcount: "+this.Dataset00.rowcount);
+}
+
+this.fn_addlog = function(strMessage)
+{
+	this.TextArea00.value = this.TextArea00.text + strMessage + '\n';
+}]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_grid_112" titletext="New Form" width="1024" height="768">
+    <Layouts>
+      <Layout height="768" width="1024">
+        <Static id="st_process" taborder="0" text="transaction --&gt; ds_input --( CopyData )--&gt; ds_copy" left="30" top="26" width="285" height="14" textAlign="left" verticalAlign="middle" font="bold 12px/normal &quot;Arial&quot;"/>
+        <Grid id="grd_DataLoad" taborder="1" left="30" top="50" width="285" height="224" binddataset="ds_copy" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Price"/>
+                <Cell col="2" text="Change(%)"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:NAME"/>
+                <Cell col="1" text="bind:PRICE" cssclass="bind:CSS"/>
+                <Cell col="2" text="bind:CHANGE_RATE" cssclass="bind:CSS" textAlign="right"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Transaction" taborder="2" text="XML Transaction" left="112" top="284" width="120" height="28" onclick="btn_Transaction_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_input" useclientlayout="true" onload="ds_input_onload">
+        <ColumnInfo>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="PRICE" type="INT" size="256"/>
+          <Column id="CHANGE_RATE" type="STRING" size="256"/>
+          <Column id="CSS" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="NAME">Item A</Col>
+            <Col id="PRICE">9007</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item B</Col>
+            <Col id="PRICE">73</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item C</Col>
+            <Col id="PRICE">895</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item D</Col>
+            <Col id="PRICE">18304</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item E</Col>
+            <Col id="PRICE">558</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item F</Col>
+            <Col id="PRICE">7993</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item G</Col>
+            <Col id="PRICE">26531</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_copy" useclientlayout="true">
+        <ColumnInfo>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="PRICE" type="INT" size="256"/>
+          <Column id="CHANGE_RATE" type="STRING" size="256"/>
+          <Column id="CSS" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="NAME">Item A</Col>
+            <Col id="PRICE">9007</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item B</Col>
+            <Col id="PRICE">73</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item C</Col>
+            <Col id="PRICE">895</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item D</Col>
+            <Col id="PRICE">18304</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item E</Col>
+            <Col id="PRICE">558</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item F</Col>
+            <Col id="PRICE">7993</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Item G</Col>
+            <Col id="PRICE">26531</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[var nXmlCount = 0;
+
+this.btn_Transaction_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    nXmlCount = (nXmlCount <= 2) ? (nXmlCount + 1) : 1;
+    var strURL = "FileSample::data_sample_grid_112_" + nXmlCount + ".xml";
+    this.transaction("test", strURL, null, "ds_input=TEST", null, "fn_test");
+};
+
+this.ds_input_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEventInfo)
+{
+    for(var i = 0; i < obj.getRowCount(); i++) 
+    {
+        var NewPrice = obj.getColumn(i, "PRICE");
+        var OrgPrice = this.ds_copy.getColumn(i, "PRICE");
+        
+        var ChangeRate = (NewPrice - OrgPrice) / OrgPrice * 100;
+        var GridCellCSS = NewPrice > OrgPrice ? "sample_grid_112_red" : "sample_grid_112_blue";
+        
+        obj.setColumn(i,"CHANGE_RATE", nexacro.round(ChangeRate, 2).toFixed(2));
+        obj.setColumn(i,"CSS", ChangeRate != 0 ? GridCellCSS : "");
+    }    
+    this.ds_copy.copyData(this.ds_input);
+};]]></Script>
+  </Form>
+</FDL>
