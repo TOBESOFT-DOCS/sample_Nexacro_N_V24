@@ -249,6 +249,7 @@
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.transaction</Col>
+				<Col id="subject_en">Processing transactions with the server (using Promise)</Col>
 			</Row>			
 			<Row>
 				<Col id="category">Frames</Col>
