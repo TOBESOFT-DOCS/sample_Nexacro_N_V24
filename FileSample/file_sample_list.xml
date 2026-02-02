@@ -244,7 +244,7 @@
 			<Row>
 				<Col id="category">Form</Col>
 				<Col id="subject">서버와 transaction 처리하기 (Promise 사용)</Col>
-				<Col id="id_sample">sample_form_12</Col>
+				<Col id="id_sample">sample_form_13</Col>
 				<Col id="id_doc">5544e6c970cb6ff9</Col>
 				<Col id="tree_level">1</Col>
 				<Col id="search_subject">4</Col>
