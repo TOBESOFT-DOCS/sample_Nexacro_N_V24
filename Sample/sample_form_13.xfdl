@@ -57,10 +57,10 @@ this.btnTransaction_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 		var req = this.transaction(strSvcID,strURL, null, strOutDatasets, null, strCallbackFunc, bAsync);
 		if(req && bPromise)
 		{
-			req.then(res => {
-				this.fn_test(strSvcID, res);
+			req.then(([ErrorCode, ErrorMsg]) => {
+				this.fn_test(strSvcID, ErrorCode, ErrorMsg);
 			})
-			.catch(err => trace("Error: "+err));
+			.catch(([ErrorCode, ErrorMsg]) => trace("Error: "+ErrorCode + ", " + ErrorMsg));
 		}
 		this.fn_addlog("After Transaction");
 	}
@@ -68,13 +68,18 @@ this.btnTransaction_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 
 this.runPromiseSync = async function()
 {
-	var res = await this.transaction(strSvcID,strURL, null, strOutDatasets, null);
-	this.fn_test(strSvcID, res);
+	try {
+		var [ErrorCode, ErrorMsg] = await this.transaction(strSvcID,strURL, null, strOutDatasets, null);
+		this.fn_test(strSvcID, ErrorCode, ErrorMsg);
+	} catch ([ErrorCode, ErrorMsg])	{
+		trace("Error: "+ErrorCode + ", " + ErrorMsg);
+	}
 	this.fn_addlog("After Transaction");
 }
 
-this.fn_test = function(strSvcID, nErrorCode, strErrorMag = "")
+this.fn_test = function(strSvcID, ErrorCode, ErrorMsg)
 {
+	this.fn_addlog(ErrorCode + ":" + ErrorMsg);
 	this.fn_addlog("Transaction rowcount: "+this.Dataset00.rowcount);
 }
 
