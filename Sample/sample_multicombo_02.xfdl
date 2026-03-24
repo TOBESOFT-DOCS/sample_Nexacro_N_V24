@@ -66,12 +66,12 @@
     </Objects>
     <Script type="xscript5.1"><![CDATA[this.Grid00_onselectchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEventInfo)
 {
-	var arrayStatrRow = e.selectstartrow;
+	var arrayStartRow = e.selectstartrow;
 	var arrayEndRow = e.selectendrow;
 	var selectedIndexes = [];
 
-	for (var i = 0; i < arrayStatrRow.length; i++) {
-		for (var j = arrayStatrRow[i]; j <= arrayEndRow[i]; j++) {
+	for (var i = 0; i < arrayStartRow.length; i++) {
+		for (var j = arrayStartRow[i]; j <= arrayEndRow[i]; j++) {
 			selectedIndexes.push(j);
 		}
 	}
