@@ -250,6 +250,7 @@
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.transaction</Col>
 				<Col id="subject_en">Processing transactions with the server (using Promise)</Col>
+				<Col id="subject_ja">サーバー連携（Promiseを使用したトランザクション）</Col>
 			</Row>			
 			<Row>
 				<Col id="category">Frames</Col>
