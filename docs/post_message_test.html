@@ -15,7 +15,7 @@
 </style>
 </head>
 <body>
-  <h2>postMessage <br>Sender / Receiver</h2>
+  <h2>postMessage Sample</h2>
   <div>
     <input id="msgInput" type="text" value="Hello from WebView Content!" placeholder="Enter the message to send">
     <button onclick="sendMessage()">Sending a message</button>
@@ -37,7 +37,7 @@
 
   window.addEventListener("message", function (event) {
     const time = new Date().toLocaleTimeString();
-	log("Received: origin: " + event.origin + " / data: " + event.data);
+	log("Receive: origin: " + event.origin + " / data: " + event.data);
 	targetWindow = event.source;
   });
   
