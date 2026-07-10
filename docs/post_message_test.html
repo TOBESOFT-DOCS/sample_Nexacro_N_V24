@@ -17,7 +17,7 @@
 <body>
   <h2>postMessage <br>Sender / Receiver</h2>
   <div>
-    <input id="msgInput" type="text" value="Hello from parent!" placeholder="Enter the message to send">
+    <input id="msgInput" type="text" value="Hello from WebView Content!" placeholder="Enter the message to send">
     <button onclick="sendMessage()">Sending a message</button>
   </div>
   <div class="log" id="log"></div>
@@ -26,7 +26,6 @@
   let targetWindow;
   function sendMessage() {
     const msg = document.getElementById('msgInput').value;
-    console.log("msg test:"+msg);
 
     if(!targetWindow)
 		targetWindow = window.parent;
