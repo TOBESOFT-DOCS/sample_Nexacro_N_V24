@@ -38,13 +38,13 @@
 
   window.addEventListener("message", function (event) {
     const time = new Date().toLocaleTimeString();
-	log("Received: " + "[" + time + "] origin: " + event.origin + " / data: " + event.data);
+	log("Received: origin: " + event.origin + " / data: " + event.data);
 	targetWindow = event.source;
   });
   
   function log(text) {
     const logEl = document.getElementById('log');
-    const time = new Date().toLocaleTimeString();
+    const time = new Date().toTimeString();
     logEl.innerHTML = "[" + time + "] " + text + "<br>" + logEl.innerHTML;
   }
 </script>
