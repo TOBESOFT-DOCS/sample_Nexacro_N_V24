@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>postMessage 전송 측 (Sender)</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  h2 { margin-bottom: 4px; }
+  .desc { color: #666; margin-bottom: 20px; }
+  input, button { padding: 8px; font-size: 14px; }
+  input { width: 300px; }
+  button { cursor: pointer; }
+  iframe { width: 100%; height: 220px; border: 1px solid #ccc; margin-top: 20px; }
+  .log { margin-top: 10px; font-size: 13px; color: #333; }
+</style>
+</head>
+<body>
+  <h2>postMessage Sender / Receiver</h2>
+  <div>
+    <input id="msgInput" type="text" value="Hello from parent!" placeholder="Enter the message to send">
+    <button onclick="sendMessage()">Sending a message</button>
+  </div>
+  <div class="log" id="log"></div>
+
+<script>
+  let targetWindow;
+  function sendMessage() {
+    const msg = document.getElementById('msgInput').value;
+    console.log("msg test:"+msg);
+
+    if(!targetWindow)
+		targetWindow = window.parent;
+		
+    targetWindow.postMessage(msg, "*");
+
+    log("Send: " + msg);
+  }
+
+  window.addEventListener("message", function (event) {
+    const time = new Date().toLocaleTimeString();
+	log("Received: " + "[" + time + "] origin: " + event.origin + " / data: " + event.data);
+	targetWindow = event.source;
+  });
+  
+  function log(text) {
+    const logEl = document.getElementById('log');
+    const time = new Date().toLocaleTimeString();
+    logEl.innerHTML = "[" + time + "] " + text + "<br>" + logEl.innerHTML;
+  }
+</script>
+</body>
+</html>
