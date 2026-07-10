@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>postMessage 전송 측 (Sender)</title>
-<style>
+<!--<style>
   body { font-family: sans-serif; padding: 20px; }
   h2 { margin-bottom: 4px; }
   .desc { color: #666; margin-bottom: 20px; }
   input, button { padding: 8px; font-size: 14px; }
   input { width: 300px; }
   button { cursor: pointer; }
-  iframe { width: 100%; height: 220px; border: 1px solid #ccc; margin-top: 20px; }
   .log { margin-top: 10px; font-size: 13px; color: #333; }
-</style>
+</style>-->
 </head>
 <body>
   <h2>postMessage Sample</h2>
@@ -43,7 +42,8 @@
   
   function log(text) {
     const logEl = document.getElementById('log');
-    logEl.innerHTML = text + "<br>" + logEl.innerHTML;
+    const now = new Date();
+    logEl.innerHTML = "["+now.getTime()+"] "+text + "<br>" + logEl.innerHTML;
   }
 </script>
 </body>
