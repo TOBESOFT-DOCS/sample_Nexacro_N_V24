@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_imageviewer_06" width="1280" height="720" titletext="New Form" oninit="Form_oninit">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Div id="divViewer" taborder="0" text="Div00" left="210" top="30" width="160" height="240" formscrolltype="none" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="1" text="Dylan performing in the De Kuip Stadium, Rotterdam, June 23, 1978" left="0" top="0" width="100%" height="100%" wordWrap="english" font="20px/normal &quot;Arial&quot;"/>
+              <ImageViewer id="ImageViewer01" taborder="0" left="0" top="0" width="160" height="240" image="url('imagerc::320px-Bob_Dylan_1978.jpg')" stretch="fixaspectratio" visible="false"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="divImage" taborder="1" text="Div02" left="30" top="30" width="160" height="240" onmousemove="divImage_onmousemove" onmouseenter="divImage_onmouseenter" onmouseleave="divImage_onmouseleave">
+          <Layouts>
+            <Layout>
+              <ImageViewer id="ImageViewer00" taborder="0" left="0" top="0" width="160" height="240" image="url('imagerc::320px-Bob_Dylan_1978.jpg')" stretch="fixaspectratio"/>
+              <Div id="divGlass" taborder="1" left="0" top="0" width="160" height="240" background="lightgray" border="1px solid white" opacity="0.4" visible="false"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static00" taborder="2" text="Zoom" left="32" top="280" width="58" height="27" font="18px/normal &quot;Arial&quot;"/>
+        <Spin id="Spin00" taborder="3" left="90" top="280" width="100" height="27" increment="0.5" max="4" min="1" value="2" type="noneditable" onspin="Spin00_onspin"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+let divGlass = this.divImage.form.divGlass;
+let imgPreview = this.divImage.form.ImageViewer00;
+let imgViewer = this.divViewer.form.ImageViewer01;
+
+let numImgViewerWidth = imgViewer.width;
+let numImgViewerHeight = imgViewer.height;
+let numDivGlassWidth = divGlass.width;
+let numDivGlassHeight = divGlass.height;
+
+let zoom;
+let w;
+let h;
+
+this.Form_oninit = function(obj:nexacro.Form,e:nexacro.EventInfo)
+{
+	this.zoomInit();
+};
+
+this.zoomInit = function()
+{
+	zoom = this.Spin00.value;
+	imgViewer.width = numImgViewerWidth * zoom;
+	imgViewer.height = numImgViewerHeight * zoom;
+	divGlass.width = numDivGlassWidth / zoom;
+	divGlass.height = numDivGlassHeight / zoom;
+	w = divGlass.width / 2;
+	h = divGlass.height / 2;
+}
+
+
+this.divImage_onmousemove = function(obj:nexacro.Div,e:nexacro.MouseEventInfo)
+{
+	let x = e.clientx;
+    let y = e.clienty;
+
+	x = Math.max(w, Math.min(x, imgPreview.width - w));
+	y = Math.max(h, Math.min(y, imgPreview.height - h));
+
+    divGlass.left = (x - w) + imgPreview.getPixelLeft();
+    divGlass.top = (y - h) + imgPreview.getPixelTop();
+	
+	this.updateViewer(divGlass.left, divGlass.top);
+};
+
+this.updateViewer = function(left, top)
+{
+	imgViewer.left = -(left * zoom);
+	imgViewer.top = -(top * zoom);
+};
+
+this.divImage_onmouseenter = function(obj:nexacro.Div,e:nexacro.MouseEventInfo)
+{
+	divGlass.visible = true;
+	imgViewer.visible = true;
+};
+
+this.divImage_onmouseleave = function(obj:nexacro.Div,e:nexacro.MouseEventInfo)
+{
+	divGlass.visible = false;
+	imgViewer.visible = false;
+};
+
+this.Spin00_onspin = function(obj:nexacro.Spin,e:nexacro.SpinEventInfo)
+{
+	this.zoomInit();
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

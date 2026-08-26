@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sample_webview_01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <WebView id="WebView00" taborder="0" left="50" top="50" width="600" height="200" border="1px solid black" url="https://tobesoft-docs.github.io/sample_Nexacro_N_V24/post_message_test.html" onmessage="WebView00_onmessage"/>
+        <Edit id="Edit00" taborder="3" left="50" top="WebView00:10" width="600" height="40" value="Hello from nexacro!" text="Hello from nexacro!"/>
+        <Button id="Button00" taborder="1" text="Sending a message" left="50" top="Edit00:10" width="120" height="40" onclick="Button00_onclick"/>
+        <TextArea id="TextArea00" taborder="2" left="50" top="Button00:10" width="600" height="100" wordWrap="english"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	const msg = this.Edit00.value;
+	this.WebView00.postMessage(msg, "https://tobesoft-docs.github.io/");
+	this.log("Send: "+msg);
+};
+
+this.WebView00_onmessage = function(obj:nexacro.WebView,e:nexacro.WebMessageEventInfo)
+{
+	this.log("Receive: origin: "+e.origin+" / data: "+e.data);
+};
+
+this.log = function(text)
+{
+	const now = new Date();
+	this.TextArea00.insertText("["+now.getTime()+"] "+text+'\n', 0);
+}]]></Script>
+  </Form>
+</FDL>
