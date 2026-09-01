@@ -159,6 +159,7 @@
 				<Col id="search_subject">4</Col>
 				<Col id="keyword">Form.onkeydown, Form.getFocus, Form.getNextComponent, Component.setFocus</Col>
 				<Col id="subject_zh">使用回车键移动组件</Col>
+				<Col id="subject_ja">Enterキーによるコンポーネント間移動</Col>
 				<Col id="subject_en">Moving Component with Enter Key</Col>
 			</Row>
 			<Row>
